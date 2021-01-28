@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
 import { Section, Title, Text, Span } from "../../components/Core";
-import imgPhoto from "../../assets/image/jpg/portfolio-about.jpg";
+import imgPhoto from "../../assets/image/jpg/fer.jpg";
 import imgSignLight from "../../assets/image/png/signature.png";
 
 const LinkSocial = styled.a`
@@ -62,9 +62,6 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                     </a>
                   </Text>
                 </div>
-                <div className="mt-5">
-                  <img src={imgSignLight} alt="sign" className="img-fluid" />
-                </div>
                 <Text color="light" className="mt-3 font-weight-bold">
                   Fernanda Cruz
                 </Text>
@@ -73,7 +70,7 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                 </Text>
                 <div className="mt-5 d-flex">
                   <LinkSocial
-                    href="https://www.twitter.com"
+                    href="https://github.com/AcquaWh"
                     target="_blank"
                     rel="noopener noreferrer"
                     className=" mr-3"
@@ -81,7 +78,7 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                     Github
                   </LinkSocial>
                   <LinkSocial
-                    href="https://www.facebook.com"
+                    href="https://www.facebook.com/AcquaWh"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mr-3"
@@ -89,7 +86,7 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                     Facebook
                   </LinkSocial>
                   <LinkSocial
-                    href="https://www.instagram.com"
+                    href="https://www.instagram.com/acquawh/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-weight-bold"
