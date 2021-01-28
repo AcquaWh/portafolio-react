@@ -1,5 +1,5 @@
-import imgT1 from "../assets/image/jpg/dev/masonry/portfolio-mas-8.jpg";
-import imgT2 from "../assets/image/jpg/dev/masonry/portfolio-mas-7.jpg";
+import imgT1 from "../assets/image/jpg/dev/masonry/erus.jpg";
+import imgT2 from "../assets/image/jpg/dev/masonry/kite.jpg";
 import imgT3 from "../assets/image/jpg/dev/masonry/portfolio-mas-6.jpg";
 import imgT4 from "../assets/image/jpg/dev/masonry/portfolio-mas-5.jpg";
 import imgT5 from "../assets/image/jpg/dev/masonry/portfolio-mas-4.jpg";
@@ -11,7 +11,7 @@ export const devWorks1 = [
   {
     brand: `Erus`,
     slug: `erus-web`,
-    title: `Adaptable but Identifiable Product for Kandinsky.`,
+    title: `Erus`,
     categories: [`web`],
     thumbnail: imgT1,
   link : "/erus"
@@ -19,7 +19,7 @@ export const devWorks1 = [
   {
     brand: `Kite`,
     slug: `kite-web`,
-    title: `Adaptable but Identifiable Product for Kandinsky.`,
+    title: `Kite`,
     categories: [`web`],
     thumbnail: imgT2,
   link : "/kite"

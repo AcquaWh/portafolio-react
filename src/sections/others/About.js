@@ -78,12 +78,12 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                     Github
                   </LinkSocial>
                   <LinkSocial
-                    href="https://www.facebook.com/AcquaWh"
+                    href="https://www.linkedin.com/in/acquawh/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mr-3"
                   >
-                    Facebook
+                    Linkedin
                   </LinkSocial>
                   <LinkSocial
                     href="https://www.instagram.com/acquawh/"

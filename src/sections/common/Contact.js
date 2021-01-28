@@ -30,8 +30,8 @@ const Contact = ({ pattern = true }) => {
             <Col lg="11" xl="10" className="text-center">
               <Box>
                 <Title variant="secSm">
-                  I am taking new projects. Waiting to hearing about new
-                  projects, so if you'd like to chat please get in touch.
+                  Estoy tomando nuevos proyectos. Esperando noticias nuevas
+                  proyectos, así que si quieres chatear, ponte en contacto.
                 </Title>
 
                 <Box
@@ -40,20 +40,20 @@ const Contact = ({ pattern = true }) => {
                 >
                   <div className="d-flex flex-column flex-lg-row justify-content-center">
                     <LinkContact
-                      href="mailto:contact@folio.design"
+                      href="mailto:fernanda.cruz@hostedred.com"
                       target="_blank"
                       className="mb-2 mb-lg-0"
                     >
-                      contact@folio.design
+                      fernanda.cruz@hostedred.com
                     </LinkContact>
                     <span className="divider mx-2 mx-lg-4 d-none d-lg-block">
                       |
                     </span>
                     <LinkContact
-                      href="https://www.linkedin.com/folio"
+                      href="https://www.linkedin.com/in/acquawh/"
                       target="_blank"
                     >
-                      linkedin.com/folio
+                      linkedin.com/in/acquawh/
                     </LinkContact>
                   </div>
                 </Box>
