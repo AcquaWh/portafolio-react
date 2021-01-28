@@ -4,22 +4,22 @@ import Masonry from "react-masonry-component";
 
 import { Section, Box, ListNav } from "../../components/Core";
 import WorkCard from "../../components/WorkCard";
-import { designWorks1 } from "../../data";
+import { devWorks1 } from "../../data";
 
 const Works = () => {
   const [items, setItems] = useState([]);
   const [activeLink, setActiveLink] = useState("*");
 
   useEffect(() => {
-    setItems(designWorks1);
+    setItems(devWorks1);
   }, []);
 
   const filterBy = (cat) => {
     if (cat === "*") {
       setActiveLink("*");
-      setItems(designWorks1);
+      setItems(devWorks1);
     } else {
-      const filteredItems = designWorks1.filter((item) => {
+      const filteredItems = devWorks1.filter((item) => {
         return item.categories.indexOf(cat) !== -1;
       });
       setActiveLink(cat);
@@ -48,46 +48,33 @@ const Works = () => {
                     filterBy("*");
                   }}
                 >
-                  All works
+                  Todos los trabajos
                 </a>
               </li>
               <li className="nav-item">
                 <a
                   className={`nav-link font-weight-bold text-uppercase ${
-                    activeLink === "branding" ? "active" : null
+                    activeLink === "web" ? "active" : null
                   }`}
                   onClick={(e) => {
                     e.preventDefault();
-                    filterBy("branding");
+                    filterBy("web");
                   }}
                 >
-                  Branding
+                  Desarrollo web
                 </a>
               </li>
               <li className="nav-item">
                 <a
                   className={`nav-link font-weight-bold text-uppercase ${
-                    activeLink === "ux-design" ? "active" : null
+                    activeLink === "vr" ? "active" : null
                   }`}
                   onClick={(e) => {
                     e.preventDefault();
-                    filterBy("ux-design");
+                    filterBy("vr");
                   }}
                 >
-                  UX Design
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className={`nav-link font-weight-bold text-uppercase ${
-                    activeLink === "photography" ? "active" : null
-                  }`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    filterBy("photography");
-                  }}
-                >
-                  Photography
+                  Realidad Virtual
                 </a>
               </li>
             </ListNav>
@@ -100,7 +87,7 @@ const Works = () => {
             className={"masonry-grid row"} // default ''
           >
             {items.map((item, index) => (
-              <Col lg="3" md="4" sm="6" key={index} className="filtr-item">
+              <Col lg="4" md="6" sm="6" key={index} className="filtr-item">
                 <WorkCard workItem={item} mb="30px" link={item.link}/>
               </Col>
             ))}

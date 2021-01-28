@@ -33,7 +33,7 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
             <Col lg="6">
               <div className="pl-lg-4 pt-5 pt-lg-0">
                 <Title color="light" variant="secSm">
-                  Bruce Ryan
+                  Fernanda Cruz Quintero
                 </Title>
                 <Text
                   color="light"
@@ -42,21 +42,23 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                     line-height: 1.5;
                   `}
                 >
-                  UX Designer based in New York, USA. I am designing with a
-                  minimal and beautiful design in mind.
+                Soy egresada de la licenciatura en Ingeniería en
+                Producción Multimedia, generación 2015.
                 </Text>
                 <Text color="light" className="mt-4">
-                  I strive for a minimal and beautiful design.
+                Me desempeño como desarrolladora full-stack
+                desde hace más de 4 años en el ambito web. 
+                Soy Co-Fundadora de HostedRed.
                 </Text>
                 <div className="mt-4">
-                  <Text color="light">Email me at</Text>
+                  <Text color="light">Mandame coreo a</Text>
 
                   <Text variant="p">
                     <a
-                      href="mailto:hello@folio.com"
+                      href="mailto:fernanda.cruz@hostedred.com"
                       className="font-weight-bold"
                     >
-                      <Span color="light">hello@folio.com</Span>
+                      <Span color="light">fernanda.cruz@hostedred.com</Span>
                     </a>
                   </Text>
                 </div>
@@ -64,27 +66,19 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                   <img src={imgSignLight} alt="sign" className="img-fluid" />
                 </div>
                 <Text color="light" className="mt-3 font-weight-bold">
-                  Bruce Ryan
+                  Fernanda Cruz
                 </Text>
                 <Text color="light" variant="small">
-                  Founder of Folio Digital
+                  Co-Fundadora de HostedRed
                 </Text>
                 <div className="mt-5 d-flex">
-                  <LinkSocial
-                    href="https://www.dribbble.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mr-3"
-                  >
-                    Dribble
-                  </LinkSocial>
                   <LinkSocial
                     href="https://www.twitter.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className=" mr-3"
                   >
-                    Twitter
+                    Github
                   </LinkSocial>
                   <LinkSocial
                     href="https://www.facebook.com"

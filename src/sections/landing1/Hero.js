@@ -1,62 +1,65 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-scroll";
 
-import { Title, Button, Section, Box, Text } from "../../components/Core";
+import GlobalContext from "../../context/GlobalContext";
+import { Title, ButtonIcon, Section, Box } from "../../components/Core";
+import bgHeroPattern from "../../assets/image/webp/hero-pattern.webp";
+import imgL from "../../assets/image/jpg/portfolio-about-3.jpg";
 
-import { device } from "../../utils";
-import imgL from "../../assets/image/png/portrait-1.png";
-
-const ImgRight = styled.img`
-  max-width: 100%;
+const SectionStyled = styled(Section)`
+  &::before {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 120%;
+    background: url(${bgHeroPattern}) top center no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
 `;
 
 const Hero = () => {
+  const gContext = useContext(GlobalContext);
+
   return (
     <>
       {/* <!-- Hero Area --> */}
-      <Section hero className="position-relative">
+      <SectionStyled hero className="position-relative">
         <Container>
-          <Row className="align-items-center">
-            <Col lg="7" className="mb-5 mb-lg-0">
+          <Box pb="40px">
+            <img
+              src={imgL}
+              alt=""
+              css={`
+                border-radius: 50rem !important;
+              `}
+            />
+          </Box>
+          <Row className="align-items-lg-end">
+            <Col lg="8" sm="12" className="mb-5 mb-lg-0">
               <Box>
-                <Text
-                  variant="tag"
-                  mb={4}
-                  className="text-uppercase"
-                  color="heading"
-                  mb="40px"
-                >
-                  ILLUSTRATOR, GRAPHIC DESIGNER, TRAVELER
-                </Text>
                 <Title variant="hero">
-                  I design digital crafts for clients.
+                  Fernanda Cruz Quintero
                 </Title>
-
-                <Box mt="52px">
-                  <Link
-                    to="works"
-                    spy={true}
-                    smooth={true}
-                    offset={-50}
-                    duration={1000}
-                  >
-                    <Button arrowRight>Explore works </Button>
-                  </Link>
-                </Box>
               </Box>
             </Col>
-            <Col lg="5" md="8" sm="9">
-              <div className="text-center text-lg-right position-relative">
-                <div className="img-main">
-                  <ImgRight src={imgL} alt="" />
-                </div>
-              </div>
+            <Col lg="4" sm="12">
+              <Box pl="1.25rem">
+                <ButtonIcon
+                  onClick={(e) => {
+                    e.preventDefault();
+                    gContext.toggleContact();
+                  }}
+                >
+                  Hablemos ahora
+                </ButtonIcon>
+              </Box>
             </Col>
           </Row>
         </Container>
-      </Section>
+      </SectionStyled>
     </>
   );
 };

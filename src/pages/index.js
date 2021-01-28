@@ -11,10 +11,7 @@ const IndexPage = () => {
     <>
       <PageWrapper>
         <Hero />
-        <Element name="works">
-          <Works />
-        </Element>
-
+        <Works />
         <Contact />
       </PageWrapper>
     </>
