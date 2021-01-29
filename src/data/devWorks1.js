@@ -46,14 +46,6 @@ export const devWorks1 = [
     thumbnail: imgT5,
   link : "/alumni"
 },
-{
-  brand: `STEM`,
-  slug: `stem-web`,
-  title: `STEM`,
-  categories: [`web`],
-  thumbnail: imgT6,
-link : "/stem"
-},
   {
     brand: `Eventos COV`,
     slug: `eventos-web`,

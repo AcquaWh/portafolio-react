@@ -19,7 +19,6 @@ export const menuItems = [
         items: [
           { name: "alumni", label: "alumni" },
           { name: "eventos-cov", label: "eventos cov" },
-          { name: "stem", label: "stem" },
         ],
       },
     ],
