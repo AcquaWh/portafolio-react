@@ -5,10 +5,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Section, Button, Title, Text, Box } from "../components/Core";
 import PageWrapper from "../components/PageWrapper";
 import Contact from "../sections/common/Contact";
-import imgWorkCover from "../assets/image/jpg/details/kite.jpg";
-import imgS1 from "../assets/image/jpg/details/kite-inicio.jpg";
-import imgS2 from "../assets/image/jpg/details/kite-propietario.jpg";
-import imgS3 from "../assets/image/jpg/details/kite-admin.jpg";
+import imgWorkCover from "../assets/image/jpg/details/kite.webp";
+import imgS1 from "../assets/image/jpg/details/kite-inicio.webp";
+import imgS2 from "../assets/image/jpg/details/kite-propietario.webp";
+import imgS3 from "../assets/image/jpg/details/kite-admin.webp";
 import { device } from "../utils";
 
 const WorkSingle = () => {

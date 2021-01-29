@@ -1,12 +1,12 @@
-import imgT1 from "../assets/image/jpg/dev/masonry/erus.jpg";
-import imgT2 from "../assets/image/jpg/dev/masonry/kite.jpg";
-import imgT3 from "../assets/image/jpg/dev/masonry/certificate.jpg";
-import imgT4 from "../assets/image/jpg/dev/masonry/wingman.jpg";
-import imgT5 from "../assets/image/jpg/dev/masonry/alumni.jpg";
-import imgT6 from "../assets/image/jpg/dev/masonry/cov.jpg";
-import imgT7 from "../assets/image/jpg/dev/masonry/caffenio.jpg";
-import imgT8 from "../assets/image/jpg/dev/masonry/vr.jpg";
-import imgT9 from "../assets/image/jpg/dev/masonry/novutek.jpg";
+import imgT1 from "../assets/image/jpg/dev/masonry/erus.webp";
+import imgT2 from "../assets/image/jpg/dev/masonry/kite.webp";
+import imgT3 from "../assets/image/jpg/dev/masonry/certificate.webp";
+import imgT4 from "../assets/image/jpg/dev/masonry/wingman.webp";
+import imgT5 from "../assets/image/jpg/dev/masonry/alumni.webp";
+import imgT6 from "../assets/image/jpg/dev/masonry/cov.webp";
+import imgT7 from "../assets/image/jpg/dev/masonry/caffenio.webp";
+import imgT8 from "../assets/image/jpg/dev/masonry/vr.webp";
+import imgT9 from "../assets/image/jpg/dev/masonry/novutek.webp";
 
 export const devWorks1 = [
   {

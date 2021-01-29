@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Section, Button, Title, Text, Box } from "../components/Core";
 import PageWrapper from "../components/PageWrapper";
 import Contact from "../sections/common/Contact";
-import imgWorkCover from "../assets/image/jpg/details/caffenio-details.png";
+import imgWorkCover from "../assets/image/jpg/details/caffenio-details.webp";
 import { device } from "../utils";
 
 const WorkSingle = () => {

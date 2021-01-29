@@ -5,9 +5,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Section, Button, Title, Text, Box } from "../components/Core";
 import PageWrapper from "../components/PageWrapper";
 import Contact from "../sections/common/Contact";
-import imgWorkCover from "../assets/image/jpg/details/novutek.jpg";
-import imgS1 from "../assets/image/jpg/details/novutek-details.jpg";
-import imgS2 from "../assets/image/jpg/details/novutek-details2.jpg";
+import imgWorkCover from "../assets/image/jpg/details/novutek.webp";
+import imgS1 from "../assets/image/jpg/details/novutek-details.webp";
+import imgS2 from "../assets/image/jpg/details/novutek-details2.webp";
 import { device } from "../utils";
 
 const WorkSingle = () => {
