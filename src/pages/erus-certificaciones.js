@@ -69,7 +69,7 @@ const WorkSingle = () => {
                 </Title>
               </Col>
               <Col lg="4">
-                <Button arrowRight>Ver página</Button>
+                <Link to="https://capacitate.erus.mx/login"><Button arrowRight>Ver página</Button></Link>
               </Col>
             </Row>
           </Container>

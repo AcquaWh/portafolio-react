@@ -33,7 +33,7 @@ const WorkSingle = () => {
               <Col lg="8">
                 <Text variant="tag">WEB</Text>
                 <Title variant="secSm" className="my-4">
-                  Nasa Spaceapps
+                  Novutek UI
                 </Title>
                 <Text
                   variant="p"
@@ -59,17 +59,14 @@ const WorkSingle = () => {
               <Col lg="4" className="mb-4 mb-lg-0">
                 <Text variant="tag">Cliente</Text>
                 <Title variant="cardBig" className="mt-3">
-                  Nasa
+                  Novutek
                 </Title>
               </Col>
               <Col lg="4" className="mb-4 mb-lg-0">
                 <Text variant="tag">Tiempo</Text>
                 <Title variant="cardBig" className="mt-3">
-                  Octubre 28, 2019
+                  Mayo 2, 2019
                 </Title>
-              </Col>
-              <Col lg="4">
-                <Link to="https://2019.spaceappschallenge.org/challenges/living-our-world/1up-nasa-earth/teams/the-no-names/project"><Button arrowRight>Ver página</Button></Link>
               </Col>
             </Row>
           </Container>

@@ -33,7 +33,7 @@ const WorkSingle = () => {
               <Col lg="8">
                 <Text variant="tag">WEB</Text>
                 <Title variant="secSm" className="my-4">
-                  Nasa Spaceapps
+                  Caffenio Wordpress
                 </Title>
                 <Text
                   variant="p"
@@ -59,41 +59,18 @@ const WorkSingle = () => {
               <Col lg="4" className="mb-4 mb-lg-0">
                 <Text variant="tag">Cliente</Text>
                 <Title variant="cardBig" className="mt-3">
-                  Nasa
+                  Caffenio
                 </Title>
               </Col>
               <Col lg="4" className="mb-4 mb-lg-0">
                 <Text variant="tag">Tiempo</Text>
                 <Title variant="cardBig" className="mt-3">
-                  Octubre 28, 2019
+                  Agusto 20, 2020
                 </Title>
-              </Col>
-              <Col lg="4">
-                <Link to="https://2019.spaceappschallenge.org/challenges/living-our-world/1up-nasa-earth/teams/the-no-names/project"><Button arrowRight>Ver página</Button></Link>
               </Col>
             </Row>
           </Container>
         </div>
-        <Section className="mt-lg-5">
-          <Container>
-            <Row>
-              <Col xs="12" className="mb-5">
-                <img src={imgS1} alt="" className="img-fluid w-100" />
-              </Col>
-              <Col xs="12" className="mb-5">
-                <img src={imgS2} alt="" className="img-fluid w-100" />
-              </Col>
-              <Col lg="6" className="mb-5 mb-lg-0 pr-lg-4">
-                <img src={imgS3} alt="" className="img-fluid w-100" />
-              </Col>
-              <Col lg="6" className="pl-lg-4">
-                <img src={imgS4} alt="" className="img-fluid w-100" />
-              </Col>
-            </Row>
-          </Container>
-        </Section>
-        
-        
         <Box py={4}>
           <Contact />
         </Box>

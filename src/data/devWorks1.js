@@ -5,6 +5,8 @@ import imgT4 from "../assets/image/jpg/dev/masonry/wingman.jpg";
 import imgT5 from "../assets/image/jpg/dev/masonry/alumni.jpg";
 import imgT6 from "../assets/image/jpg/dev/masonry/cov.jpg";
 import imgT7 from "../assets/image/jpg/dev/masonry/vr.jpg";
+import imgT8 from "../assets/image/jpg/dev/masonry/vr.jpg";
+import imgT9 from "../assets/image/jpg/dev/masonry/vr.jpg";
 
 export const devWorks1 = [
   {
@@ -56,11 +58,35 @@ export const devWorks1 = [
   link : "/eventos-cov"
 },
 {
+  brand: `Caffenio`,
+  slug: `caffenio-web`,
+  title: `Caffenio`,
+  categories: [`web`],
+  thumbnail: imgT6,
+link : "/caffenio"
+},
+{
   brand: `Nasa SpaceApps`,
   slug: `nasa-vr`,
   title: `Nasa SpaceApps`,
   categories: [`vr`],
   thumbnail: imgT7,
 link : "/nasa-spaceapps"
+},
+{
+  brand: `Kite UI`,
+  slug: `kite-ui`,
+  title: `Kite UI`,
+  categories: [`ui`],
+  thumbnail: imgT8,
+link : "/kite-ui"
+},
+{
+  brand: `Novutek UI`,
+  slug: `novutek-ui`,
+  title: `Novutek UI`,
+  categories: [`ui`],
+  thumbnail: imgT9,
+link : "/novutek-ui"
 },
 ];

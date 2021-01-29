@@ -69,7 +69,7 @@ const WorkSingle = () => {
                 </Title>
               </Col>
               <Col lg="4">
-                <Button arrowRight>Ver página</Button>
+              <Link to="http://wingman.mx/demo/"><Button arrowRight>Ver página</Button></Link>
               </Col>
             </Row>
           </Container>

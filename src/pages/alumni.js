@@ -65,35 +65,12 @@ const WorkSingle = () => {
               <Col lg="4" className="mb-4 mb-lg-0">
                 <Text variant="tag">Tiempo</Text>
                 <Title variant="cardBig" className="mt-3">
-                  Apr 14, 2020
+                  Mayo 14, 2020
                 </Title>
-              </Col>
-              <Col lg="4">
-                <Button arrowRight>Ver página</Button>
               </Col>
             </Row>
           </Container>
         </div>
-        <Section className="mt-lg-5">
-          <Container>
-            <Row>
-              <Col xs="12" className="mb-5">
-                <img src={imgS1} alt="" className="img-fluid w-100" />
-              </Col>
-              <Col xs="12" className="mb-5">
-                <img src={imgS2} alt="" className="img-fluid w-100" />
-              </Col>
-              <Col lg="6" className="mb-5 mb-lg-0 pr-lg-4">
-                <img src={imgS3} alt="" className="img-fluid w-100" />
-              </Col>
-              <Col lg="6" className="pl-lg-4">
-                <img src={imgS4} alt="" className="img-fluid w-100" />
-              </Col>
-            </Row>
-          </Container>
-        </Section>
-        
-        
         <Box py={4}>
           <Contact />
         </Box>
