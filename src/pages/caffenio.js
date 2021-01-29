@@ -35,13 +35,9 @@ const WorkSingle = () => {
                     max-width: 750px;
                   `}
                 >
-                  To satisfy our goal of creating a brand that could adapt
-                  across many use cases, we took the base form of their new logo
-                  and used it as an artboard. As long as the structural outline
-                  of the mark stayed consistent their brand was allowed to flex
-                  and adapt to specific uses. And by introducing these
-                  illustrative elements to the logomark, Strictly found it’s
-                  voice.
+                  Se desarrollo en Wordpress como un tema nuevo para Caffenio como una bolsa de trabajo donde 
+                  podrán contratar empleados nuevos y nosotros podremos buscar nuevas opciones para trabajar en Caffenio.
+                  Esto se creo cuando estaba laborando en Mawe Tecnologías.
                 </Text>
               </Col>
             </Row>

@@ -36,13 +36,8 @@ const WorkSingle = () => {
                     max-width: 750px;
                   `}
                 >
-                  To satisfy our goal of creating a brand that could adapt
-                  across many use cases, we took the base form of their new logo
-                  and used it as an artboard. As long as the structural outline
-                  of the mark stayed consistent their brand was allowed to flex
-                  and adapt to specific uses. And by introducing these
-                  illustrative elements to the logomark, Strictly found it’s
-                  voice.
+                  Un juego de realidad virtual desarrollado en Unity con C# que permite a los jugadores experimentar las verdaderas consecuencias del cambio climatico. 
+                  Fue nominado en Ciudad Obregón en el 2019.
                 </Text>
               </Col>
             </Row>

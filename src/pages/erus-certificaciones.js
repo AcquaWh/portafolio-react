@@ -6,10 +6,9 @@ import { Section, Button, Title, Text, Box } from "../components/Core";
 import PageWrapper from "../components/PageWrapper";
 import Contact from "../sections/common/Contact";
 import imgWorkCover from "../assets/image/jpg/details/certificate.jpg";
-import imgS1 from "../assets/image/jpg/details/details-6.jpg";
-import imgS2 from "../assets/image/jpg/details/details-5.jpg";
-import imgS3 from "../assets/image/jpg/details/details-4.jpg";
-import imgS4 from "../assets/image/jpg/details/details-3.jpg";
+import imgS1 from "../assets/image/jpg/details/certificate-details.jpg";
+import imgS2 from "../assets/image/jpg/details/certificate-details2.jpg";
+import imgS3 from "../assets/image/jpg/details/certificate-details3.jpg";
 import { device } from "../utils";
 
 const WorkSingle = () => {
@@ -39,13 +38,10 @@ const WorkSingle = () => {
                     max-width: 750px;
                   `}
                 >
-                  To satisfy our goal of creating a brand that could adapt
-                  across many use cases, we took the base form of their new logo
-                  and used it as an artboard. As long as the structural outline
-                  of the mark stayed consistent their brand was allowed to flex
-                  and adapt to specific uses. And by introducing these
-                  illustrative elements to the logomark, Strictly found it’s
-                  voice.
+                  Mi equipo y yo creamos una herramienta para capacitar a los empleados de Erus programada con Angular y PHP,
+                  donde podrán ver videos, hacer sus propias videoconferencias desde la plataforma. El acceso es solo restringuido a
+                  empleados de Erus. Dependiendo de cuantas capacitaciones hayas tomado y pasado por un examen después conseguiras
+                  una insignia.
                 </Text>
               </Col>
             </Row>
@@ -83,9 +79,6 @@ const WorkSingle = () => {
               </Col>
               <Col lg="6" className="mb-5 mb-lg-0 pr-lg-4">
                 <img src={imgS3} alt="" className="img-fluid w-100" />
-              </Col>
-              <Col lg="6" className="pl-lg-4">
-                <img src={imgS4} alt="" className="img-fluid w-100" />
               </Col>
             </Row>
           </Container>

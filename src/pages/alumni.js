@@ -6,12 +6,6 @@ import { Section, Button, Title, Text, Box } from "../components/Core";
 import PageWrapper from "../components/PageWrapper";
 import Contact from "../sections/common/Contact";
 import imgWorkCover from "../assets/image/jpg/details/alumni.jpg";
-import imgS1 from "../assets/image/jpg/details/details-6.jpg";
-import imgS2 from "../assets/image/jpg/details/details-5.jpg";
-import imgS3 from "../assets/image/jpg/details/details-4.jpg";
-import imgS4 from "../assets/image/jpg/details/details-3.jpg";
-import imgS5 from "../assets/image/jpg/details/details-8.jpg";
-import imgS6 from "../assets/image/jpg/details/details-7.jpg";
 import { device } from "../utils";
 
 const WorkSingle = () => {
@@ -41,13 +35,8 @@ const WorkSingle = () => {
                     max-width: 750px;
                   `}
                 >
-                  To satisfy our goal of creating a brand that could adapt
-                  across many use cases, we took the base form of their new logo
-                  and used it as an artboard. As long as the structural outline
-                  of the mark stayed consistent their brand was allowed to flex
-                  and adapt to specific uses. And by introducing these
-                  illustrative elements to the logomark, Strictly found it’s
-                  voice.
+                  La desarrolle en Laravel para los Alumnis de ULSA Noroeste mientras estaba laborando en la empresa de Mawe Tecnologías 
+                  donde empresas y alumnos graduados se registrarán para buscar empleo o registrar alguna oferta de trabajo.
                 </Text>
               </Col>
             </Row>

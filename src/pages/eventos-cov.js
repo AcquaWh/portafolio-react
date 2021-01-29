@@ -35,13 +35,8 @@ const WorkSingle = () => {
                     max-width: 750px;
                   `}
                 >
-                  To satisfy our goal of creating a brand that could adapt
-                  across many use cases, we took the base form of their new logo
-                  and used it as an artboard. As long as the structural outline
-                  of the mark stayed consistent their brand was allowed to flex
-                  and adapt to specific uses. And by introducing these
-                  illustrative elements to the logomark, Strictly found it’s
-                  voice.
+                  Desarrolle esta plataforma en Laravel para la inscripción de colegiados, universidades, entre otras cosas para los eventos que se organizan en ELCOV para saber
+                  si asistió o no al evento organizado actual y sí pago su inscripción.
                 </Text>
               </Col>
             </Row>
