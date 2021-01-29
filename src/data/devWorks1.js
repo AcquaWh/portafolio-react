@@ -1,11 +1,9 @@
 import imgT1 from "../assets/image/jpg/dev/masonry/erus.jpg";
 import imgT2 from "../assets/image/jpg/dev/masonry/kite.jpg";
-import imgT3 from "../assets/image/jpg/dev/masonry/portfolio-mas-6.jpg";
-import imgT4 from "../assets/image/jpg/dev/masonry/portfolio-mas-5.jpg";
-import imgT5 from "../assets/image/jpg/dev/masonry/portfolio-mas-4.jpg";
-import imgT6 from "../assets/image/jpg/dev/masonry/portfolio-mas-1.jpg";
-import imgT7 from "../assets/image/jpg/dev/masonry/portfolio-mas-2.jpg";
-import imgT8 from "../assets/image/jpg/dev/masonry/portfolio-mas-3.jpg";
+import imgT3 from "../assets/image/jpg/dev/masonry/certificate.jpg";
+import imgT4 from "../assets/image/jpg/dev/masonry/wingman.jpg";
+import imgT5 from "../assets/image/jpg/dev/masonry/alumni.jpg";
+import imgT6 from "../assets/image/jpg/dev/masonry/stem.jpg";
 
 export const devWorks1 = [
   {
@@ -49,11 +47,11 @@ export const devWorks1 = [
   link : "/alumni"
 },
 {
-  brand: `Stem`,
+  brand: `STEM`,
   slug: `stem-web`,
-  title: `Stem`,
+  title: `STEM`,
   categories: [`web`],
-  thumbnail: imgT5,
+  thumbnail: imgT6,
 link : "/stem"
 },
   {
