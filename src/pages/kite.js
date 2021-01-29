@@ -59,7 +59,7 @@ const WorkSingle = () => {
                 </Title>
               </Col>
               <Col lg="4" className="mb-4 mb-lg-0">
-                <Text variant="tag">Time</Text>
+                <Text variant="tag">Tiempo</Text>
                 <Title variant="cardBig" className="mt-3">
                   Abril 27, 2020
                 </Title>

@@ -67,6 +67,19 @@ const Works = () => {
               <li className="nav-item">
                 <a
                   className={`nav-link font-weight-bold text-uppercase ${
+                    activeLink === "ui" ? "active" : null
+                  }`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    filterBy("ui");
+                  }}
+                >
+                  Diseño UI
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className={`nav-link font-weight-bold text-uppercase ${
                     activeLink === "vr" ? "active" : null
                   }`}
                   onClick={(e) => {
