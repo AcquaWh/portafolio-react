@@ -37,6 +37,8 @@ const WorkSingle = () => {
                 >
                   La desarrolle en Laravel para los Alumnis de ULSA Noroeste mientras estaba laborando en la empresa de Mawe Tecnologías 
                   donde empresas y alumnos graduados se registrarán para buscar empleo o registrar alguna oferta de trabajo.
+                  Tiene un panel de control para los alumnis, administradores, las universidades y las empresas.
+                  Las universidades podrán importar sus alumnos mediante un CSV.
                 </Text>
               </Col>
             </Row>

@@ -6,12 +6,13 @@ import { Section, Button, Title, Text, Box } from "../components/Core";
 import PageWrapper from "../components/PageWrapper";
 import Contact from "../sections/common/Contact";
 import imgWorkCover from "../assets/image/jpg/details/wingman.jpg";
-import imgS1 from "../assets/image/jpg/details/details-6.jpg";
-import imgS2 from "../assets/image/jpg/details/details-5.jpg";
-import imgS3 from "../assets/image/jpg/details/details-4.jpg";
-import imgS4 from "../assets/image/jpg/details/details-3.jpg";
-import imgS5 from "../assets/image/jpg/details/details-8.jpg";
-import imgS6 from "../assets/image/jpg/details/details-7.jpg";
+import imgS1 from "../assets/image/jpg/details/crear-proyecto.png";
+import imgS2 from "../assets/image/jpg/details/usuario.png";
+import imgS3 from "../assets/image/jpg/details/proyecto.png";
+import imgS4 from "../assets/image/jpg/details/proveedor.png";
+import imgS5 from "../assets/image/jpg/details/pagos.png";
+import imgS6 from "../assets/image/jpg/details/chat.png";
+import imgS7 from "../assets/image/jpg/details/backoffice.jpg";
 import { device } from "../utils";
 
 const WorkSingle = () => {
@@ -33,7 +34,7 @@ const WorkSingle = () => {
               <Col lg="8">
                 <Text variant="tag">WEB</Text>
                 <Title variant="secSm" className="my-4">
-                  Wingman
+                  Wingman y Backoffice
                 </Title>
                 <Text
                   variant="p"
@@ -41,7 +42,39 @@ const WorkSingle = () => {
                     max-width: 750px;
                   `}
                 >
-                  
+                  Se desarrollo en Angular y PHP para Erus que funcionara como una bolsa de trabajo en línea que se pueden solicitar
+                  servicios como un carpintero, un ingeniero, un licenciado hasta un pintor.
+                </Text>
+                <Text
+                  variant="p"
+                  css={`
+                    max-width: 750px;
+                  `}
+                >
+                  <strong>PROCESO DE TRABAJO</strong>
+                  <p>Los de Erus tienen un área donde mandan sus Mockups y diseños, el desarrollo de el sitio web se baso en eso, después
+                  se hace una reunión para revisar sí las páginas son responsivas y funcionan correctamente.
+                  Se desarrollo un chat donde proveedor y cliente esten en contacto.
+                  Después de hacer el panel para el cliente y el proveedor se trabajo en el Backoffice donde se podrá administrar el marketing, entre otras cosas
+                  que se mostrarán en las imagenes siguientes.</p>
+                </Text>
+                <Text
+                  variant="p"
+                  css={`
+                    max-width: 750px;
+                  `}
+                >
+                  <strong>MÉTODOS DE PAGO</strong>
+                  <p>Se utilizaron las librerias de npm de Stripe y Paypal</p>
+                </Text>
+                <Text
+                  variant="p"
+                  css={`
+                    max-width: 750px;
+                  `}
+                >
+                  <strong>CORREOS</strong>
+                  <p>Se uso Mailchimp para mandar correos a los usuarios en donde yo diseñe los correos que se mandarían.</p>
                 </Text>
               </Col>
             </Row>
@@ -59,7 +92,7 @@ const WorkSingle = () => {
               <Col lg="4" className="mb-4 mb-lg-0">
                 <Text variant="tag">Tiempo</Text>
                 <Title variant="cardBig" className="mt-3">
-                  Apr 14, 2020
+                  Noviembre 27, 2020
                 </Title>
               </Col>
               <Col lg="4">
@@ -77,17 +110,24 @@ const WorkSingle = () => {
               <Col xs="12" className="mb-5">
                 <img src={imgS2} alt="" className="img-fluid w-100" />
               </Col>
+              <Col xs="12" className="mb-5">
+                <img src={imgS7} alt="" className="img-fluid w-100" />
+              </Col>
               <Col lg="6" className="mb-5 mb-lg-0 pr-lg-4">
                 <img src={imgS3} alt="" className="img-fluid w-100" />
               </Col>
               <Col lg="6" className="pl-lg-4">
                 <img src={imgS4} alt="" className="img-fluid w-100" />
               </Col>
+              <Col lg="6" className="pl-lg-4">
+                <img src={imgS5} alt="" className="img-fluid w-100" />
+              </Col>
+              <Col lg="6" className="pl-lg-4">
+                <img src={imgS6} alt="" className="img-fluid w-100" />
+              </Col>
             </Row>
           </Container>
         </Section>
-        
-        
         <Box py={4}>
           <Contact />
         </Box>

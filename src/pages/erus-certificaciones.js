@@ -77,7 +77,7 @@ const WorkSingle = () => {
               <Col xs="12" className="mb-5">
                 <img src={imgS2} alt="" className="img-fluid w-100" />
               </Col>
-              <Col lg="6" className="mb-5 mb-lg-0 pr-lg-4">
+              <Col lg="12" className="mb-5">
                 <img src={imgS3} alt="" className="img-fluid w-100" />
               </Col>
             </Row>
