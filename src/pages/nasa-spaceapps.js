@@ -64,7 +64,7 @@ const WorkSingle = () => {
                 </Title>
               </Col>
               <Col lg="4">
-                <Link to="https://2019.spaceappschallenge.org/challenges/living-our-world/1up-nasa-earth/teams/the-no-names/project"><Button arrowRight>Ver página</Button></Link>
+                <Link to="https://2019.spaceappschallenge.org/challenges/living-our-world/1up-nasa-earth/teams/the-no-names/project" target="_blank"><Button arrowRight>Ver página</Button></Link>
               </Col>
             </Row>
           </Container>

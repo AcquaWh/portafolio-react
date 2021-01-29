@@ -64,7 +64,7 @@ const WorkSingle = () => {
                 </Title>
               </Col>
               <Col lg="4">
-                <Link to="https://erus.mx/"><Button arrowRight>Ver página</Button></Link>
+                <Link to="https://erus.mx/" target="_blank"><Button arrowRight>Ver página</Button></Link>
               </Col>
             </Row>
           </Container>

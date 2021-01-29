@@ -62,7 +62,7 @@ const WorkSingle = () => {
                 </Title>
               </Col>
               <Col lg="4">
-              <Link to="http://alpae.mx/kite/start"><Button arrowRight>Ver página</Button></Link>
+              <Link to="http://alpae.mx/kite/start" target="_blank"><Button arrowRight>Ver página</Button></Link>
               </Col>
             </Row>
           </Container>
