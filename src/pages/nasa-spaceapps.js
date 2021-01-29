@@ -6,12 +6,7 @@ import { Section, Button, Title, Text, Box } from "../components/Core";
 import PageWrapper from "../components/PageWrapper";
 import Contact from "../sections/common/Contact";
 import imgWorkCover from "../assets/image/jpg/details/vr.jpg";
-import imgS1 from "../assets/image/jpg/details/details-6.jpg";
-import imgS2 from "../assets/image/jpg/details/details-5.jpg";
-import imgS3 from "../assets/image/jpg/details/details-4.jpg";
-import imgS4 from "../assets/image/jpg/details/details-3.jpg";
-import imgS5 from "../assets/image/jpg/details/details-8.jpg";
-import imgS6 from "../assets/image/jpg/details/details-7.jpg";
+import imgS1 from "../assets/image/jpg/details/vr-details.jpg";
 import { device } from "../utils";
 
 const WorkSingle = () => {
@@ -31,7 +26,7 @@ const WorkSingle = () => {
           <Container>
             <Row>
               <Col lg="8">
-                <Text variant="tag">WEB</Text>
+                <Text variant="tag">VR</Text>
                 <Title variant="secSm" className="my-4">
                   Nasa Spaceapps
                 </Title>
@@ -79,15 +74,6 @@ const WorkSingle = () => {
             <Row>
               <Col xs="12" className="mb-5">
                 <img src={imgS1} alt="" className="img-fluid w-100" />
-              </Col>
-              <Col xs="12" className="mb-5">
-                <img src={imgS2} alt="" className="img-fluid w-100" />
-              </Col>
-              <Col lg="6" className="mb-5 mb-lg-0 pr-lg-4">
-                <img src={imgS3} alt="" className="img-fluid w-100" />
-              </Col>
-              <Col lg="6" className="pl-lg-4">
-                <img src={imgS4} alt="" className="img-fluid w-100" />
               </Col>
             </Row>
           </Container>

@@ -6,12 +6,9 @@ import { Section, Button, Title, Text, Box } from "../components/Core";
 import PageWrapper from "../components/PageWrapper";
 import Contact from "../sections/common/Contact";
 import imgWorkCover from "../assets/image/jpg/details/kite.jpg";
-import imgS1 from "../assets/image/jpg/details/kite-details.jpg";
-import imgS2 from "../assets/image/jpg/details/kite-details2.jpg";
-import imgS3 from "../assets/image/jpg/details/kite-details3.jpg";
-import imgS4 from "../assets/image/jpg/details/details-3.jpg";
-import imgS5 from "../assets/image/jpg/details/details-8.jpg";
-import imgS6 from "../assets/image/jpg/details/details-7.jpg";
+import imgS1 from "../assets/image/jpg/details/kite-inicio.jpg";
+import imgS2 from "../assets/image/jpg/details/kite-propietario.jpg";
+import imgS3 from "../assets/image/jpg/details/kite-admin.jpg";
 import { device } from "../utils";
 
 const WorkSingle = () => {
@@ -85,8 +82,6 @@ const WorkSingle = () => {
             </Row>
           </Container>
         </Section>
-        
-        
         <Box py={4}>
           <Contact />
         </Box>

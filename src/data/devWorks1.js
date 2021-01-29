@@ -4,9 +4,9 @@ import imgT3 from "../assets/image/jpg/dev/masonry/certificate.jpg";
 import imgT4 from "../assets/image/jpg/dev/masonry/wingman.jpg";
 import imgT5 from "../assets/image/jpg/dev/masonry/alumni.jpg";
 import imgT6 from "../assets/image/jpg/dev/masonry/cov.jpg";
-import imgT7 from "../assets/image/jpg/dev/masonry/vr.jpg";
+import imgT7 from "../assets/image/jpg/dev/masonry/caffenio.jpg";
 import imgT8 from "../assets/image/jpg/dev/masonry/vr.jpg";
-import imgT9 from "../assets/image/jpg/dev/masonry/vr.jpg";
+import imgT9 from "../assets/image/jpg/dev/masonry/novutek.jpg";
 
 export const devWorks1 = [
   {
@@ -62,7 +62,7 @@ export const devWorks1 = [
   slug: `caffenio-web`,
   title: `Caffenio`,
   categories: [`web`],
-  thumbnail: imgT6,
+  thumbnail: imgT7,
 link : "/caffenio"
 },
 {
@@ -70,16 +70,8 @@ link : "/caffenio"
   slug: `nasa-vr`,
   title: `Nasa SpaceApps`,
   categories: [`vr`],
-  thumbnail: imgT7,
-link : "/nasa-spaceapps"
-},
-{
-  brand: `Kite UI`,
-  slug: `kite-ui`,
-  title: `Kite UI`,
-  categories: [`ui`],
   thumbnail: imgT8,
-link : "/kite-ui"
+link : "/nasa-spaceapps"
 },
 {
   brand: `Novutek UI`,
