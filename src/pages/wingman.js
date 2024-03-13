@@ -5,14 +5,14 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Section, Button, Title, Text, Box } from "../components/Core";
 import PageWrapper from "../components/PageWrapper";
 import Contact from "../sections/common/Contact";
-import imgWorkCover from "../assets/image/jpg/details/wingman.jpg";
-import imgS1 from "../assets/image/jpg/details/crear-proyecto.png";
-import imgS2 from "../assets/image/jpg/details/usuario.png";
-import imgS3 from "../assets/image/jpg/details/proyecto.png";
-import imgS4 from "../assets/image/jpg/details/proveedor.png";
-import imgS5 from "../assets/image/jpg/details/pagos.png";
-import imgS6 from "../assets/image/jpg/details/chat.png";
-import imgS7 from "../assets/image/jpg/details/backoffice.jpg";
+import imgWorkCover from "../assets/image/jpg/details/wingman.webp";
+import imgS1 from "../assets/image/jpg/details/crear-proyecto.webp";
+import imgS2 from "../assets/image/jpg/details/usuario.webp";
+import imgS3 from "../assets/image/jpg/details/proyecto.webp";
+import imgS4 from "../assets/image/jpg/details/proveedor.webp";
+import imgS5 from "../assets/image/jpg/details/pagos.webp";
+import imgS6 from "../assets/image/jpg/details/chat.webp";
+import imgS7 from "../assets/image/jpg/details/backoffice.webp";
 import { device } from "../utils";
 
 const WorkSingle = () => {

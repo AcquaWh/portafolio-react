@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Section, Button, Title, Text, Box } from "../components/Core";
 import PageWrapper from "../components/PageWrapper";
 import Contact from "../sections/common/Contact";
-import imgWorkCover from "../assets/image/jpg/details/erus.jpg";
+import imgWorkCover from "../assets/image/jpg/details/erus.webp";
 import { device } from "../utils";
 
 const WorkSingle = () => {
