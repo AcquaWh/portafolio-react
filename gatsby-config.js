@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Omega Gatsby`,
   },
+  //pathPrefix: `/folio-gatsby/public`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
