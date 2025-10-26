@@ -21,7 +21,7 @@ const PageWrapper = ({ children, darkTheme = false, themeConfig = null }) => {
     } else {
       gContext.changeTheme({ ...themeConfigDefault, ...themeConfig });
     }
-  }, []);
+  }, [darkTheme, gContext, themeConfig]);
 
   return <>{children}</>;
 };

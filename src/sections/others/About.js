@@ -47,18 +47,16 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                 </Text>
                 <Text color="light" className="mt-4">
                 Me desempeño como desarrolladora full-stack
-                desde hace más de 4 años en el ambito web. 
-                Soy Co-Fundadora de HostedRed.
                 </Text>
                 <div className="mt-4">
                   <Text color="light">Mandame coreo a</Text>
 
                   <Text variant="p">
                     <a
-                      href="mailto:fernanda.cruz@hostedred.com"
+                      href="mailto:info@fernandacruz.com"
                       className="font-weight-bold"
                     >
-                      <Span color="light">fernanda.cruz@hostedred.com</Span>
+                      <Span color="light">info@fernandacruz.com</Span>
                     </a>
                   </Text>
                 </div>

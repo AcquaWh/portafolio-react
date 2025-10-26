@@ -3,6 +3,21 @@
   "description": "Portafolio web de Fernanda Cruz Quintero",
   "version": "1.0.0",
   "author": "grayic",
+  "license": "MIT",
+  "keywords": ["gatsby", "portafolio", "react", "frontend"],
+  "main": "index.js",
+  "engines": {
+    "node": ">=14 <=16",
+    "npm": ">=6"
+  },
+  "scripts": {
+    "start": "gatsby develop",
+    "develop": "gatsby develop",
+    "build": "gatsby clean && gatsby build --prefix-paths",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\""
+  },
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^1.0.43",
     "aos": "^3.0.0-beta.6",
@@ -37,19 +52,6 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.4.1",
     "styled-system": "^5.1.5"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "start": "yarn develop",
-    "build": "gatsby clean && gatsby build --prefix-paths",
-    "clean": "gatsby clean",
-    "develop": "gatsby develop",
-    "serve": "gatsby serve",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\""
   },
   "devDependencies": {
     "prettier": "^1.17.0"

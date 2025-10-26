@@ -39,18 +39,9 @@ const Contact = ({ hero = true, bg = "dark", ...rest }) => {
                 <div>
                   <Text color="light">Mandame correo en</Text>
 
-                  <a href="mailto:fernanda.cruz@hostedred.com" className="font-weight-bold">
-                    <Span color="primary">fernanda.cruz@hostedred.com</Span>
+                  <a href="mailto:info@fernandacruz.com" className="font-weight-bold">
+                    <Span color="primary">info@fernandacruz.com</Span>
                   </a>
-                </div>
-                <div className="mt-5">
-                  <Text color="light">Llamame a</Text>
-
-                  <div>
-                    <a href="tel:+526441450190" className="font-weight-bold">
-                      <Span color="primary">+52 (644)1450190</Span>
-                    </a>
-                  </div>
                 </div>
               </ContactCard>
             </Col>
