@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
 import { Section, Title, Text, Span } from "../../components/Core";
-import imgPhoto from "../../assets/image/jpg/fer.jpg";
 import imgSignLight from "../../assets/image/png/signature.png";
 
 const LinkSocial = styled.a`
@@ -24,13 +23,8 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
     <>
       <Section hero={hero} bg={bg} {...rest}>
         <Container>
-          <Row className="align-items-center">
-            <Col lg="6">
-              <div>
-                <img src={imgPhoto} alt="folio" className="img-fluid" />
-              </div>
-            </Col>
-            <Col lg="6">
+          <Row className="justify-content-center">
+            <Col lg="8">
               <div className="pl-lg-4 pt-5 pt-lg-0">
                 <Title color="light" variant="secSm">
                   Fernanda Cruz Quintero
@@ -42,11 +36,18 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                     line-height: 1.5;
                   `}
                 >
-                Soy egresada de la licenciatura en Ingeniería en
-                Producción Multimedia, generación 2015.
+                Desarrolladora de software con más de 5 años de experiencia
+                construyendo aplicaciones web y móviles de alto impacto.
+                Trabajo con tecnologías como .NET Core, React, Vue.js, Blazor,
+                Azure y Google Cloud Platform.
                 </Text>
                 <Text color="light" className="mt-4">
-                Me desempeño como desarrolladora full-stack
+                Especializada en desarrollo full-stack y aplicaciones móviles
+                para Android e iOS con React Native y .NET MAUI.
+                Me apasiona escribir código limpio, escalable y orientado
+                a resultados reales para el negocio. Con experiencia en
+                CI/CD, despliegue de aplicaciones y gestión de proyectos
+                con Azure DevOps y Jira.
                 </Text>
                 <div className="mt-4">
                   <Text color="light">Mandame coreo a</Text>
@@ -64,7 +65,7 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                   Fernanda Cruz
                 </Text>
                 <Text color="light" variant="small">
-                  Co-Fundadora de HostedRed
+                  Desarrolladora de Software
                 </Text>
                 <div className="mt-5 d-flex">
                   <LinkSocial
