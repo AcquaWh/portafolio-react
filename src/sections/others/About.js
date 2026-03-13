@@ -50,7 +50,7 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                 con Azure DevOps y Jira.
                 </Text>
                 <div className="mt-4">
-                  <Text color="light">Mandame coreo a</Text>
+                  <Text color="light">Envíame correo a</Text>
 
                   <Text variant="p">
                     <a

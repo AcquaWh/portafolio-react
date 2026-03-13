@@ -7,17 +7,28 @@ const themeConfigDefault = {
   footerDark: false,
 };
 
+const getSavedTheme = () => {
+  try {
+    const saved = localStorage.getItem("theme");
+    return saved ? JSON.parse(saved) : themeConfigDefault;
+  } catch {
+    return themeConfigDefault;
+  }
+};
+
 const GlobalProvider = ({ children }) => {
-  const [theme, setTheme] = useState(themeConfigDefault);
+  const [theme, setTheme] = useState(getSavedTheme);
   const [videoModalVisible, setVideoModalVisible] = useState(false);
   const [aboutVisible, setAboutVisible] = useState(false);
   const [contactVisible, setContactVisible] = useState(false);
   const [visibleOffCanvas, setVisibleOffCanvas] = useState(false);
 
   const changeTheme = (themeConfig = themeConfigDefault) => {
-    setTheme({
-      ...themeConfig,
-    });
+    const newTheme = { ...themeConfig };
+    setTheme(newTheme);
+    try {
+      localStorage.setItem("theme", JSON.stringify(newTheme));
+    } catch {}
   };
 
   const toggleVideoModal = () => {

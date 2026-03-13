@@ -21,7 +21,7 @@ const Hero = () => {
                 <ButtonIcon
                   onClick={(e) => {
                     e.preventDefault();
-                    gContext.toggleContact();
+                    gContext.toggleAbout();
                   }}
                 >
                   Hablemos ahora

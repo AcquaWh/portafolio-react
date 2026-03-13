@@ -447,19 +447,6 @@ const Header = ({ isDark }) => {
                     </a>
                   </li>
 
-                  {/* Open contact modal */}
-                  <li className="nav-item">
-                    <a
-                      className="nav-link"
-                      href="/#"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        gContext.toggleContact();
-                      }}
-                    >
-                      contacto.
-                    </a>
-                  </li>
                 </Menu>
               </div>
             </div>
