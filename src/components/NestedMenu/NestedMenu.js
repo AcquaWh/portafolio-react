@@ -207,9 +207,27 @@ const NestedMenu = ({ menuItems = defaultMenuItems }) => {
                 }
               }}
             >
-              about me.
+              acerca de mi.
             </a>
           }
+        </ListGroup.Item>
+
+        <ListGroup.Item
+          css={`
+            padding-left: 0px !important;
+            padding-right: 0 !important;
+          `}
+        >
+          <Link
+            to="/curriculum"
+            onClick={() => {
+              if (gContext.visibleOffCanvas) {
+                gContext.toggleOffCanvas();
+              }
+            }}
+          >
+            curriculum.
+          </Link>
         </ListGroup.Item>
 
       </ListGroup>
