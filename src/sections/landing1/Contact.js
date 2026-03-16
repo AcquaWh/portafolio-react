@@ -14,10 +14,10 @@ const Hero = () => {
         <Container>
           <Row className="text-center justify-content-center">
             <Col lg="10" xl="7">
-              <div className="text-center mb-5">
+              <div className="text-center mb-5" data-aos="fade-up">
                 <Title variant="hero">¿Estás listo para hablar?</Title>
               </div>
-              <div className="text-center">
+              <div className="text-center" data-aos="fade-up" data-aos-delay="150">
                 <ButtonIcon
                   onClick={(e) => {
                     e.preventDefault();

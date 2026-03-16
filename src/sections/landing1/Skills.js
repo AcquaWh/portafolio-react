@@ -50,12 +50,12 @@ const skills = [
 const Skills = () => (
   <Section>
     <Container>
-      <Title variant="secSm" className="mb-5">
+      <Title variant="secSm" className="mb-5" data-aos="fade-up">
         Stack tecnológico
       </Title>
       <Row>
-        {skills.map(({ category, tags }) => (
-          <Col lg="4" md="6" className="mb-5" key={category}>
+        {skills.map(({ category, tags }, index) => (
+          <Col lg="4" md="6" className="mb-5" key={category} data-aos="fade-up" data-aos-delay={`${(index % 3) * 100 + 100}`}>
             <Text
               variant="tag"
               color="primary"

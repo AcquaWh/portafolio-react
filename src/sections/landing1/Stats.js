@@ -16,25 +16,25 @@ const Stats = () => (
   <Section>
     <Container>
       <Row className="text-center justify-content-center">
-        <Col xs="6" lg="3" className="mb-5 mb-lg-0">
+        <Col xs="6" lg="3" className="mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
           <Box>
             <Number>9+</Number>
             <Text variant="tag" className="mt-3">Años de experiencia</Text>
           </Box>
         </Col>
-        <Col xs="6" lg="3" className="mb-5 mb-lg-0">
+        <Col xs="6" lg="3" className="mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
           <Box>
             <Number>10+</Number>
             <Text variant="tag" className="mt-3">Proyectos entregados</Text>
           </Box>
         </Col>
-        <Col xs="6" lg="3" className="mb-5 mb-lg-0">
+        <Col xs="6" lg="3" className="mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
           <Box>
             <Number>3</Number>
             <Text variant="tag" className="mt-3">Plataformas cloud</Text>
           </Box>
         </Col>
-        <Col xs="6" lg="3">
+        <Col xs="6" lg="3" data-aos="fade-up" data-aos-delay="400">
           <Box>
             <Number>8+</Number>
             <Text variant="tag" className="mt-3">Tecnologías dominadas</Text>

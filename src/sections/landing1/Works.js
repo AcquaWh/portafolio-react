@@ -36,7 +36,7 @@ const Works = () => {
       {/* <!-- Works Area --> */}
       <Section className="position-relative">
         <Container>
-          <Box mb="2.5rem" ml="-1.75rem">
+          <Box mb="2.5rem" ml="-1.75rem" data-aos="fade-up">
             <ListNav className="nav">
               <li className="nav-item">
                 <button
