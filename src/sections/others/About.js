@@ -4,6 +4,12 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Section, Title, Text, Span } from "../../components/Core";
 
+const LightTextWrapper = styled.div`
+  p, h1, h2, h3, h4, h5, h6 {
+    color: ${({ theme }) => theme.colors.light} !important;
+  }
+`;
+
 const LinkSocial = styled.a`
   color: ${({ theme }) => theme.colors.light} !important;
   text-transform: uppercase;
@@ -21,6 +27,7 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
   return (
     <>
       <Section hero={hero} bg={bg} {...rest}>
+        <LightTextWrapper>
         <Container>
           <Row className="justify-content-center">
             <Col lg="8">
@@ -95,6 +102,7 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
             </Col>
           </Row>
         </Container>
+        </LightTextWrapper>
       </Section>
     </>
   );
