@@ -13,7 +13,6 @@ import imgS4 from "../assets/image/jpg/details/proveedor.webp";
 import imgS5 from "../assets/image/jpg/details/pagos.webp";
 import imgS6 from "../assets/image/jpg/details/chat.webp";
 import imgS7 from "../assets/image/jpg/details/backoffice.webp";
-import { device } from "../utils";
 
 const WorkSingle = () => {
   return (

@@ -9,7 +9,6 @@ import imgWorkCover from "../assets/image/jpg/details/kite.webp";
 import imgS1 from "../assets/image/jpg/details/kite-inicio.webp";
 import imgS2 from "../assets/image/jpg/details/kite-propietario.webp";
 import imgS3 from "../assets/image/jpg/details/kite-admin.webp";
-import { device } from "../utils";
 
 const WorkSingle = () => {
   return (

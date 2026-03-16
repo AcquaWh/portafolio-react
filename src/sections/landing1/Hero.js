@@ -41,7 +41,10 @@ const Hero = () => {
             <Col lg="8" sm="12" className="mb-5 mb-lg-0">
               <Box>
                 <Title variant="hero">
-                  Fernanda Cruz Quintero
+                  Fernanda Cruz
+                </Title>
+                <Title variant="card" className="mt-2" color="primary">
+                  Desarrolladora de Software
                 </Title>
               </Box>
             </Col>

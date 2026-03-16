@@ -9,7 +9,6 @@ import imgWorkCover from "../assets/image/jpg/details/certificate.webp";
 import imgS1 from "../assets/image/jpg/details/certificate-details.webp";
 import imgS2 from "../assets/image/jpg/details/certificate-details2.webp";
 import imgS3 from "../assets/image/jpg/details/certificate-details3.webp";
-import { device } from "../utils";
 
 const WorkSingle = () => {
   return (

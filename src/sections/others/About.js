@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
 import { Section, Title, Text, Span } from "../../components/Core";
-import imgSignLight from "../../assets/image/png/signature.png";
 
 const LinkSocial = styled.a`
   color: ${({ theme }) => theme.colors.light} !important;
@@ -27,7 +26,7 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
             <Col lg="8">
               <div className="pl-lg-4 pt-5 pt-lg-0">
                 <Title color="light" variant="secSm">
-                  Fernanda Cruz Quintero
+                  Fernanda Cruz
                 </Title>
                 <Text
                   color="light"
@@ -51,13 +50,18 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                 </Text>
                 <div className="mt-4">
                   <Text color="light">Envíame correo a</Text>
-
                   <Text variant="p">
                     <a
-                      href="mailto:info@fernandacruz.com"
+                      href="#contact"
                       className="font-weight-bold"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const u = "info";
+                        const d = "fernandacruz.com";
+                        window.location.href = "mailto:" + u + "@" + d;
+                      }}
                     >
-                      <Span color="light">info@fernandacruz.com</Span>
+                      <Span color="light">{"info" + "@" + "fernandacruz.com"}</Span>
                     </a>
                   </Text>
                 </div>
@@ -83,14 +87,6 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                     className="mr-3"
                   >
                     Linkedin
-                  </LinkSocial>
-                  <LinkSocial
-                    href="https://www.instagram.com/acquawh/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-weight-bold"
-                  >
-                    Instagram
                   </LinkSocial>
                 </div>
               </div>

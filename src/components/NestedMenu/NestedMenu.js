@@ -212,28 +212,6 @@ const NestedMenu = ({ menuItems = defaultMenuItems }) => {
           }
         </ListGroup.Item>
 
-        {/* Open contact modal */}
-        <ListGroup.Item
-          css={`
-            padding-left: 0px !important;
-            padding-right: 0 !important;
-          `}
-        >
-          {
-            <a
-              href="/#"
-              onClick={(e) => {
-                e.preventDefault();
-                gContext.toggleContact();
-                if (gContext.visibleOffCanvas) {
-                  gContext.toggleOffCanvas();
-                }
-              }}
-            >
-              contact.
-            </a>
-          }
-        </ListGroup.Item>
       </ListGroup>
     </NestedMenuContainer>
   );

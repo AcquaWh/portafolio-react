@@ -39,56 +39,48 @@ const Works = () => {
           <Box mb="2.5rem" ml="-1.75rem">
             <ListNav className="nav">
               <li className="nav-item">
-                <a
+                <button
                   className={`nav-link font-weight-bold text-uppercase ${
                     activeLink === "*" ? "active" : null
                   }`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    filterBy("*");
-                  }}
+                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
+                  onClick={() => filterBy("*")}
                 >
                   Todos los trabajos
-                </a>
+                </button>
               </li>
               <li className="nav-item">
-                <a
+                <button
                   className={`nav-link font-weight-bold text-uppercase ${
                     activeLink === "web" ? "active" : null
                   }`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    filterBy("web");
-                  }}
+                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
+                  onClick={() => filterBy("web")}
                 >
                   Desarrollo web
-                </a>
+                </button>
               </li>
               <li className="nav-item">
-                <a
+                <button
                   className={`nav-link font-weight-bold text-uppercase ${
                     activeLink === "ui" ? "active" : null
                   }`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    filterBy("ui");
-                  }}
+                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
+                  onClick={() => filterBy("ui")}
                 >
                   Diseño UI
-                </a>
+                </button>
               </li>
               <li className="nav-item">
-                <a
+                <button
                   className={`nav-link font-weight-bold text-uppercase ${
                     activeLink === "vr" ? "active" : null
                   }`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    filterBy("vr");
-                  }}
+                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
+                  onClick={() => filterBy("vr")}
                 >
                   Realidad Virtual
-                </a>
+                </button>
               </li>
             </ListNav>
           </Box>

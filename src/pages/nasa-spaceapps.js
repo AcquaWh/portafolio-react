@@ -7,7 +7,6 @@ import PageWrapper from "../components/PageWrapper";
 import Contact from "../sections/common/Contact";
 import imgWorkCover from "../assets/image/jpg/details/vr.webp";
 import imgS1 from "../assets/image/jpg/details/vr-details.webp";
-import { device } from "../utils";
 
 const WorkSingle = () => {
   return (
