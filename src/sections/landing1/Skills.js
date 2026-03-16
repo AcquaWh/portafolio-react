@@ -26,12 +26,16 @@ const skills = [
     tags: ["React", "Vue.js", "Angular", "Blazor", "Razor", "TypeScript"],
   },
   {
-    category: "Mobile",
+    category: "Móvil",
     tags: ["React Native", ".NET MAUI", "MAUI Blazor", "iOS", "Android"],
   },
   {
     category: "Cloud & DevOps",
     tags: ["Azure DevOps", "Pipelines CI/CD", "Docker", "Kubernetes", "Cloud Run", "Cloud Tasks", "VM", "Google Cloud"],
+  },
+  {
+    category: "Inteligencia Artificial",
+    tags: ["Claude API", "Gemini API", "Integración de IA"],
   },
   {
     category: "Datos & Reportes",

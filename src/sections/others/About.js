@@ -44,10 +44,11 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                 <Text color="light" className="mt-4">
                 Desarrollo aplicaciones web con React, Vue.js, Angular, Blazor y
                 Razor, y apps móviles para iOS y Android con React Native, .NET
-                MAUI y MAUI Blazor. Gestiono infraestructura en Google Cloud con
-                Kubernetes, Cloud Run, Cloud Tasks y VM. Construyo reportes y
-                dashboards con Power BI, Looker Studio y BigQuery. Coordino
-                entregas de equipo con Jira usando Kanban y Scrum.
+                MAUI y MAUI Blazor. Integro inteligencia artificial en desarrollos
+                usando Claude API y Gemini API. Gestiono infraestructura en
+                Google Cloud con Kubernetes, Cloud Run, Cloud Tasks y VM.
+                Construyo reportes con Power BI, Looker Studio y BigQuery.
+                Coordino entregas de equipo con Jira usando Kanban y Scrum.
                 </Text>
                 <div className="mt-4">
                   <Text color="light">Envíame correo a</Text>
