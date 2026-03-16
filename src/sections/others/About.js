@@ -68,7 +68,7 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                 <Text color="light" className="mt-3 font-weight-bold">
                   Fernanda Cruz
                 </Text>
-                <Text color="light" variant="small">
+                <Text color="primary" variant="small">
                   Desarrolladora de Software
                 </Text>
                 <div className="mt-5 d-flex">

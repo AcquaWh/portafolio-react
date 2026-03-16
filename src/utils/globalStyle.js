@@ -8,12 +8,16 @@ const globalStyle = createGlobalStyle`
   }
 
   p, .p{
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.text} !important;
     font-size: 18px;
     font-weight: 300;
     letter-spacing: -0.56px;
     line-height: 30px;
     margin-bottom: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: ${({ theme }) => theme.colors.heading};
   }
 
   ul,.ul{
