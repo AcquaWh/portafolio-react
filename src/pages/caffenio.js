@@ -33,9 +33,9 @@ const WorkSingle = () => {
                     max-width: 750px;
                   `}
                 >
-                  Se desarrollo en Wordpress como un tema nuevo para Caffenio como una bolsa de trabajo donde 
+                  Se desarrolló en Wordpress como un tema nuevo para Caffenio como una bolsa de trabajo donde
                   podrán contratar empleados nuevos y nosotros podremos buscar nuevas opciones para trabajar en Caffenio.
-                  Esto se creo cuando estaba laborando en Mawe Tecnologías.
+                  Esto se creó cuando estaba laborando en Mawe Tecnologías.
                 </Text>
               </Col>
             </Row>
@@ -53,7 +53,7 @@ const WorkSingle = () => {
               <Col lg="4" className="mb-4 mb-lg-0">
                 <Text variant="tag">Tiempo</Text>
                 <Title variant="cardBig" className="mt-3">
-                  Agusto 20, 2020
+                  Agosto 20, 2020
                 </Title>
               </Col>
             </Row>

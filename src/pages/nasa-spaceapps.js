@@ -35,7 +35,7 @@ const WorkSingle = () => {
                     max-width: 750px;
                   `}
                 >
-                  Un juego de realidad virtual desarrollado en Unity con C# que permite a los jugadores experimentar las verdaderas consecuencias del cambio climatico. 
+                  Un juego de realidad virtual desarrollado en Unity con C# que permite a los jugadores experimentar las verdaderas consecuencias del cambio climático.
                   Fue nominado en Ciudad Obregón en el 2019.
                 </Text>
               </Col>

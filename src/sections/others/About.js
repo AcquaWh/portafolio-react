@@ -61,7 +61,7 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                         window.location.href = "mailto:" + u + "@" + d;
                       }}
                     >
-                      <Span color="light">{"info" + "@" + "fernandacruz.com"}</Span>
+                      <Span color="light">{["info", "fernandacruz.com"].join("@")}</Span>
                     </a>
                   </Text>
                 </div>

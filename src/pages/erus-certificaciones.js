@@ -38,8 +38,8 @@ const WorkSingle = () => {
                   `}
                 >
                   Mi equipo y yo creamos una herramienta para capacitar a los empleados de Erus programada con Angular y PHP,
-                  donde podrán ver videos, hacer sus propias videoconferencias desde la plataforma. El acceso es solo restringuido a
-                  empleados de Erus. Dependiendo de cuantas capacitaciones hayas tomado y pasado por un examen después conseguiras
+                  donde podrán ver videos, hacer sus propias videoconferencias desde la plataforma. El acceso es solo restringido a
+                  empleados de Erus. Dependiendo de cuántas capacitaciones hayas tomado y pasado por un examen después conseguirás
                   una insignia.
                 </Text>
               </Col>

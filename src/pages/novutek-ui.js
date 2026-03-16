@@ -35,8 +35,8 @@ const WorkSingle = () => {
                     max-width: 750px;
                   `}
                 >
-                  Este diseño se llevo acabo para hacer una plataforma educativa en donde podrían acceder los empleados de novutek a capacitarse
-                  y dar clases donde podrían recibir varios certificados en línea. Se diseño primero en photoshop llevandolo a un prototipo en Adobe XD.
+                  Este diseño se llevó a cabo para hacer una plataforma educativa en donde podrían acceder los empleados de novutek a capacitarse
+                  y dar clases donde podrían recibir varios certificados en línea. Se diseñó primero en Photoshop llevándolo a un prototipo en Adobe XD.
                 </Text>
               </Col>
             </Row>

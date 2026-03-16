@@ -38,7 +38,7 @@ const WorkSingle = () => {
                   `}
                 >
                   Este sitio web se hizo con AngularJS y PHP usando openpay de npm para hacer el sistema de pagos
-                  para apartar tu departamento según lo que necesites. También se programo el panel de administración
+                  para apartar tu departamento según lo que necesites. También se programó el panel de administración
                   para los clientes, propietario de departamento y los encargados de la página.
                 </Text>
               </Col>

@@ -41,7 +41,7 @@ const WorkSingle = () => {
                     max-width: 750px;
                   `}
                 >
-                  Se desarrollo en Angular y PHP para Erus que funcionara como una bolsa de trabajo en línea que se pueden solicitar
+                  Se desarrolló en Angular y PHP para Erus que funcionará como una bolsa de trabajo en línea que se pueden solicitar
                   servicios como un carpintero, un ingeniero, un licenciado hasta un pintor.
                 </Text>
                 <Text
@@ -51,11 +51,11 @@ const WorkSingle = () => {
                   `}
                 >
                   <strong>PROCESO DE TRABAJO</strong>
-                  <p>Los de Erus tienen un área donde mandan sus Mockups y diseños, el desarrollo de el sitio web se baso en eso, después
-                  se hace una reunión para revisar sí las páginas son responsivas y funcionan correctamente.
-                  Se desarrollo un chat donde proveedor y cliente esten en contacto.
-                  Después de hacer el panel para el cliente y el proveedor se trabajo en el Backoffice donde se podrá administrar el marketing, entre otras cosas
-                  que se mostrarán en las imagenes siguientes.</p>
+                  <p>Los de Erus tienen un área donde mandan sus Mockups y diseños, el desarrollo del sitio web se basó en eso, después
+                  se hace una reunión para revisar si las páginas son responsivas y funcionan correctamente.
+                  Se desarrolló un chat donde proveedor y cliente estén en contacto.
+                  Después de hacer el panel para el cliente y el proveedor se trabajó en el Backoffice donde se podrá administrar el marketing, entre otras cosas
+                  que se mostrarán en las imágenes siguientes.</p>
                 </Text>
                 <Text
                   variant="p"
@@ -64,7 +64,7 @@ const WorkSingle = () => {
                   `}
                 >
                   <strong>MÉTODOS DE PAGO</strong>
-                  <p>Se utilizaron las librerias de npm de Stripe y Paypal</p>
+                  <p>Se utilizaron las librerías de npm de Stripe y Paypal</p>
                 </Text>
                 <Text
                   variant="p"
@@ -73,7 +73,7 @@ const WorkSingle = () => {
                   `}
                 >
                   <strong>CORREOS</strong>
-                  <p>Se uso Mailchimp para mandar correos a los usuarios en donde yo diseñe los correos que se mandarían.</p>
+                  <p>Se usó Mailchimp para mandar correos a los usuarios en donde yo diseñé los correos que se mandarían.</p>
                 </Text>
               </Col>
             </Row>

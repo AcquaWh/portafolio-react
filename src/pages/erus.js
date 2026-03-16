@@ -34,8 +34,8 @@ const WorkSingle = () => {
                     max-width: 750px;
                   `}
                 >
-                La tienda en línea se creo para que Erus pueda vender sus productos como ecommerce desde
-                las tecnologías Angular y PHP utilizandose para el sistema de pagos Openpay una librería de npm.
+                La tienda en línea se creó para que Erus pueda vender sus productos como ecommerce desde
+                las tecnologías Angular y PHP, utilizándose para el sistema de pagos Openpay una librería de npm.
                 </Text>
               </Col>
             </Row>

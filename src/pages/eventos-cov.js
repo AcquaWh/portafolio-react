@@ -34,8 +34,8 @@ const WorkSingle = () => {
                     max-width: 750px;
                   `}
                 >
-                  Desarrolle esta plataforma en Laravel para la inscripción de colegiados, universidades, entre otras cosas para los eventos que se organizan en ELCOV para saber
-                  si asistió o no al evento organizado actual y sí pago su inscripción.
+                  Desarrollé esta plataforma en Laravel para la inscripción de colegiados, universidades, entre otras cosas para los eventos que se organizan en ELCOV para saber
+                  si asistió o no al evento organizado actual y si pagó su inscripción.
                 </Text>
               </Col>
             </Row>
