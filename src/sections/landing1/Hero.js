@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "gatsby";
 
 import GlobalContext from "../../context/GlobalContext";
 import { Title, ButtonIcon, Section, Box } from "../../components/Core";
@@ -36,7 +37,7 @@ const SocialLink = styled.a`
   }
 `;
 
-const CVButton = styled.a`
+const CVButton = styled(Link)`
   display: inline-flex;
   align-items: center;
   padding: 0.5rem 1.25rem;
@@ -50,7 +51,7 @@ const CVButton = styled.a`
   transition: all 0.3s;
   &:hover {
     background: ${({ theme }) => theme.colors.primary};
-    color: #fff;
+    color: #fff !important;
     text-decoration: none;
   }
 `;
@@ -96,11 +97,8 @@ const Hero = () => {
                   >
                     GitHub
                   </SocialLink>
-                  <CVButton
-                    href="/cv.pdf"
-                    download="Fernanda_Cruz_CV.pdf"
-                  >
-                    Descargar CV
+                  <CVButton to="/curriculum">
+                    Ver curriculum
                   </CVButton>
                 </Box>
               </Box>

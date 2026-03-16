@@ -1,10 +1,38 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { createGlobalStyle, keyframes } from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 import PageWrapper from "../components/PageWrapper";
 import { Section, Title, Text, Box } from "../components/Core";
 import bgHeroPattern from "../assets/image/webp/hero-pattern.webp";
 import imgL from "../assets/image/jpg/avatar.jpg";
+
+const HideFooter = createGlobalStyle`
+  .site-wrapper > footer { display: none !important; }
+`;
+
+const PrintStyles = createGlobalStyle`
+  @media print {
+    @page { margin: 1.2cm 1.5cm; size: A4; }
+    header, footer, nav,
+    .site-wrapper > header,
+    .site-wrapper > footer { display: none !important; }
+    body { font-size: 11pt; color: #000; background: #fff; }
+    .no-print { display: none !important; }
+    a { color: #495fef !important; text-decoration: none !important; }
+    /* Hero */
+    section[class*="Section"] { padding-top: 0 !important; }
+    /* Evitar que el timeline se corte */
+    div[class*="TimelineItem"] { page-break-inside: avoid; }
+    div[class*="LogroItem"] { page-break-inside: avoid; }
+    div[class*="EduItem"] { page-break-inside: avoid; }
+    /* Quitar sombras y backgrounds decorativos */
+    div[class*="HeroSection"]::before { display: none !important; }
+    div[class*="HeroSection"] { background: #fff !important; padding-top: 0.5cm !important; }
+    /* Columnas lado a lado en print */
+    .col-lg-7 { width: 58% !important; float: left !important; padding-right: 1cm !important; }
+    .col-lg-5 { width: 40% !important; float: right !important; }
+  }
+`;
 
 /* ── Hero ── */
 const HeroSection = styled(Section)`
@@ -197,8 +225,20 @@ const LangItem = styled.div`
   flex-direction: column;
 `;
 
+const fadeIn = keyframes`
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+`;
+
+const PageFade = styled.div`
+  animation: ${fadeIn} 0.55s ease forwards;
+`;
+
 const CurriculumPage = () => (
   <PageWrapper>
+    <HideFooter />
+    <PrintStyles />
+    <PageFade>
 
     {/* ── HERO ── */}
     <HeroSection hero className="position-relative">
@@ -231,7 +271,11 @@ const CurriculumPage = () => (
             github.com/AcquaWh
           </a>
         </ContactRow>
-        <DownloadBtn href="/cv.pdf" download="Fernanda_Cruz_CV.pdf">
+        <DownloadBtn
+          href="#"
+          className="no-print"
+          onClick={e => { e.preventDefault(); window.print(); }}
+        >
           Descargar CV
         </DownloadBtn>
       </Container>
@@ -302,7 +346,7 @@ const CurriculumPage = () => (
                 <Title variant="cardSm">Desarrolladora Front-End</Title>
                 <JobMeta>
                   <Company>Ludens</Company>
-                  <Period>feb 2022 – abr 2022 · Temporal</Period>
+                  <Period>feb 2022 – abr 2022 · Freelance</Period>
                 </JobMeta>
                 <BulletList>
                   <li>Desarrollo de Front y Back Office de Dasana en Angular.</li>
@@ -501,6 +545,7 @@ const CurriculumPage = () => (
       </Container>
     </Section>
 
+    </PageFade>
   </PageWrapper>
 );
 

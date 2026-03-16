@@ -11,7 +11,6 @@ import { Helmet } from "react-helmet";
 import AOS from "aos";
 
 import Header from "../Header";
-import Footer from "../Footer";
 import ThemeSwitch from "../ThemeSwitch";
 
 import ModalVideo from "../ModalVideo";
@@ -150,8 +149,6 @@ const Layout = ({ children, pageContext }) => {
         <div className="site-wrapper overflow-hidden" ref={eleRef}>
           <Header isDark={gContext.theme.headerDark} />
           {children}
-
-          <Footer isDark={gContext.theme.footerDark} />
         </div>
         <AboutModal />
         <ModalVideo />

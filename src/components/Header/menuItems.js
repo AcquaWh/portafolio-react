@@ -1,7 +1,7 @@
 export const menuItems = [
   {
-    name: "paginas",
-    label: "paginas",
+    name: "proyectos",
+    label: "proyectos",
     items: [
       {
         name: "angular",
