@@ -96,7 +96,6 @@ const Menu = styled.ul`
       > .menu-dropdown {
         @media ${device.lg} {
           top: 90%;
-          right: 0;
           opacity: 1;
           pointer-events: visible;
         }
@@ -120,7 +119,8 @@ const MenuDropdown = styled.ul`
     opacity: 0;
     transition: opacity 0.4s, top 0.4s;
     pointer-events: none;
-    left: -90%;
+    left: 0;
+    right: auto;
     border: 1px solid #e5e5e5;
     border-radius: 0 0 10px 10px;
     display: block;
@@ -445,6 +445,12 @@ const Header = ({ isDark }) => {
                     >
                       acerca de mi.
                     </a>
+                  </li>
+
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/curriculum">
+                      curriculum
+                    </Link>
                   </li>
 
                 </Menu>

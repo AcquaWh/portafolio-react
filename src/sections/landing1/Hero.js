@@ -20,6 +20,41 @@ const SectionStyled = styled(Section)`
   }
 `;
 
+const SocialLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  color: ${({ theme }) => theme.colors.text};
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-right: 1.25rem;
+  transition: color 0.3s;
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+    text-decoration: none;
+  }
+`;
+
+const CVButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  border: 2px solid ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primary};
+  border-radius: 500px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  &:hover {
+    background: ${({ theme }) => theme.colors.primary};
+    color: #fff;
+    text-decoration: none;
+  }
+`;
+
 const Hero = () => {
   const gContext = useContext(GlobalContext);
 
@@ -46,6 +81,28 @@ const Hero = () => {
                 <Title variant="card" className="mt-2" color="primary">
                   Ingeniera de Software &amp; Líder de Equipo
                 </Title>
+                <Box mt="1.25rem" className="d-flex align-items-center flex-wrap">
+                  <SocialLink
+                    href="https://www.linkedin.com/in/acquawh/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </SocialLink>
+                  <SocialLink
+                    href="https://github.com/AcquaWh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </SocialLink>
+                  <CVButton
+                    href="/cv.pdf"
+                    download="Fernanda_Cruz_CV.pdf"
+                  >
+                    Descargar CV
+                  </CVButton>
+                </Box>
               </Box>
             </Col>
             <Col lg="4" sm="12">
