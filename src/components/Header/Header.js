@@ -449,7 +449,7 @@ const Header = ({ isDark }) => {
 
                   <li className="nav-item">
                     <Link className="nav-link" to="/curriculum">
-                      curriculum
+                      curriculum.
                     </Link>
                   </li>
 

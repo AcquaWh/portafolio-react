@@ -376,7 +376,7 @@ const CurriculumPage = () => (
                 <Title variant="cardSm">Fundadora &amp; Desarrolladora Full-Stack</Title>
                 <JobMeta>
                   <Company>HostedRed</Company>
-                  <Period>ene 2017 – sept 2021</Period>
+                  <Period>ene 2017 – sept 2021 · Freelance</Period>
                 </JobMeta>
                 <BulletList>
                   <li>Desarrollo full-stack con Node.js, Java, Angular, Laravel y diseño UX/UI.</li>

@@ -43,7 +43,7 @@ const Works = () => {
                   className={`nav-link font-weight-bold text-uppercase ${
                     activeLink === "*" ? "active" : null
                   }`}
-                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
+                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer", outline: "none" }}
                   onClick={() => filterBy("*")}
                 >
                   Todos los trabajos
@@ -54,29 +54,19 @@ const Works = () => {
                   className={`nav-link font-weight-bold text-uppercase ${
                     activeLink === "web" ? "active" : null
                   }`}
-                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
+                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer", outline: "none" }}
                   onClick={() => filterBy("web")}
                 >
                   Desarrollo web
                 </button>
               </li>
-              <li className="nav-item">
-                <button
-                  className={`nav-link font-weight-bold text-uppercase ${
-                    activeLink === "ui" ? "active" : null
-                  }`}
-                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
-                  onClick={() => filterBy("ui")}
-                >
-                  Diseño UI
-                </button>
-              </li>
+
               <li className="nav-item">
                 <button
                   className={`nav-link font-weight-bold text-uppercase ${
                     activeLink === "vr" ? "active" : null
                   }`}
-                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
+                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer", outline: "none" }}
                   onClick={() => filterBy("vr")}
                 >
                   Realidad Virtual
