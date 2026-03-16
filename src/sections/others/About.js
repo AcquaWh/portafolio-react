@@ -176,15 +176,16 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                   {/* Bio */}
                   <SectionLabel>Sobre mí</SectionLabel>
                   <Text color="light" css={`line-height: 1.65; font-size: 0.92rem;`}>
-                    Ingeniera de Software con más de 9 años de trayectoria. Comencé como
-                    desarrolladora Front-End, crecí a líder del área frontend y hoy dirijo
-                    el equipo completo de software en Didcom: defino estándares de código,
-                    valido Pull Requests y tomo decisiones arquitectónicas que impactan al negocio.
+                    Ingeniera de Software con más de 9 años de trayectoria. Hoy dirijo el equipo
+                    completo de software en Didcom: gestiono el ciclo de vida del proyecto desde
+                    el análisis de requerimientos, estimaciones, cronogramas y release notes bajo
+                    ISO 9001, hasta la revisión de PRs y decisiones arquitectónicas.
                   </Text>
                   <Text color="light" className="mt-3" css={`line-height: 1.65; font-size: 0.92rem;`}>
-                    Mi enfoque combina ejecución técnica sólida (C# · .NET 8/9, React, APIs REST,
-                    Google Cloud) con visión de liderazgo: equipos motivados, entregas a tiempo y
-                    arquitectura que escala.
+                    Funciono como canal transversal entre áreas comercial, hardware y software
+                    para asegurar que el producto se entienda, se despliegue y se pueda vender.
+                    Combino gestión de proyecto con ejecución técnica: C# · .NET 8/9, React,
+                    Google Cloud, Azure e integración de IA.
                   </Text>
 
                   {/* Skills */}

@@ -300,7 +300,9 @@ const CurriculumPage = () => (
                   <Period>sept 2025 – presente</Period>
                 </JobMeta>
                 <BulletList>
-                  <li>Liderazgo técnico de equipos de desarrollo frontend y backend.</li>
+                  <li>Gestión completa del ciclo de vida del proyecto: análisis de requerimientos, estimaciones de tiempo, cronogramas, release notes y seguimiento bajo estándares ISO 9001.</li>
+                  <li>Canal transversal entre áreas comercial, hardware y software para asegurar el entendimiento del producto, su despliegue y comercialización.</li>
+                  <li>Liderazgo técnico de equipos de desarrollo frontend y backend: revisión de PRs, estándares de código y decisiones arquitectónicas.</li>
                   <li>Arquitectura con .NET Core, .NET MAUI, Blazor, React JS, React Native y Vue.js.</li>
                   <li>Gestión de infraestructura cloud en Azure y GCP (Cloud Run, Cloud Tasks, VM, BigQuery).</li>
                   <li>Implementación de pipelines CI/CD con Azure DevOps.</li>
