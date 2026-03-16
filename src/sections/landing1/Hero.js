@@ -44,7 +44,7 @@ const Hero = () => {
                   Fernanda Cruz
                 </Title>
                 <Title variant="card" className="mt-2" color="primary">
-                  Desarrolladora de Software
+                  Ingeniera de Software &amp; Líder de Equipo
                 </Title>
               </Box>
             </Col>

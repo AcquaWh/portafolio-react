@@ -35,18 +35,19 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                     line-height: 1.5;
                   `}
                 >
-                Desarrolladora de software con más de 5 años de experiencia
-                construyendo aplicaciones web y móviles de alto impacto.
-                Trabajo con tecnologías como .NET Core, React, Vue.js, Blazor,
-                Azure y Google Cloud Platform.
+                Líder del área de software con más de 5 años de experiencia.
+                Dirijo el equipo de desarrollo, defino estándares de código,
+                valido Pull Requests y tomo decisiones arquitectónicas que
+                impactan al negocio. Mi día a día es C# con .NET 8/.NET 9,
+                construyendo APIs REST y servicios web robustos.
                 </Text>
                 <Text color="light" className="mt-4">
-                Especializada en desarrollo full-stack y aplicaciones móviles
-                para Android e iOS con React Native y .NET MAUI.
-                Me apasiona escribir código limpio, escalable y orientado
-                a resultados reales para el negocio. Con experiencia en
-                CI/CD, despliegue de aplicaciones y gestión de proyectos
-                con Azure DevOps y Jira.
+                Desarrollo aplicaciones web con React, Vue.js, Angular, Blazor y
+                Razor, y apps móviles para iOS y Android con React Native, .NET
+                MAUI y MAUI Blazor. Gestiono infraestructura en Google Cloud con
+                Kubernetes, Cloud Run, Cloud Tasks y VM. Construyo reportes y
+                dashboards con Power BI, Looker Studio y BigQuery. Coordino
+                entregas de equipo con Jira usando Kanban y Scrum.
                 </Text>
                 <div className="mt-4">
                   <Text color="light">Envíame correo a</Text>
@@ -69,7 +70,7 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                   Fernanda Cruz
                 </Text>
                 <Text color="primary" variant="small">
-                  Desarrolladora de Software
+                  Ingeniera de Software &amp; Líder de Equipo
                 </Text>
                 <div className="mt-5 d-flex">
                   <LinkSocial
