@@ -34,6 +34,18 @@ RUN printf 'server {\n\
   add_header Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()" always;\n\
   add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;\n\
   add_header X-Permitted-Cross-Domain-Policies "none" always;\n\
+  location = /about {\n\
+    return 301 /;\n\
+  }\n\
+  location = /about/ {\n\
+    return 301 /;\n\
+  }\n\
+  location = /contact {\n\
+    return 301 /;\n\
+  }\n\
+  location = /contact/ {\n\
+    return 301 /;\n\
+  }\n\
   location ~* \\.html$ {\n\
     add_header Cache-Control "no-cache, no-store, must-revalidate" always;\n\
     add_header Pragma "no-cache" always;\n\
