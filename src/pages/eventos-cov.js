@@ -1,72 +1,26 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import CaseStudyPage from "../components/CaseStudy";
+import imgCover from "../assets/image/jpg/details/cov.webp";
 
-import { Section, Button, Title, Text, Box } from "../components/Core";
-import PageWrapper from "../components/PageWrapper";
-import Contact from "../sections/common/Contact";
-import imgWorkCover from "../assets/image/jpg/details/cov.webp";
-
-const WorkSingle = () => {
-  return (
-    <>
-      <PageWrapper>
-        <Container
-          fluid
-          className="px-sm-5"
-          css={`
-            margin-top: 92px;
-          `}
-        >
-          <img src={imgWorkCover} alt="" className="img-fluid w-100" />
-        </Container>
-        <Section className="mt-lg-5">
-          <Container>
-            <Row>
-              <Col lg="8">
-                <Text variant="tag">WEB</Text>
-                <Title variant="secSm" className="my-4">
-                  Eventos COV
-                </Title>
-                <Text
-                  variant="p"
-                  css={`
-                    max-width: 750px;
-                  `}
-                >
-                  Desarrollé esta plataforma en Laravel para la inscripción de colegiados, universidades, entre otras cosas para los eventos que se organizan en ELCOV para saber
-                  si asistió o no al evento organizado actual y si pagó su inscripción.
-                </Text>
-              </Col>
-            </Row>
-          </Container>
-        </Section>
-        <div className="mt-lg-3">
-          <Container>
-            <Row>
-              <Col lg="4" className="mb-4 mb-lg-0">
-                <Text variant="tag">Cliente</Text>
-                <Title variant="cardBig" className="mt-3">
-                  COV
-                </Title>
-              </Col>
-              <Col lg="4" className="mb-4 mb-lg-0">
-                <Text variant="tag">Tiempo</Text>
-                <Title variant="cardBig" className="mt-3">
-                  Apr 14, 2020
-                </Title>
-              </Col>
-              <Col lg="4">
-                <a href="https://colegiados.elcov.org/login" target="_blank" rel="noopener noreferrer"><Button arrowRight>Ver página</Button></a>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-        
-        <Box py={4}>
-          <Contact />
-        </Box>
-      </PageWrapper>
-    </>
-  );
+const data = {
+  title: "Eventos COV — Gestión de inscripciones para colegiados",
+  tags: ["Laravel", "PHP", "Gestión de eventos", "Colegio"],
+  cover: imgCover,
+  meta: { client: "ELCOV", year: "2020", role: "Full-Stack Developer", stack: "Laravel · PHP · MySQL" },
+  problem: "El Colegio de Obstetricia y Ginecología (ELCOV) gestionaba las inscripciones a sus eventos de forma manual: hojas de cálculo, transferencias bancarias sin trazabilidad y listas de asistencia en papel. Era imposible saber en tiempo real quién había pagado y quién asistiría.",
+  solution: "Desarrollamos una plataforma web en Laravel para gestionar el ciclo completo de inscripción a eventos: registro de colegiados y universidades, control de pagos y validación de asistencia en tiempo real.",
+  highlights: [
+    { title: "Registro de colegiados y universidades", desc: "Los participantes se registran y asocian a su institución. El sistema valida que sean miembros activos del colegio." },
+    { title: "Control de pagos de inscripción", desc: "Registro de pagos por evento con estado (pendiente / confirmado). El organizador puede filtrar inscritos por estado de pago." },
+    { title: "Control de asistencia", desc: "Al día del evento, el sistema permite validar la asistencia de cada inscrito con un check-in digital, eliminando las listas en papel." },
+  ],
+  screenshots: [],
+  result: "ELCOV eliminó el trabajo manual de sus eventos: el equipo organizador tiene en tiempo real la lista de inscritos, estado de pago y confirmación de asistencia desde cualquier dispositivo, reduciendo el tiempo de check-in en eventos de horas a minutos.",
+  techStack: ["Laravel", "PHP", "MySQL", "Bootstrap", "Blade"],
+  myRole: "Desarrollo full-stack en Laravel: diseño del modelo de datos, módulos de inscripción, gestión de pagos y control de asistencia.",
+  bullets: ["Control de inscripciones en tiempo real", "Gestión de pagos por evento", "Check-in digital en día de evento", "Filtros por estado de pago y asistencia"],
+  liveUrl: "https://colegiados.elcov.org/login",
 };
-export default WorkSingle;
+
+const EventosCovPage = () => <CaseStudyPage data={data} />;
+export default EventosCovPage;

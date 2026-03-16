@@ -111,7 +111,7 @@ const Layout = ({ children, pageContext }) => {
         <ThemeSwitch />
         <GlobalStyle />
         <Helmet>
-          <title>Folio</title>
+          <title>Fernanda Cruz · Ingeniera de Software &amp; Líder de Equipo</title>
           <link rel="icon" type="image/png" href={imgFavicon} />
         </Helmet>
         <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
@@ -138,8 +138,28 @@ const Layout = ({ children, pageContext }) => {
         <ThemeSwitch />
         <GlobalStyle />
         <Helmet>
-          <title>Fernanda Cruz</title>
+          <title>Fernanda Cruz · Ingeniera de Software &amp; Líder de Equipo</title>
+          <meta name="description" content="Portfolio de Fernanda Cruz — Ingeniera de Software con 9+ años de experiencia. Liderazgo técnico, .NET, React, Google Cloud, Azure e integración de IA." />
+          <meta name="author" content="Fernanda Cruz" />
+          {/* Open Graph */}
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://fernandacruz.com" />
+          <meta property="og:title" content="Fernanda Cruz · Ingeniera de Software & Líder de Equipo" />
+          <meta property="og:description" content="Portfolio de Fernanda Cruz — Ingeniera de Software con 9+ años de experiencia. Liderazgo técnico, .NET, React, Google Cloud, Azure e integración de IA." />
+          <meta property="og:image" content="https://fernandacruz.com/og-image.jpg" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:locale" content="es_MX" />
+          {/* Twitter / X */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Fernanda Cruz · Ingeniera de Software & Líder de Equipo" />
+          <meta name="twitter:description" content="Portfolio de Fernanda Cruz — Ingeniera de Software con 9+ años de experiencia. Liderazgo técnico, .NET, React, Google Cloud, Azure e integración de IA." />
+          <meta name="twitter:image" content="https://fernandacruz.com/og-image.jpg" />
+          {/* LinkedIn */}
+          <meta property="profile:first_name" content="Fernanda" />
+          <meta property="profile:last_name" content="Cruz" />
           <link rel="icon" type="image/png" href={imgFavicon} />
+          <link rel="canonical" href="https://fernandacruz.com" />
         </Helmet>
         <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
           <div className="load-circle">

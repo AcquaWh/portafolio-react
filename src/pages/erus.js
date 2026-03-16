@@ -1,73 +1,26 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import CaseStudyPage from "../components/CaseStudy";
+import imgCover from "../assets/image/jpg/details/erus.webp";
 
-import { Section, Button, Title, Text, Box } from "../components/Core";
-import PageWrapper from "../components/PageWrapper";
-import Contact from "../sections/common/Contact";
-import imgWorkCover from "../assets/image/jpg/details/erus.webp";
-
-const WorkSingle = () => {
-  return (
-    <>
-      <PageWrapper>
-        <Container
-          fluid
-          className="px-sm-5"
-          css={`
-            margin-top: 92px;
-          `}
-        >
-          <img src={imgWorkCover} alt="" className="img-fluid w-100" />
-        </Container>
-        <Section className="mt-lg-5">
-          <Container>
-            <Row>
-              <Col lg="8">
-                <Text variant="tag">WEB</Text>
-                <Title variant="secSm" className="my-4">
-                  Erus
-                </Title>
-                <Text
-                  variant="p"
-                  css={`
-                    max-width: 750px;
-                  `}
-                >
-                La tienda en línea se creó para que Erus pueda vender sus productos como ecommerce desde
-                las tecnologías Angular y PHP, utilizándose para el sistema de pagos Openpay una librería de npm.
-                </Text>
-              </Col>
-            </Row>
-          </Container>
-        </Section>
-        <div className="mt-lg-3">
-          <Container>
-            <Row>
-              <Col lg="4" className="mb-4 mb-lg-0">
-                <Text variant="tag">Cliente</Text>
-                <Title variant="cardBig" className="mt-3">
-                  Erus
-                </Title>
-              </Col>
-              <Col lg="4" className="mb-4 mb-lg-0">
-                <Text variant="tag">Tiempo</Text>
-                <Title variant="cardBig" className="mt-3">
-                  Marzo 16, 2016
-                </Title>
-              </Col>
-              <Col lg="4">
-                <a href="https://erus.mx/" target="_blank" rel="noopener noreferrer"><Button arrowRight>Ver página</Button></a>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-        
-        
-        <Box py={4}>
-          <Contact />
-        </Box>
-      </PageWrapper>
-    </>
-  );
+const data = {
+  title: "Erus — Tienda en línea con pagos integrados",
+  tags: ["Angular", "PHP", "Openpay", "E-commerce"],
+  cover: imgCover,
+  meta: { client: "Erus", year: "2016", role: "Front-End Developer", stack: "Angular · PHP · Openpay" },
+  problem: "Erus comercializaba sus productos únicamente de forma presencial y telefónica. No tenía presencia en línea ni un mecanismo para recibir pagos digitales, lo que limitaba su alcance de ventas y dependía completamente del canal físico.",
+  solution: "Desarrollamos una tienda en línea completa con catálogo de productos, carrito de compras y checkout con pago seguro mediante Openpay. La solución permitió a Erus vender sus productos 24/7 sin intermediarios.",
+  highlights: [
+    { title: "Catálogo de productos", desc: "Vitrina digital con filtros por categoría, descripción detallada y galería de imágenes de cada producto." },
+    { title: "Sistema de pagos con Openpay", desc: "Integración de la pasarela de pagos Openpay para aceptar tarjetas de crédito y débito con tokenización segura." },
+    { title: "Panel de administración", desc: "Dashboard para gestionar inventario, pedidos y clientes sin conocimientos técnicos." },
+  ],
+  screenshots: [],
+  result: "Erus pasó de cero ventas digitales a tener un canal de e-commerce activo accesible desde cualquier dispositivo. El proceso de compra completo se puede realizar en menos de 3 minutos, ampliando el alcance de ventas más allá de su área geográfica.",
+  techStack: ["AngularJS", "PHP", "Openpay", "MySQL", "Bootstrap", "npm"],
+  myRole: "Desarrollo front-end con AngularJS, integración con la API de Openpay y coordinación con el equipo de backend para el flujo de compra completo.",
+  bullets: ["E-commerce con pago en línea en producción", "Integración Openpay con tokenización segura", "Catálogo administrable sin código", "Responsive para móvil y escritorio"],
+  liveUrl: "https://erus.mx/",
 };
-export default WorkSingle;
+
+const ErusPage = () => <CaseStudyPage data={data} />;
+export default ErusPage;

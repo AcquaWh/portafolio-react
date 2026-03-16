@@ -1,70 +1,27 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import CaseStudyPage from "../components/CaseStudy";
+import imgCover from "../assets/image/jpg/details/alumni.webp";
 
-import { Section, Title, Text, Box } from "../components/Core";
-import PageWrapper from "../components/PageWrapper";
-import Contact from "../sections/common/Contact";
-import imgWorkCover from "../assets/image/jpg/details/alumni.webp";
-
-const WorkSingle = () => {
-  return (
-    <>
-      <PageWrapper>
-        <Container
-          fluid
-          className="px-sm-5"
-          css={`
-            margin-top: 92px;
-          `}
-        >
-          <img src={imgWorkCover} alt="" className="img-fluid w-100" />
-        </Container>
-        <Section className="mt-lg-5">
-          <Container>
-            <Row>
-              <Col lg="8">
-                <Text variant="tag">WEB</Text>
-                <Title variant="secSm" className="my-4">
-                  Alumni
-                </Title>
-                <Text
-                  variant="p"
-                  css={`
-                    max-width: 750px;
-                  `}
-                >
-                  La desarrollé en Laravel para los Alumnis de ULSA Noroeste mientras estaba laborando en la empresa de Mawe Tecnologías
-                  donde empresas y alumnos graduados se registrarán para buscar empleo o registrar alguna oferta de trabajo.
-                  Tiene un panel de control para los alumnis, administradores, las universidades y las empresas.
-                  Las universidades podrán importar sus alumnos mediante un CSV.
-                </Text>
-              </Col>
-            </Row>
-          </Container>
-        </Section>
-        <div className="mt-lg-3">
-          <Container>
-            <Row>
-              <Col lg="4" className="mb-4 mb-lg-0">
-                <Text variant="tag">Cliente</Text>
-                <Title variant="cardBig" className="mt-3">
-                  ULSA
-                </Title>
-              </Col>
-              <Col lg="4" className="mb-4 mb-lg-0">
-                <Text variant="tag">Tiempo</Text>
-                <Title variant="cardBig" className="mt-3">
-                  Mayo 14, 2020
-                </Title>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-        <Box py={4}>
-          <Contact />
-        </Box>
-      </PageWrapper>
-    </>
-  );
+const data = {
+  title: "Alumni ULSA — Bolsa de trabajo universitaria",
+  tags: ["Laravel", "PHP", "Plataforma web", "Educación"],
+  cover: imgCover,
+  meta: { client: "ULSA Noroeste", year: "2020", role: "Full-Stack Developer", stack: "Laravel · PHP · MySQL" },
+  problem: "La Universidad La Salle Noroeste no tenía una plataforma digital para conectar a sus egresados con empleadores. El proceso de búsqueda de empleo era manual, sin visibilidad para las empresas ni trazabilidad para la universidad sobre la inserción laboral de sus alumni.",
+  solution: "Desarrollamos una plataforma de bolsa de trabajo universitaria con cuatro roles diferenciados: alumni, empresas, universidades y administradores. Las universidades pueden importar su base de egresados mediante CSV y las empresas publican vacantes directamente.",
+  highlights: [
+    { title: "Portal de Alumni", desc: "Registro de perfil profesional, búsqueda de vacantes por área y postulación en línea. Acceso a historial de aplicaciones." },
+    { title: "Portal de Empresas", desc: "Publicación de ofertas de trabajo, revisión de candidatos egresados ULSA y contacto directo con postulantes." },
+    { title: "Portal de Universidades", desc: "Importación masiva de alumnos graduados mediante CSV, seguimiento de inserción laboral y reportes de colocación." },
+    { title: "Panel de Administración", desc: "Gestión centralizada de usuarios, validación de empresas y moderación de contenido de la plataforma." },
+  ],
+  screenshots: [],
+  result: "La plataforma centralizó el proceso de vinculación laboral de ULSA Noroeste, eliminando la gestión manual de CVs y permitiendo a la universidad tener por primera vez métricas de inserción laboral de sus egresados.",
+  techStack: ["Laravel", "PHP", "MySQL", "Bootstrap", "CSV Import", "Blade"],
+  myRole: "Desarrollo full-stack en Laravel: diseño de base de datos, módulos de importación CSV, sistema de roles y permisos, y todas las vistas de la plataforma.",
+  bullets: ["4 roles de usuario con accesos diferenciados", "Importación masiva de egresados por CSV", "Vinculación directa alumni-empresa", "Reportes de inserción laboral"],
+  liveUrl: null,
 };
-export default WorkSingle;
+
+const AlumniPage = () => <CaseStudyPage data={data} />;
+export default AlumniPage;
