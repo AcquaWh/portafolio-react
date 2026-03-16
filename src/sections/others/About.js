@@ -42,20 +42,21 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                     line-height: 1.5;
                   `}
                 >
-                Líder del área de software con más de 5 años de experiencia.
-                Dirijo el equipo de desarrollo, defino estándares de código,
-                valido Pull Requests y tomo decisiones arquitectónicas que
-                impactan al negocio. Mi día a día es C# con .NET 8/.NET 9,
-                construyendo APIs REST y servicios web robustos.
+                Ingeniera de Software y Líder de Equipo con más de 8 años de experiencia
+                en desarrollo de software. Comencé como desarrolladora Front-End,
+                crecí a líder del área frontend y hoy dirijo el equipo completo de
+                software: defino estándares de código, valido Pull Requests y tomo
+                decisiones arquitectónicas que impactan al negocio.
                 </Text>
                 <Text color="light" className="mt-4">
-                Desarrollo aplicaciones web con React, Vue.js, Angular, Blazor y
-                Razor, y apps móviles para iOS y Android con React Native, .NET
-                MAUI y MAUI Blazor. Integro inteligencia artificial en desarrollos
-                usando Claude API y Gemini API. Gestiono infraestructura en
-                Google Cloud con Kubernetes, Cloud Run, Cloud Tasks y VM.
-                Construyo reportes con Power BI, Looker Studio y BigQuery.
-                Coordino entregas de equipo con Jira usando Kanban y Scrum.
+                Mi día a día es C# con .NET 8/.NET 9 construyendo APIs REST y servicios
+                web robustos. Desarrollo aplicaciones web con React, Vue.js, Angular,
+                Blazor y Razor, y apps móviles para iOS y Android con React Native,
+                .NET MAUI y MAUI Blazor. Integro inteligencia artificial en desarrollos
+                usando Claude API y Gemini API. Gestiono infraestructura en Google Cloud
+                con Kubernetes, Cloud Run, Cloud Tasks y VM. Construyo reportes con
+                Power BI, Looker Studio y BigQuery. Coordino entregas con Jira,
+                Kanban y Scrum.
                 </Text>
                 <div className="mt-4">
                   <Text color="light">Envíame correo a</Text>
@@ -79,7 +80,7 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                 </Text>
                 <Text color="primary" variant="small">
                   Ingeniera de Software &amp; Líder de Equipo
-                </Text>
+</Text>
                 <div className="mt-5 d-flex">
                   <LinkSocial
                     href="https://github.com/AcquaWh"

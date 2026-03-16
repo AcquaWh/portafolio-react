@@ -18,7 +18,7 @@ const Stats = () => (
       <Row className="text-center justify-content-center">
         <Col xs="6" lg="3" className="mb-5 mb-lg-0">
           <Box>
-            <Number>5+</Number>
+            <Number>9+</Number>
             <Text variant="tag" className="mt-3">Años de experiencia</Text>
           </Box>
         </Col>
