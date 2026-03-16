@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
 
 import { Section, Button, Title, Text, Box } from "../components/Core";
@@ -58,7 +57,7 @@ const WorkSingle = () => {
                 </Title>
               </Col>
               <Col lg="4">
-                <Link to="https://2019.spaceappschallenge.org/challenges/living-our-world/1up-nasa-earth/teams/the-no-names/project" target="_blank"><Button arrowRight>Ver página</Button></Link>
+                <a href="https://2019.spaceappschallenge.org/challenges/living-our-world/1up-nasa-earth/teams/the-no-names/project" target="_blank" rel="noopener noreferrer"><Button arrowRight>Ver página</Button></a>
               </Col>
             </Row>
           </Container>

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
 
 import { Section, Button, Title, Text, Box } from "../components/Core";
@@ -57,7 +56,7 @@ const WorkSingle = () => {
                 </Title>
               </Col>
               <Col lg="4">
-                <Link to="https://erus.mx/" target="_blank"><Button arrowRight>Ver página</Button></Link>
+                <a href="https://erus.mx/" target="_blank" rel="noopener noreferrer"><Button arrowRight>Ver página</Button></a>
               </Col>
             </Row>
           </Container>

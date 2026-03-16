@@ -25,11 +25,25 @@ RUN printf 'server {\n\
   listen 8080;\n\
   root /usr/share/nginx/html;\n\
   index index.html;\n\
+  server_tokens off;\n\
   add_header X-Frame-Options "DENY" always;\n\
   add_header X-Content-Type-Options "nosniff" always;\n\
   add_header X-XSS-Protection "1; mode=block" always;\n\
   add_header Referrer-Policy "strict-origin-when-cross-origin" always;\n\
-  add_header Content-Security-Policy "frame-ancestors '\''none'\''" always;\n\
+  add_header Content-Security-Policy "default-src '\''self'\''; script-src '\''self'\'' '\''unsafe-inline'\''; style-src '\''self'\'' '\''unsafe-inline'\''; img-src '\''self'\'' data: blob:; font-src '\''self'\'' data:; connect-src '\''self'\''; object-src '\''none'\''; frame-src '\''none'\''; frame-ancestors '\''none'\''; base-uri '\''self'\''; form-action '\''self'\'';" always;\n\
+  add_header Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()" always;\n\
+  add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;\n\
+  add_header X-Permitted-Cross-Domain-Policies "none" always;\n\
+  location ~* \\.html$ {\n\
+    add_header Cache-Control "no-cache, no-store, must-revalidate" always;\n\
+    add_header Pragma "no-cache" always;\n\
+    add_header Expires "0" always;\n\
+    try_files $uri =404;\n\
+  }\n\
+  location ~* \\.(js|css|png|jpg|jpeg|webp|gif|ico|svg|woff|woff2|ttf)$ {\n\
+    add_header Cache-Control "public, max-age=31536000, immutable" always;\n\
+    try_files $uri =404;\n\
+  }\n\
   location / {\n\
     try_files $uri $uri/ /index.html;\n\
   }\n\

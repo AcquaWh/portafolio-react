@@ -40,11 +40,10 @@ const Contact = ({ pattern = true }) => {
                 >
                   <div className="d-flex flex-column flex-lg-row justify-content-center">
                     <LinkContact
-                      href="mailto:fernanda.cruz@hostedred.com"
-                      target="_blank"
+                      href="mailto:info@fernandacruz.com"
                       className="mb-2 mb-lg-0"
                     >
-                      fernanda.cruz@hostedred.com
+                      info@fernandacruz.com
                     </LinkContact>
                     <span className="divider mx-2 mx-lg-4 d-none d-lg-block">
                       |
@@ -52,6 +51,7 @@ const Contact = ({ pattern = true }) => {
                     <LinkContact
                       href="https://www.linkedin.com/in/acquawh/"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       linkedin.com/in/acquawh/
                     </LinkContact>
