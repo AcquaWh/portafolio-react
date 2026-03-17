@@ -294,9 +294,9 @@ const CurriculumPage = () => (
             <TimelineWrap>
 
               <TimelineItem>
-                <Title variant="cardSm">Software Engineering Leader</Title>
+                <Title variant="cardSm">Líder de Equipo Software</Title>
                 <JobMeta>
-                  <Company>Didcom Connecting Innovations</Company>
+                  <Company>Grupo Tecnologico DIDCOM</Company>
                   <Period>sept 2025 – presente</Period>
                 </JobMeta>
                 <BulletList>
@@ -314,10 +314,10 @@ const CurriculumPage = () => (
               </TimelineItem>
 
               <TimelineItem>
-                <Title variant="cardSm">Front-End Leader</Title>
+                <Title variant="cardSm">Líder de Equipo Frontend</Title>
                 <JobMeta>
-                  <Company>Didcom Connecting Innovations</Company>
-                  <Period>jun 2023 – ene 2026</Period>
+                  <Company>Grupo Tecnologico DIDCOM</Company>
+                  <Period>jun 2023 – sept 2025</Period>
                 </JobMeta>
                 <BulletList>
                   <li>Dirección del equipo frontend, definición de estándares y revisión de código.</li>
@@ -330,9 +330,9 @@ const CurriculumPage = () => (
               </TimelineItem>
 
               <TimelineItem>
-                <Title variant="cardSm">Software Developer Front-End</Title>
+                <Title variant="cardSm">Ingeniera de Frontend</Title>
                 <JobMeta>
-                  <Company>Didcom Connecting Innovations</Company>
+                  <Company>Grupo Tecnologico DIDCOM</Company>
                   <Period>mar 2021 – jun 2023</Period>
                 </JobMeta>
                 <BulletList>
@@ -345,7 +345,7 @@ const CurriculumPage = () => (
               </TimelineItem>
 
               <TimelineItem>
-                <Title variant="cardSm">Desarrolladora Front-End</Title>
+                <Title variant="cardSm">Líder de Equipo</Title>
                 <JobMeta>
                   <Company>Ludens</Company>
                   <Period>feb 2022 – abr 2022 · Freelance</Period>
@@ -360,7 +360,7 @@ const CurriculumPage = () => (
               </TimelineItem>
 
               <TimelineItem>
-                <Title variant="cardSm">Front-End Developer</Title>
+                <Title variant="cardSm">Desarrolladora Frontend</Title>
                 <JobMeta>
                   <Company>ALPAE Asesores Corporativos</Company>
                   <Period>abr 2020 – mar 2021</Period>
@@ -375,10 +375,10 @@ const CurriculumPage = () => (
               </TimelineItem>
 
               <TimelineItem>
-                <Title variant="cardSm">Fundadora &amp; Desarrolladora Full-Stack</Title>
+                <Title variant="cardSm">Fundadora y Desarrolladora de Software</Title>
                 <JobMeta>
                   <Company>HostedRed</Company>
-                  <Period>ene 2017 – sept 2021 · Freelance</Period>
+                  <Period>ene 2017 – sept 2021 · Negocio Propio</Period>
                 </JobMeta>
                 <BulletList>
                   <li>Desarrollo full-stack con Node.js, Java, Angular, Laravel y diseño UX/UI.</li>
@@ -391,7 +391,7 @@ const CurriculumPage = () => (
               </TimelineItem>
 
               <TimelineItem>
-                <Title variant="cardSm">Full Stack Developer</Title>
+                <Title variant="cardSm">Desarrolladora de Software</Title>
                 <JobMeta>
                   <Company>Mawe Tecnologías</Company>
                   <Period>jun 2019 – may 2020</Period>
@@ -406,7 +406,21 @@ const CurriculumPage = () => (
               </TimelineItem>
 
               <TimelineItem>
-                <Title variant="cardSm">Practicante Desarrolladora</Title>
+                <Title variant="cardSm">Editora de Contenido Audiovisual</Title>
+                <JobMeta>
+                  <Company>JoyBrands</Company>
+                  <Period>jun 2018 – oct 2018</Period>
+                </JobMeta>
+                <BulletList>
+                  <li>Producción y edición de proyectos audiovisuales para redes sociales y televisión.</li>
+                </BulletList>
+                <TagList>
+                  {["Adobe Photoshop", "Adobe Illustrator", "Adobe Premiere", "Adobe After Effects"].map(t => <Tag key={t}>{t}</Tag>)}
+                </TagList>
+              </TimelineItem>
+
+              <TimelineItem>
+                <Title variant="cardSm">Desarrolladora de Software</Title>
                 <JobMeta>
                   <Company>Novutek</Company>
                   <Period>ene 2019 – sept 2019</Period>
@@ -455,6 +469,13 @@ const CurriculumPage = () => (
                 <SkillLabel>Cloud &amp; DevOps</SkillLabel>
                 <TagList>
                   {["Azure DevOps", "Docker", "Kubernetes", "Cloud Run", "Cloud Tasks", "VM", "BigQuery", "CI/CD"].map(t => <Tag key={t}>{t}</Tag>)}
+                </TagList>
+              </SkillBlock>
+
+              <SkillBlock>
+                <SkillLabel>Bases de Datos</SkillLabel>
+                <TagList>
+                  {["Firebase", "Firestore", "SQL Server", "MySQL", "BigQuery"].map(t => <Tag key={t}>{t}</Tag>)}
                 </TagList>
               </SkillBlock>
 
