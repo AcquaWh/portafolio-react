@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const GlobalContext = React.createContext();
 const themeConfigDefault = {
@@ -17,7 +17,20 @@ const getSavedTheme = () => {
 };
 
 const GlobalProvider = ({ children }) => {
-  const [theme, setTheme] = useState(getSavedTheme);
+  // Always start with default (light) so SSR and client initial render match.
+  // Load localStorage only after mount to avoid styled-components hydration mismatch.
+  const [theme, setTheme] = useState(themeConfigDefault);
+
+  useEffect(() => {
+    const saved = getSavedTheme();
+    if (
+      saved.bodyDark !== themeConfigDefault.bodyDark ||
+      saved.headerDark !== themeConfigDefault.headerDark ||
+      saved.footerDark !== themeConfigDefault.footerDark
+    ) {
+      setTheme(saved);
+    }
+  }, []);
   const [videoModalVisible, setVideoModalVisible] = useState(false);
   const [aboutVisible, setAboutVisible] = useState(false);
   const [contactVisible, setContactVisible] = useState(false);

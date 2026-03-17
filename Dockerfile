@@ -30,7 +30,7 @@ RUN printf 'server {\n\
   add_header X-Content-Type-Options "nosniff" always;\n\
   add_header X-XSS-Protection "1; mode=block" always;\n\
   add_header Referrer-Policy "strict-origin-when-cross-origin" always;\n\
-  add_header Content-Security-Policy "default-src '\''self'\''; script-src '\''self'\'' '\''unsafe-inline'\''; style-src '\''self'\'' '\''unsafe-inline'\''; img-src '\''self'\'' data: blob:; font-src '\''self'\'' data:; connect-src '\''self'\''; object-src '\''none'\''; frame-src '\''none'\''; frame-ancestors '\''none'\''; base-uri '\''self'\''; form-action '\''self'\'';" always;\n\
+  add_header Content-Security-Policy "default-src '\''self'\''; script-src '\''self'\'' '\''unsafe-inline'\'' https://www.googletagmanager.com; style-src '\''self'\'' '\''unsafe-inline'\''; img-src '\''self'\'' data: blob: https://www.googletagmanager.com https://www.google-analytics.com; font-src '\''self'\'' data:; connect-src '\''self'\'' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com; object-src '\''none'\''; frame-src https://www.googletagmanager.com; frame-ancestors '\''none'\''; base-uri '\''self'\''; form-action '\''self'\'';" always;\n\
   add_header Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()" always;\n\
   add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;\n\
   add_header X-Permitted-Cross-Domain-Policies "none" always;\n\
