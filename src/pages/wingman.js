@@ -36,7 +36,7 @@ const data = {
   techStack: ["AngularJS", "PHP", "Stripe", "PayPal", "Mailchimp", "MySQL", "Bootstrap"],
   myRole: "Led front-end development in Angular: architected both client and provider portals, integrated Stripe and PayPal, implemented real-time chat, and designed transactional emails in Mailchimp.",
   bullets: ["Full marketplace with 2 separate portals", "Dual Stripe + PayPal integration", "Real-time client-provider chat", "Backoffice with marketing management", "Transactional emails with Mailchimp"],
-  liveUrl: "http://wingman.mx/demo/",
+  liveUrl: null,
 };
 
 const WingmanPage = () => <CaseStudyPage data={data} />;

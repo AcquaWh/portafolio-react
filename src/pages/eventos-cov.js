@@ -19,7 +19,7 @@ const data = {
   techStack: ["Laravel", "PHP", "MySQL", "Bootstrap", "Blade"],
   myRole: "Full-stack development in Laravel: data model design, registration modules, payment management, and attendance control.",
   bullets: ["Real-time registration tracking", "Per-event payment management", "Digital check-in on event day", "Filters by payment and attendance status"],
-  liveUrl: "https://colegiados.elcov.org/login",
+  liveUrl: null,
 };
 
 const EventosCovPage = () => <CaseStudyPage data={data} />;

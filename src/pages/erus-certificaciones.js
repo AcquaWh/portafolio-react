@@ -27,7 +27,7 @@ const data = {
   techStack: ["AngularJS", "PHP", "MySQL", "Bootstrap", "Video streaming"],
   myRole: "Led the front-end development team. Designed the role architecture (employee / admin), the full training flow, and the badge system.",
   bullets: ["Restricted access for Erus employees only", "Video + integrated video conferencing", "Validation exams per module", "Badge system per completed training", "Per-employee progress tracking"],
-  liveUrl: "https://capacitate.erus.mx/login",
+  liveUrl: null,
 };
 
 const ErusCertPage = () => <CaseStudyPage data={data} />;
