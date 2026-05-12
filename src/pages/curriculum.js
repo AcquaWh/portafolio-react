@@ -4,7 +4,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import PageWrapper from "../components/PageWrapper";
 import { Section, Title, Text, Box } from "../components/Core";
 import bgHeroPattern from "../assets/image/webp/hero-pattern.webp";
-import imgL from "../assets/image/jpg/avatar.jpg";
 
 const HideFooter = createGlobalStyle`
   .site-wrapper > footer { display: none !important; }
@@ -71,14 +70,6 @@ const HeroSection = styled(Section)`
     background-size: cover;
     z-index: -1;
   }
-`;
-
-const Avatar = styled.img`
-  width: 90px;
-  height: 90px;
-  border-radius: 50rem;
-  object-fit: cover;
-  margin-bottom: 1.5rem;
 `;
 
 const ContactRow = styled.div`
@@ -296,7 +287,6 @@ const CurriculumPage = () => {
     {/* ── HERO ── */}
     <HeroSection hero className="position-relative">
       <Container>
-        <Avatar src={imgL} alt="Fernanda Cruz" />
         <Title variant="hero">Fernanda Cruz</Title>
         <Title variant="card" color="primary" className="mt-2">
           Frontend Engineer &amp; Engineering Lead

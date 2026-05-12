@@ -11,6 +11,7 @@ import { device } from "../../utils";
 const ModalStyled = styled(Modal)`
   &.modal {
     padding-left: 0 !important;
+    color-scheme: dark;
   }
   .modal-dialog {
     min-width: 100vw;
@@ -90,7 +91,7 @@ const AboutModal = (props) => {
       onHide={gContext.toggleAbout}
     >
       <Modal.Body className="position-relative ">
-        <Container fluid className="px-sm-5 py-2" style={{ position: "sticky", top: 0, zIndex: 10, background: "inherit", backdropFilter: "blur(7px)" }}>
+        <Container fluid className="px-sm-5 py-2" style={{ position: "sticky", top: 0, zIndex: 10, background: "inherit" }}>
           <div className="d-flex justify-content-between py-3">
             <Logo color="light" />
             <CloseButton onClick={gContext.toggleAbout} />

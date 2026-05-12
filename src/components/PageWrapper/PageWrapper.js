@@ -12,7 +12,7 @@ const PageWrapper = ({ children, darkTheme = false, themeConfig = null }) => {
   const gContext = useContext(GlobalContext);
 
   useEffect(() => {
-    // Solo aplica el tema de la página si el usuario NO ha guardado preferencia
+    // Only apply page theme if the user has not saved a preference
     const saved = localStorage.getItem("theme");
     if (!saved) {
       if (darkTheme) {
