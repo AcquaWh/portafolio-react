@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled, { createGlobalStyle, keyframes } from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 import PageWrapper from "../components/PageWrapper";
@@ -13,24 +13,49 @@ const HideFooter = createGlobalStyle`
 const PrintStyles = createGlobalStyle`
   @media print {
     @page { margin: 1.2cm 1.5cm; size: A4; }
+    html, body {
+      height: auto !important;
+      min-height: 0 !important;
+      overflow: visible !important;
+    }
+    .site-wrapper {
+      min-height: 0 !important;
+      overflow: visible !important;
+      height: auto !important;
+    }
+    * { animation: none !important; transition: none !important; }
     header, footer, nav,
     .site-wrapper > header,
     .site-wrapper > footer { display: none !important; }
+    /* Hide loader, modals, offcanvas — they add blank pages */
+    #loading,
+    [class*="Modal"],
+    [class*="Offcanvas"],
+    [class*="ThemeSwitch"],
+    [class*="ModalVideo"] { display: none !important; }
     body { font-size: 11pt; color: #000; background: #fff; }
     .no-print { display: none !important; }
     a { color: #495fef !important; text-decoration: none !important; }
-    /* Hero */
-    section[class*="Section"] { padding-top: 0 !important; }
-    /* Evitar que el timeline se corte */
+    /* Remove all section padding */
+    section, section[class*="Section"] {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    /* Avoid cutting timeline items */
     div[class*="TimelineItem"] { page-break-inside: avoid; }
     div[class*="LogroItem"] { page-break-inside: avoid; }
     div[class*="EduItem"] { page-break-inside: avoid; }
-    /* Quitar sombras y backgrounds decorativos */
+    /* Remove decorative backgrounds */
     div[class*="HeroSection"]::before { display: none !important; }
     div[class*="HeroSection"] { background: #fff !important; padding-top: 0.5cm !important; }
-    /* Columnas lado a lado en print */
+    /* Side-by-side columns in print — clearfix on row */
     .col-lg-7 { width: 58% !important; float: left !important; padding-right: 1cm !important; }
     .col-lg-5 { width: 40% !important; float: right !important; }
+    .row::after { content: ""; display: table; clear: both; }
+    /* No trailing space after last element */
+    body > *, .site-wrapper > * { page-break-after: avoid; }
   }
 `;
 
@@ -234,7 +259,35 @@ const PageFade = styled.div`
   animation: ${fadeIn} 0.55s ease forwards;
 `;
 
-const CurriculumPage = () => (
+const CurriculumPage = () => {
+  useEffect(() => {
+    const allDivs = () => document.querySelectorAll("div");
+
+    const beforePrint = () => {
+      allDivs().forEach((el) => {
+        el.dataset.pb = el.style.paddingBottom;
+        el.dataset.pt = el.style.paddingTop;
+        el.style.setProperty("padding-bottom", "0", "important");
+        el.style.setProperty("padding-top", "0", "important");
+      });
+    };
+
+    const afterPrint = () => {
+      allDivs().forEach((el) => {
+        el.style.paddingBottom = el.dataset.pb || "";
+        el.style.paddingTop = el.dataset.pt || "";
+      });
+    };
+
+    window.addEventListener("beforeprint", beforePrint);
+    window.addEventListener("afterprint", afterPrint);
+    return () => {
+      window.removeEventListener("beforeprint", beforePrint);
+      window.removeEventListener("afterprint", afterPrint);
+    };
+  }, []);
+
+  return (
   <PageWrapper>
     <HideFooter />
     <PrintStyles />
@@ -246,12 +299,14 @@ const CurriculumPage = () => (
         <Avatar src={imgL} alt="Fernanda Cruz" />
         <Title variant="hero">Fernanda Cruz</Title>
         <Title variant="card" color="primary" className="mt-2">
-          Ingeniera de Software &amp; Líder de Equipo
+          Frontend Engineer &amp; Engineering Lead
         </Title>
-        <Text className="mt-3" css={`max-width: 620px; font-size: 0.9rem; line-height: 1.6;`}>
-          Ingeniera de Software con más de 9 años de experiencia en desarrollo full-stack y liderazgo técnico.
-          Especializada en arquitecturas modernas con .NET Core, Vue.js, React y cloud (Azure / GCP).
-          Apasionada por la calidad del código, las metodologías ágiles y el desarrollo de equipos de alto rendimiento.
+        <Text className="mt-3" css={`max-width: 640px; font-size: 0.9rem; line-height: 1.6;`}>
+          Frontend Engineer with 9+ years of experience building web and mobile applications for clients
+          in the mobility, transportation, and tourism industries. I focus on creating fast, user-centered
+          interfaces and working with serverless and cloud technologies to build scalable applications.
+          I have also led engineering teams and helped improve product stability and delivery quality
+          across multiple projects.
         </Text>
         <ContactRow>
           <a
@@ -264,9 +319,6 @@ const CurriculumPage = () => (
           >
             info@fernandacruz.com
           </a>
-          <a href="https://www.linkedin.com/in/acquawh/" target="_blank" rel="noopener noreferrer">
-            linkedin.com/in/acquawh
-          </a>
           <a href="https://github.com/AcquaWh" target="_blank" rel="noopener noreferrer">
             github.com/AcquaWh
           </a>
@@ -276,7 +328,7 @@ const CurriculumPage = () => (
           className="no-print"
           onClick={e => { e.preventDefault(); window.print(); }}
         >
-          Descargar CV
+          Download Curriculum
         </DownloadBtn>
       </Container>
     </HeroSection>
@@ -288,148 +340,126 @@ const CurriculumPage = () => (
 
           {/* ── COLUMNA IZQUIERDA: Experiencia ── */}
           <Col lg="7" className="pr-lg-5 mb-5 mb-lg-0">
-            <SectionLabel>Experiencia laboral</SectionLabel>
+            <SectionLabel>Work Experience</SectionLabel>
             <Divider />
 
             <TimelineWrap>
 
               <TimelineItem>
-                <Title variant="cardSm">Líder de Equipo Software</Title>
+                <Title variant="cardSm">Software Team Lead</Title>
                 <JobMeta>
-                  <Company>Grupo Tecnologico DIDCOM</Company>
-                  <Period>sept 2025 – presente</Period>
+                  <Company>Grupo Tecnológico DIDCOM, S.A. de C.V.</Company>
+                  <Period>Sep 2025 – Present</Period>
                 </JobMeta>
                 <BulletList>
-                  <li>Gestión completa del ciclo de vida del proyecto: análisis de requerimientos, estimaciones de tiempo, cronogramas, release notes y seguimiento bajo estándares ISO 9001.</li>
-                  <li>Canal transversal entre áreas comercial, hardware y software para asegurar el entendimiento del producto, su despliegue y comercialización.</li>
-                  <li>Liderazgo técnico de equipos de desarrollo frontend y backend: revisión de PRs, estándares de código y decisiones arquitectónicas.</li>
-                  <li>Arquitectura con .NET Core, .NET MAUI, Blazor, React JS, React Native y Vue.js.</li>
-                  <li>Gestión de infraestructura cloud en Azure y GCP (Cloud Run, Cloud Tasks, VM, BigQuery).</li>
-                  <li>Implementación de pipelines CI/CD con Azure DevOps.</li>
-                  <li>Integración de IA mediante Claude API y Gemini API.</li>
+                  <li>Took ownership of a web app in crisis (20+ bugs per release, CEO escalations); implemented code reviews and quality standards, leading a 3-engineer team. Reduced defects to near zero within weeks and restored predictable delivery across Vue, .NET, and cloud (Cloud Run, Kubernetes, Cloud Functions, BigQuery, Firebase).</li>
+                  <li>Built KPI dashboards to track rework, delivery commitments, and post-release incidents, reducing incidents by ~80–90% and improving overall team productivity.</li>
+                  <li>Resolved a critical scaling issue on a client's servers impacting a React Native app used by ~4,000 users (100% of active clients) during peak hours (6–7 AM); partnered with the client to diagnose and fix the issue, restoring full production within ~1–2 hours and preventing recurrence.</li>
                 </BulletList>
                 <TagList>
-                  {[".NET 8", ".NET 9", ".NET MAUI", "Blazor", "React", "React Native", "Vue.js", "Azure", "GCP", "Claude API", "Gemini API"].map(t => <Tag key={t}>{t}</Tag>)}
+                  {[".NET 8", ".NET 9", ".NET MAUI", "Blazor", "React", "React Native", "Vue.js", "Cloud Run", "Kubernetes", "BigQuery", "Firebase", "Claude API", "Gemini API"].map(t => <Tag key={t}>{t}</Tag>)}
                 </TagList>
               </TimelineItem>
 
               <TimelineItem>
-                <Title variant="cardSm">Líder de Equipo Frontend</Title>
+                <Title variant="cardSm">Frontend Engineering Lead</Title>
                 <JobMeta>
-                  <Company>Grupo Tecnologico DIDCOM</Company>
-                  <Period>jun 2023 – sept 2025</Period>
+                  <Company>Grupo Tecnológico DIDCOM, S.A. de C.V.</Company>
+                  <Period>Jun 2023 – Sep 2025</Period>
                 </JobMeta>
                 <BulletList>
-                  <li>Dirección del equipo frontend, definición de estándares y revisión de código.</li>
-                  <li>Diseño de arquitectura de componentes reutilizables con Vue.js y React.</li>
-                  <li>Metodologías ágiles (Scrum / Kanban) con Jira y Monday.</li>
+                  <li>Owned web and mobile frontend teams; built and drove adoption of a shared UI component library (Vue for web, React Native for mobile) across 10+ products, reducing onboarding from 1–2 months to a few days (~80–90%) and eliminating duplicated work.</li>
                 </BulletList>
                 <TagList>
-                  {["React", "Vue.js", "TypeScript", "Figma", "Scrum", "Kanban", "Jira", "Monday"].map(t => <Tag key={t}>{t}</Tag>)}
+                  {["React", "React Native", "Vue.js", "TypeScript", "Figma", "Scrum", "Kanban", "Jira"].map(t => <Tag key={t}>{t}</Tag>)}
                 </TagList>
               </TimelineItem>
 
               <TimelineItem>
-                <Title variant="cardSm">Ingeniera de Frontend</Title>
+                <Title variant="cardSm">Frontend Engineer</Title>
                 <JobMeta>
-                  <Company>Grupo Tecnologico DIDCOM</Company>
-                  <Period>mar 2021 – jun 2023</Period>
+                  <Company>Grupo Tecnológico DIDCOM, S.A. de C.V.</Company>
+                  <Period>Mar 2021 – Jun 2023</Period>
                 </JobMeta>
                 <BulletList>
-                  <li>Desarrollo de interfaces con .NET, Vue.js y arquitectura MVC.</li>
-                  <li>Diseño UI/UX con Figma.</li>
+                  <li>Took ownership of an undocumented React Native app by reverse-engineering its architecture and delivering complete documentation in ~1 week, reducing onboarding time by ~70–80% and improving team productivity.</li>
+                  <li>Fixed a critical bug in a React Native app blocking 100% of QR-based passenger boarding; diagnosed and resolved within ~3–4 hours, restoring full operation the same day with zero escalations.</li>
                 </BulletList>
                 <TagList>
-                  {[".NET", "Vue.js", "MVC", "Figma", "Jira"].map(t => <Tag key={t}>{t}</Tag>)}
+                  {[".NET", "Vue.js", "React Native", "MVC", "Figma", "Jira"].map(t => <Tag key={t}>{t}</Tag>)}
                 </TagList>
               </TimelineItem>
 
               <TimelineItem>
-                <Title variant="cardSm">Líder de Equipo</Title>
+                <Title variant="cardSm">Frontend Engineering Lead</Title>
                 <JobMeta>
-                  <Company>Ludens</Company>
-                  <Period>feb 2022 – abr 2022 · Freelance</Period>
+                  <Company>Ludens / Media Aérea</Company>
+                  <Period>Feb 2022 – Apr 2022 · Contract / Part-time</Period>
                 </JobMeta>
                 <BulletList>
-                  <li>Desarrollo de Front y Back Office de Dasana en Angular.</li>
-                  <li>Capacitación de personal nuevo en el área de Frontend.</li>
+                  <li>Led a 3-engineer team during afternoon/night shifts to build a drag-and-drop feature in an Angular web app with AI-powered dinner recipe suggestions; delivered in ~2–3 weeks, reducing user meal selection time by ~50% and improving feature engagement.</li>
                 </BulletList>
                 <TagList>
-                  {["Angular"].map(t => <Tag key={t}>{t}</Tag>)}
+                  {["Angular", "TypeScript"].map(t => <Tag key={t}>{t}</Tag>)}
                 </TagList>
               </TimelineItem>
 
               <TimelineItem>
-                <Title variant="cardSm">Desarrolladora Frontend</Title>
+                <Title variant="cardSm">Frontend Engineer</Title>
                 <JobMeta>
                   <Company>ALPAE Asesores Corporativos</Company>
-                  <Period>abr 2020 – mar 2021</Period>
+                  <Period>Apr 2020 – Mar 2021</Period>
                 </JobMeta>
                 <BulletList>
-                  <li>Desarrollo de aplicaciones web en Angular: proyectos Erus, Wingman y Kite.</li>
-                  <li>Plataforma Certificate para capacitación de empleados.</li>
+                  <li>Built and launched a corporate e-learning platform (Angular, PHP) from scratch used by multiple companies (~100+ users), reducing training costs ~30–50% and enabling immediate employee onboarding.</li>
+                  <li>Owned end-to-end delivery of a hotel reservation web app (Angular), including UI/UX design from scratch; enabled digital bookings, reducing manual processes ~40% and supporting 50+ active users.</li>
+                  <li>Developed and enhanced an e-commerce web app (Angular + PHP) enabling users to buy/sell products and redeem vouchers; supported 100+ users, improved checkout and voucher flows, and increased successful transactions by ~20–30%.</li>
+                  <li>Built a video calling platform from scratch (Angular + web services), enabling real-time communication for 80+ users; delivered core features including session management and call stability, supporting reliable virtual interactions.</li>
                 </BulletList>
                 <TagList>
-                  {["Angular", "Erus", "Wingman", "Kite"].map(t => <Tag key={t}>{t}</Tag>)}
+                  {["Angular", "PHP", "Figma", "UX/UI"].map(t => <Tag key={t}>{t}</Tag>)}
                 </TagList>
               </TimelineItem>
 
               <TimelineItem>
-                <Title variant="cardSm">Fundadora y Desarrolladora de Software</Title>
+                <Title variant="cardSm">Software Engineer (Owner, Part-time)</Title>
                 <JobMeta>
                   <Company>HostedRed</Company>
-                  <Period>ene 2017 – sept 2021 · Negocio Propio</Period>
+                  <Period>Jan 2017 – Sep 2021 · Own Business</Period>
                 </JobMeta>
                 <BulletList>
-                  <li>Desarrollo full-stack con Node.js, Java, Angular, Laravel y diseño UX/UI.</li>
-                  <li>Sitio web y sistema de registro para el Colegio de Odontólogos de Venezuela.</li>
-                  <li>Sistemas de inscripción y big data para eventos con miles de estudiantes.</li>
+                  <li>Owned and led end-to-end development of a dental certification platform, managing a team of 4–5 engineers; defined product strategy, architecture, and delivery while building a full-stack system (Node.js, Angular, Laravel) used by 2,000+ doctors.</li>
                 </BulletList>
                 <TagList>
-                  {["Node.js", "Java", "Angular", "Laravel", "UX/UI"].map(t => <Tag key={t}>{t}</Tag>)}
+                  {["Node.js", "Angular", "Laravel", "UX/UI"].map(t => <Tag key={t}>{t}</Tag>)}
                 </TagList>
               </TimelineItem>
 
               <TimelineItem>
-                <Title variant="cardSm">Desarrolladora de Software</Title>
+                <Title variant="cardSm">Software Engineer</Title>
                 <JobMeta>
                   <Company>Mawe Tecnologías</Company>
-                  <Period>jun 2019 – may 2020</Period>
+                  <Period>Jun 2019 – May 2020</Period>
                 </JobMeta>
                 <BulletList>
-                  <li>Frontend y backend con Laravel, PHP, WordPress y APIs REST.</li>
-                  <li>Proyectos: Caffenio (diseño web), STEM (inventario universitario), ULSA (bolsa de trabajo).</li>
+                  <li>Built and launched a university job platform from scratch (Laravel, PHP, MySQL), enabling 1,000+ alumni to apply to jobs online and companies to post vacancies; eliminated manual CV handling and introduced digital tracking of employment outcomes.</li>
                 </BulletList>
                 <TagList>
-                  {["Laravel", "PHP", "WordPress", "APIs REST"].map(t => <Tag key={t}>{t}</Tag>)}
+                  {["Laravel", "PHP", "MySQL", "APIs REST"].map(t => <Tag key={t}>{t}</Tag>)}
                 </TagList>
               </TimelineItem>
 
               <TimelineItem>
-                <Title variant="cardSm">Editora de Contenido Audiovisual</Title>
-                <JobMeta>
-                  <Company>JoyBrands</Company>
-                  <Period>jun 2018 – oct 2018</Period>
-                </JobMeta>
-                <BulletList>
-                  <li>Producción y edición de proyectos audiovisuales para redes sociales y televisión.</li>
-                </BulletList>
-                <TagList>
-                  {["Adobe Photoshop", "Adobe Illustrator", "Adobe Premiere", "Adobe After Effects"].map(t => <Tag key={t}>{t}</Tag>)}
-                </TagList>
-              </TimelineItem>
-
-              <TimelineItem>
-                <Title variant="cardSm">Desarrolladora de Software</Title>
+                <Title variant="cardSm">Frontend Engineer</Title>
                 <JobMeta>
                   <Company>Novutek</Company>
-                  <Period>ene 2019 – sept 2019</Period>
+                  <Period>Jan 2019 – Sep 2019</Period>
                 </JobMeta>
                 <BulletList>
-                  <li>Desarrollo de plataforma educativa para empleados en PHP y Moodle.</li>
+                  <li>Led UX/UI design and frontend development of a Moodle-based onboarding platform (Angular, Laravel), replacing a fully manual process; enabled 100+ employees to onboard through a structured digital flow, reducing onboarding time by 50%+ and significantly lowering HR workload.</li>
                 </BulletList>
                 <TagList>
-                  {["PHP", "Moodle"].map(t => <Tag key={t}>{t}</Tag>)}
+                  {["Angular", "Laravel", "PHP", "Moodle", "UX/UI"].map(t => <Tag key={t}>{t}</Tag>)}
                 </TagList>
               </TimelineItem>
 
@@ -441,124 +471,110 @@ const CurriculumPage = () => (
 
             {/* Stack */}
             <Box mb="2.5rem">
-              <SectionLabel>Stack tecnológico</SectionLabel>
+              <SectionLabel>Tech Stack</SectionLabel>
               <Divider />
 
               <SkillBlock>
                 <SkillLabel>Backend</SkillLabel>
                 <TagList>
-                  {["C#", ".NET 8", ".NET 9", ".NET Core", ".NET Framework", "REST APIs", "PHP", "Laravel", "Node.js"].map(t => <Tag key={t}>{t}</Tag>)}
+                  {["C#", ".NET (Core, Framework)", "REST APIs", "Node.js", "PHP (Laravel)"].map(t => <Tag key={t}>{t}</Tag>)}
                 </TagList>
               </SkillBlock>
 
               <SkillBlock>
                 <SkillLabel>Frontend</SkillLabel>
                 <TagList>
-                  {["React", "Vue.js", "Angular", "Blazor", "Razor", "TypeScript", "HTML/SCSS", "Bootstrap", "Vuetify"].map(t => <Tag key={t}>{t}</Tag>)}
+                  {["React", "Vue", "Angular", "TypeScript", "HTML", "SCSS"].map(t => <Tag key={t}>{t}</Tag>)}
                 </TagList>
               </SkillBlock>
 
               <SkillBlock>
-                <SkillLabel>Móvil</SkillLabel>
+                <SkillLabel>Mobile</SkillLabel>
                 <TagList>
-                  {["React Native", ".NET MAUI", "MAUI Blazor", "iOS", "Android"].map(t => <Tag key={t}>{t}</Tag>)}
+                  {["React Native", ".NET MAUI", "iOS (Swift)", "Android"].map(t => <Tag key={t}>{t}</Tag>)}
                 </TagList>
               </SkillBlock>
 
               <SkillBlock>
                 <SkillLabel>Cloud &amp; DevOps</SkillLabel>
                 <TagList>
-                  {["Azure DevOps", "Docker", "Kubernetes", "Cloud Run", "Cloud Tasks", "VM", "BigQuery", "CI/CD"].map(t => <Tag key={t}>{t}</Tag>)}
+                  {["GCP (Cloud Run, Kubernetes, BigQuery, Cloud Functions)", "Azure", "Docker", "CI/CD"].map(t => <Tag key={t}>{t}</Tag>)}
                 </TagList>
               </SkillBlock>
 
               <SkillBlock>
-                <SkillLabel>Bases de Datos</SkillLabel>
+                <SkillLabel>AI &amp; Data</SkillLabel>
                 <TagList>
-                  {["Firebase", "Firestore", "SQL Server", "MySQL", "BigQuery"].map(t => <Tag key={t}>{t}</Tag>)}
+                  {["Claude API", "Gemini API", "BigQuery", "Power BI", "Looker Studio"].map(t => <Tag key={t}>{t}</Tag>)}
                 </TagList>
               </SkillBlock>
 
               <SkillBlock>
-                <SkillLabel>Inteligencia Artificial</SkillLabel>
+                <SkillLabel>Engineering &amp; Tools</SkillLabel>
                 <TagList>
-                  {["Claude API", "Gemini API", "Integración de IA"].map(t => <Tag key={t}>{t}</Tag>)}
+                  {["Git", "GitHub", "Azure DevOps", "Jira", "Scrum", "Kanban"].map(t => <Tag key={t}>{t}</Tag>)}
                 </TagList>
               </SkillBlock>
 
               <SkillBlock>
-                <SkillLabel>Datos &amp; Reportes</SkillLabel>
+                <SkillLabel>Design</SkillLabel>
                 <TagList>
-                  {["Power BI", "Looker Studio", "BigQuery"].map(t => <Tag key={t}>{t}</Tag>)}
-                </TagList>
-              </SkillBlock>
-
-              <SkillBlock>
-                <SkillLabel>Gestión</SkillLabel>
-                <TagList>
-                  {["Jira", "Monday", "Kanban", "Scrum", "Git", "GitHub", "Azure DevOps"].map(t => <Tag key={t}>{t}</Tag>)}
-                </TagList>
-              </SkillBlock>
-
-              <SkillBlock>
-                <SkillLabel>Diseño</SkillLabel>
-                <TagList>
-                  {["Figma", "Photoshop", "Adobe Illustrator", "Looker Studio"].map(t => <Tag key={t}>{t}</Tag>)}
+                  {["Figma", "Adobe Creative Suite"].map(t => <Tag key={t}>{t}</Tag>)}
                 </TagList>
               </SkillBlock>
             </Box>
 
-            {/* Educación */}
+            {/* Education */}
             <Box mb="2.5rem">
-              <SectionLabel>Educación</SectionLabel>
+              <SectionLabel>Education</SectionLabel>
               <Divider />
 
               <EduItem>
-                <Title variant="cardSm">Lic. Ingeniería en Producción Multimedia</Title>
+                <Title variant="cardSm">Degree in Multimedia Production Engineering</Title>
                 <Company>ULSA – Universidad La Salle Noroeste</Company>
-                <Text variant="small" css={`display:block; margin-top: 0.2rem;`}>ago 2015 – jun 2020</Text>
+                <Text variant="small" css={`display:block; margin-top: 0.2rem;`}>Aug 2015 – Jun 2020</Text>
               </EduItem>
 
               <EduItem>
-                <Title variant="cardSm">Diplomado en Desarrollo de Videojuegos</Title>
+                <Title variant="cardSm">Diploma in Video Game Development (Unity, C#)</Title>
                 <Company>ITSON – Instituto Tecnológico de Sonora</Company>
-                <Text variant="small" css={`display:block; margin-top: 0.2rem;`}>nov 2019 – ene 2020 · Unity con C#</Text>
+                <Text variant="small" css={`display:block; margin-top: 0.2rem;`}>Nov 2019 – Jan 2020</Text>
               </EduItem>
             </Box>
 
-            {/* Reconocimientos */}
+            {/* Awards */}
             <Box mb="2.5rem">
-              <SectionLabel>Reconocimientos</SectionLabel>
+              <SectionLabel>Awards &amp; Achievements</SectionLabel>
               <Divider />
 
               <LogroItem>
-                <Title variant="cardSm" className="mb-1">NASA Space Apps Challenge 2019</Title>
-                <Text variant="small">Ganadora local y nominada global. Proyecto de Realidad Virtual con Unity y C#.</Text>
+                <Title variant="cardSm" className="mb-1">Local Winner — NASA Space Apps Challenge 2019</Title>
+                <Text variant="small">Built a VR experience using Unity and C# to raise awareness of planetary pollution; recognized for innovation and social impact.</Text>
               </LogroItem>
 
               <LogroItem>
-                <Title variant="cardSm" className="mb-1">Arizona Woman Hackathon 2019</Title>
-                <Text variant="small">Ganadora. App móvil para iPhone que ayuda a personas sordomudas a comunicarse mediante símbolos, programada en Swift.</Text>
+                <Title variant="cardSm" className="mb-1">Winner — Arizona Women Hackathon 2019</Title>
+                <Text variant="small">Built an iOS app in Swift enabling communication for hearing-impaired users; delivered a functional prototype within the hackathon timeframe.</Text>
               </LogroItem>
 
               <LogroItem>
-                <Title variant="cardSm" className="mb-1">Líder de equipo de software</Title>
-                <Text variant="small">Crecí de desarrolladora a líder del área completa de software en Didcom en menos de 5 años.</Text>
+                <Title variant="cardSm" className="mb-1">Rapid Career Growth — Didcom</Title>
+                <Text variant="small">Promoted from individual contributor to software organization lead in &lt;5 years, owning team structure and technical strategy.</Text>
               </LogroItem>
             </Box>
 
-            {/* Idiomas */}
+            {/* Languages */}
             <Box mb="2.5rem">
-              <SectionLabel>Idiomas</SectionLabel>
+              <SectionLabel>Languages</SectionLabel>
               <Divider />
               <LangRow>
                 <LangItem>
-                  <Text css={`font-weight: 700; font-size: 0.85rem;`}>Español</Text>
-                  <Text variant="small">Nativo</Text>
+                  <Text css={`font-weight: 700; font-size: 0.85rem;`}>Spanish</Text>
+                  <Text variant="small">Native</Text>
                 </LangItem>
                 <LangItem>
-                  <Text css={`font-weight: 700; font-size: 0.85rem;`}>Inglés</Text>
-                  <Text variant="small">B1</Text>
+                  <Text css={`font-weight: 700; font-size: 0.85rem;`}>English</Text>
+                  <Text variant="small">B2 (Upper-Intermediate)</Text>
                 </LangItem>
               </LangRow>
             </Box>
@@ -570,6 +586,7 @@ const CurriculumPage = () => (
 
     </PageFade>
   </PageWrapper>
-);
+  );
+};
 
 export default CurriculumPage;

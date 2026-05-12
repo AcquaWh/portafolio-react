@@ -6,27 +6,27 @@ import imgS2    from "../assets/image/jpg/details/certificate-details2.webp";
 import imgS3    from "../assets/image/jpg/details/certificate-details3.webp";
 
 const data = {
-  title: "Erus Certificaciones — Plataforma interna de capacitación",
-  tags: ["Angular", "PHP", "E-learning", "Interno"],
+  title: "Erus Certifications — Internal training platform",
+  tags: ["Angular", "PHP", "E-learning", "Internal"],
   cover: imgCover,
-  meta: { client: "Erus", year: "2020", role: "Front-End Lead", stack: "Angular · PHP · Videoconferencias" },
-  problem: "Erus capacitaba a sus empleados de forma presencial y sin seguimiento estructurado. No existía un mecanismo para validar que los empleados completaran las capacitaciones ni para certificar las habilidades adquiridas.",
-  solution: "Desarrollamos una plataforma interna de e-learning con acceso restringido a empleados Erus. Incluye reproducción de videos, videoconferencias internas, exámenes de validación y un sistema de insignias por nivel de capacitación completado.",
+  meta: { client: "Erus", year: "2020", role: "Front-End Lead", stack: "Angular · PHP · Video Conferencing" },
+  problem: "Erus trained employees in person with no structured tracking. There was no mechanism to verify that employees completed training or to certify the skills they acquired.",
+  solution: "We built an internal e-learning platform with restricted access for Erus employees. It includes video playback, internal video conferencing, certification exams, and a badge system for each completed training level.",
   highlights: [
-    { title: "Biblioteca de videos de capacitación", desc: "Cursos organizados por área y nivel, con progreso guardado y control de visualización completa antes del examen." },
-    { title: "Videoconferencias internas", desc: "Capacitaciones en vivo integradas en la plataforma, sin necesidad de herramientas externas." },
-    { title: "Exámenes de certificación", desc: "Al finalizar cada módulo, el empleado presenta un examen. Solo con calificación aprobatoria se otorga la insignia del nivel." },
-    { title: "Sistema de insignias", desc: "Gamificación del aprendizaje: cada capacitación superada otorga una insignia visible en el perfil del empleado." },
+    { title: "Training video library", desc: "Courses organized by area and level, with saved progress and required full viewing before unlocking the exam." },
+    { title: "Internal video conferencing", desc: "Live training sessions integrated directly into the platform, no external tools needed." },
+    { title: "Certification exams", desc: "After completing each module, employees take an exam. The badge is only awarded upon passing." },
+    { title: "Badge system", desc: "Gamified learning: each completed training awards a badge visible on the employee's profile." },
   ],
   screenshots: [
-    { img: imgS1, caption: "Biblioteca de cursos — módulos disponibles por área" },
-    { img: imgS2, caption: "Vista de capacitación con video y progreso" },
-    { img: imgS3, caption: "Sistema de insignias — certificaciones obtenidas por empleado" },
+    { img: imgS1, caption: "Course library — available modules by area" },
+    { img: imgS2, caption: "Training view with video and progress tracking" },
+    { img: imgS3, caption: "Badge system — certifications earned per employee" },
   ],
-  result: "Erus formalizó su proceso de capacitación interna con trazabilidad completa: saben exactamente qué empleados completaron cada curso, cuántos aprobaron los exámenes y qué certificaciones tiene activas cada persona del equipo.",
+  result: "Erus formalized their internal training process with full traceability: they know exactly which employees completed each course, how many passed the exams, and which certifications each team member holds.",
   techStack: ["AngularJS", "PHP", "MySQL", "Bootstrap", "Video streaming"],
-  myRole: "Lideré el equipo de desarrollo front-end. Diseñé la arquitectura de roles (empleado / admin), el flujo de capacitación completo y el sistema de insignias.",
-  bullets: ["Acceso restringido solo a empleados Erus", "Videos + videoconferencias integradas", "Exámenes de validación por módulo", "Sistema de insignias por capacitación", "Seguimiento de progreso por empleado"],
+  myRole: "Led the front-end development team. Designed the role architecture (employee / admin), the full training flow, and the badge system.",
+  bullets: ["Restricted access for Erus employees only", "Video + integrated video conferencing", "Validation exams per module", "Badge system per completed training", "Per-employee progress tracking"],
   liveUrl: "https://capacitate.erus.mx/login",
 };
 

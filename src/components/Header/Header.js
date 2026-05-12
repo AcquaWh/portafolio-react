@@ -233,8 +233,7 @@ const Header = ({ isDark }) => {
         dark={isDark ? 1 : 0}
       >
         <Container fluid>
-          <nav className="navbar px-0 px-md-3 site-navbar offcanvas-active navbar-expand-lg navbar-light">
-            {/* <!-- Brand Logo--> */}
+          <nav className="navbar px-0 px-md-3 navbar-expand-lg navbar-light">
             <div className="brand-logo">
               <Logo color={isDark ? "light" : "dark"} />
             </div>
@@ -443,7 +442,7 @@ const Header = ({ isDark }) => {
                         gContext.toggleAbout();
                       }}
                     >
-                      acerca de mi.
+                      about me.
                     </a>
                   </li>
 
@@ -470,7 +469,6 @@ const Header = ({ isDark }) => {
               onClick={gContext.toggleOffCanvas}
               dark={isDark ? 1 : 0}
             >
-              {/* <i className="icon icon-simple-remove icon-close"></i> */}
               <i className="icon icon-menu-34 icon-burger d-block"></i>
             </ToggleButton>
           </nav>

@@ -4,24 +4,24 @@ import imgCover from "../assets/image/jpg/details/vr.webp";
 import imgS1    from "../assets/image/jpg/details/vr-details.webp";
 
 const data = {
-  title: "NASA SpaceApps — Juego VR sobre cambio climático",
-  tags: ["Unity", "C#", "Realidad Virtual", "Hackathon"],
+  title: "NASA SpaceApps — VR game about climate change",
+  tags: ["Unity", "C#", "Virtual Reality", "Hackathon"],
   cover: imgCover,
   meta: { client: "NASA SpaceApps Challenge", year: "2019", role: "VR Developer", stack: "Unity · C# · VR" },
-  problem: "El reto de NASA SpaceApps Challenge 2019 pedía crear una experiencia interactiva que hiciera tangibles las consecuencias del cambio climático. Los datos científicos existen pero son abstractos para el público general — necesitaban ser experimentados, no solo leídos.",
-  solution: "Desarrollamos un juego de realidad virtual en Unity donde el jugador experimenta en primera persona las consecuencias reales del cambio climático: aumento del nivel del mar, deshielo polar y eventos climáticos extremos en entornos interactivos.",
+  problem: "The NASA SpaceApps Challenge 2019 asked teams to create an interactive experience that made the consequences of climate change tangible. Scientific data exists but is abstract for the general public — it needed to be experienced, not just read.",
+  solution: "We built a virtual reality game in Unity where the player experiences the real-world consequences of climate change firsthand: rising sea levels, polar ice melt, and extreme weather events in interactive environments.",
   highlights: [
-    { title: "Experiencia inmersiva en VR", desc: "El jugador se transporta a escenarios afectados por el cambio climático con visualizaciones basadas en datos reales de la NASA." },
-    { title: "Mecánicas de juego educativas", desc: "Las decisiones del jugador dentro del juego tienen consecuencias ambientales visibles, generando conciencia de causa-efecto." },
-    { title: "Nominación local Ciudad Obregón 2019", desc: "El proyecto fue seleccionado y nominado en la sede local del hackathon, compitiendo contra equipos de toda la región." },
+    { title: "Immersive VR experience", desc: "The player is transported to climate-affected scenarios with visualizations based on real NASA data." },
+    { title: "Educational game mechanics", desc: "The player's in-game decisions have visible environmental consequences, building cause-and-effect awareness." },
+    { title: "Local winner — Ciudad Obregón 2019", desc: "The project was selected and nominated at the local hackathon venue, competing against teams from across the region." },
   ],
   screenshots: [
-    { img: imgS1, caption: "Escena del juego VR — visualización de impacto climático" },
+    { img: imgS1, caption: "VR game scene — climate impact visualization" },
   ],
-  result: "El proyecto fue nominado en Ciudad Obregón en el NASA SpaceApps Challenge 2019. Fue una demostración de que la realidad virtual puede ser un vehículo poderoso para la comunicación científica y la educación ambiental.",
+  result: "The project was nominated at the NASA SpaceApps Challenge 2019 in Ciudad Obregón. It demonstrated that virtual reality can be a powerful vehicle for science communication and environmental education.",
   techStack: ["Unity", "C#", "VR SDK", "3D Modeling", "NASA Open Data"],
-  myRole: "Desarrollo del juego en Unity con C#, diseño de mecánicas de juego, integración de los escenarios VR y presentación del proyecto ante los jueces del hackathon.",
-  bullets: ["Nominado NASA SpaceApps Challenge 2019", "Experiencia VR completa en Unity + C#", "Datos reales de la NASA integrados", "Mecánicas educativas de causa-efecto"],
+  myRole: "Built the game in Unity with C#, designed game mechanics, integrated the VR environments, and presented the project to the hackathon judges.",
+  bullets: ["Nominated at NASA SpaceApps Challenge 2019", "Full VR experience in Unity + C#", "Real NASA data integrated", "Educational cause-and-effect mechanics"],
   liveUrl: "https://2019.spaceappschallenge.org/challenges/living-our-world/1up-nasa-earth/teams/the-no-names/project",
 };
 

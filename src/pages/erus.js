@@ -3,22 +3,22 @@ import CaseStudyPage from "../components/CaseStudy";
 import imgCover from "../assets/image/jpg/details/erus.webp";
 
 const data = {
-  title: "Erus — Tienda en línea con pagos integrados",
+  title: "Erus — Online store with integrated payments",
   tags: ["Angular", "PHP", "Openpay", "E-commerce"],
   cover: imgCover,
   meta: { client: "Erus", year: "2016", role: "Front-End Developer", stack: "Angular · PHP · Openpay" },
-  problem: "Erus comercializaba sus productos únicamente de forma presencial y telefónica. No tenía presencia en línea ni un mecanismo para recibir pagos digitales, lo que limitaba su alcance de ventas y dependía completamente del canal físico.",
-  solution: "Desarrollamos una tienda en línea completa con catálogo de productos, carrito de compras y checkout con pago seguro mediante Openpay. La solución permitió a Erus vender sus productos 24/7 sin intermediarios.",
+  problem: "Erus sold products exclusively in person and over the phone. They had no online presence or mechanism to accept digital payments, limiting their sales reach and making them entirely dependent on the physical channel.",
+  solution: "We built a complete online store with a product catalog, shopping cart, and checkout with secure card payments via Openpay, letting Erus sell 24/7 without intermediaries.",
   highlights: [
-    { title: "Catálogo de productos", desc: "Vitrina digital con filtros por categoría, descripción detallada y galería de imágenes de cada producto." },
-    { title: "Sistema de pagos con Openpay", desc: "Integración de la pasarela de pagos Openpay para aceptar tarjetas de crédito y débito con tokenización segura." },
-    { title: "Panel de administración", desc: "Dashboard para gestionar inventario, pedidos y clientes sin conocimientos técnicos." },
+    { title: "Product catalog", desc: "Digital storefront with category filters, detailed descriptions, and image galleries for each product." },
+    { title: "Openpay payment gateway", desc: "Integration of the Openpay payment gateway to accept credit and debit cards with secure tokenization." },
+    { title: "Admin dashboard", desc: "Dashboard to manage inventory, orders, and customers without technical knowledge." },
   ],
   screenshots: [],
-  result: "Erus pasó de cero ventas digitales a tener un canal de e-commerce activo accesible desde cualquier dispositivo. El proceso de compra completo se puede realizar en menos de 3 minutos, ampliando el alcance de ventas más allá de su área geográfica.",
+  result: "Erus went from zero digital sales to an active e-commerce channel accessible from any device. The full purchase flow takes under 3 minutes, extending their sales reach beyond their local area.",
   techStack: ["AngularJS", "PHP", "Openpay", "MySQL", "Bootstrap", "npm"],
-  myRole: "Desarrollo front-end con AngularJS, integración con la API de Openpay y coordinación con el equipo de backend para el flujo de compra completo.",
-  bullets: ["E-commerce con pago en línea en producción", "Integración Openpay con tokenización segura", "Catálogo administrable sin código", "Responsive para móvil y escritorio"],
+  myRole: "Front-end development with AngularJS, Openpay API integration, and coordination with the backend team for the complete purchase flow.",
+  bullets: ["Live e-commerce with online payments", "Openpay integration with secure tokenization", "Code-free manageable catalog", "Responsive for mobile and desktop"],
   liveUrl: "https://erus.mx/",
 };
 

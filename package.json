@@ -1,12 +1,12 @@
 {
-  "name": "fernandacruz",
-  "description": "Portafolio",
+  "name": "fernandacruz-portfolio",
+  "description": "Portfolio of Fernanda Cruz — Frontend Engineer & Engineering Lead",
   "version": "1.0.0",
-  "author": "grayic",
-  "license": "MIT",
+  "author": "Fernanda Cruz <info@fernandacruz.com>",
+  "private": true,
   "keywords": [
     "gatsby",
-    "portafolio",
+    "portfolio",
     "react",
     "frontend"
   ],
@@ -40,6 +40,7 @@
     "gatsby-transformer-sharp": "^2.3.13",
     "google-map-react": "^1.1.7",
     "lodash": "^4.17.15",
+    "lottie-react": "^2.4.1",
     "node-sass": "^6.0.1",
     "polished": "^3.4.2",
     "react": "^16.10.2",

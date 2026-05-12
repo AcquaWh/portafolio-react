@@ -68,7 +68,7 @@ const SectionLabel = styled.div`
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #495fef;
+  color: rgba(255, 255, 255, 0.5);
   margin-bottom: 8px;
   margin-top: 20px;
 `;
@@ -120,9 +120,9 @@ const Wrapper = styled.div`
 `;
 
 const skills = [
-  "C# · .NET 8/9", "React", "Vue.js", "Angular", "Blazor",
-  "React Native", ".NET MAUI", "Google Cloud", "Kubernetes",
-  "Cloud Run", "Power BI", "BigQuery", "Claude API", "Gemini API",
+  "React", "React Native", "TypeScript", "Vue.js", "Angular",
+  "Component libraries", "Design systems", "GCP", "Azure",
+  "CI/CD", "Claude API", "Gemini API",
 ];
 
 const About = ({ hero = true, bg = "dark", ...rest }) => {
@@ -149,15 +149,11 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                         Fernanda Cruz
                       </Title>
                       <Text color="primary" variant="small" style={{ fontWeight: 600, marginBottom: "0.5rem" }}>
-                        Ingeniera de Software &amp; Líder de Equipo
+                        Frontend Engineer &amp; Engineering Lead
                       </Text>
                       <div className="d-flex align-items-center" style={{ gap: "12px" }}>
                         <LinkSocial href="https://github.com/AcquaWh" target="_blank" rel="noopener noreferrer">
                           GitHub
-                        </LinkSocial>
-                        <span style={{ color: "rgba(255,255,255,0.2)" }}>|</span>
-                        <LinkSocial href="https://www.linkedin.com/in/acquawh/" target="_blank" rel="noopener noreferrer">
-                          LinkedIn
                         </LinkSocial>
                       </div>
                     </div>
@@ -165,31 +161,33 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
 
                   {/* Stats */}
                   <div className="mb-2">
-                    <StatPill><span className="num">9+</span><span className="lbl">años de experiencia</span></StatPill>
-                    <StatPill><span className="num">8+</span><span className="lbl">años en Didcom</span></StatPill>
-                    <StatPill><span className="num">5+</span><span className="lbl">tecnologías en producción</span></StatPill>
+                    <StatPill><span className="num">9+</span><span className="lbl">years of experience</span></StatPill>
+                    <StatPill><span className="num">10+</span><span className="lbl">products shipped</span></StatPill>
+                    <StatPill><span className="num">5+</span><span className="lbl">years leading teams</span></StatPill>
                     <StatPill><span className="num">iOS &amp; Android</span><span className="lbl">mobile</span></StatPill>
                   </div>
 
                   <Divider />
 
                   {/* Bio */}
-                  <SectionLabel>Sobre mí</SectionLabel>
+                  <SectionLabel>About me</SectionLabel>
                   <Text color="light" css={`line-height: 1.65; font-size: 0.92rem;`}>
-                    Ingeniera de Software con más de 9 años de trayectoria. Hoy dirijo el equipo
-                    completo de software en Didcom: gestiono el ciclo de vida del proyecto desde
-                    el análisis de requerimientos, estimaciones, cronogramas y release notes bajo
-                    ISO 9001, hasta la revisión de PRs y decisiones arquitectónicas.
+                    Frontend Engineer with 9+ years delivering production web and mobile apps
+                    at scale. Built and drove adoption of a shared UI component library
+                    (Vue + React Native) across 10+ products — cutting onboarding from
+                    1–2 months to a few days. Fixed a critical React Native bug blocking
+                    100% of passenger boarding within ~3–4 hours; resolved a scaling issue
+                    affecting ~4,000 active users within ~1–2 hours.
                   </Text>
                   <Text color="light" className="mt-3" css={`line-height: 1.65; font-size: 0.92rem;`}>
-                    Funciono como canal transversal entre áreas comercial, hardware y software
-                    para asegurar que el producto se entienda, se despliegue y se pueda vender.
-                    Combino gestión de proyecto con ejecución técnica: C# · .NET 8/9, React,
-                    Google Cloud, Azure e integración de IA.
+                    I lead engineering teams, own architecture decisions, run PR reviews and
+                    CI/CD pipelines (GCP, Azure), and bridge product, design, and engineering.
+                    I build with React, React Native, TypeScript, Vue.js, and ship
+                    AI-integrated features using Claude API and Gemini API.
                   </Text>
 
                   {/* Skills */}
-                  <SectionLabel>Stack tecnológico</SectionLabel>
+                  <SectionLabel>Tech Stack</SectionLabel>
                   <div>
                     {skills.map((s) => (
                       <SkillBadge key={s}>{s}</SkillBadge>
@@ -212,7 +210,7 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                     >
                       info@fernandacruz.com
                     </a>
-                    <CVLink onClick={handleCVClick}>Ver curriculum completo →</CVLink>
+                    <CVLink onClick={handleCVClick}>View curriculum →</CVLink>
                   </div>
                 </div>
               </Col>

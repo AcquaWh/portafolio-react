@@ -5,7 +5,6 @@ import { Box, Title } from "../Core";
 const Footer = ({ isDark = true }) => {
   return (
     <>
-      {/* <!-- Footer section --> */}
       <Box
         bg="bg"
         pt={[0, null, null, "3.75rem"]}
@@ -24,7 +23,7 @@ const Footer = ({ isDark = true }) => {
               `}
               className="text-uppercase"
             >
-              © 2026 Todos los derechos reservados · Desarrollado con React
+              © 2026 All rights reserved · Built with React
             </Title>
           </div>
         </Container>

@@ -5,6 +5,8 @@ import React, {
   useContext,
   useRef,
 } from "react";
+import Lottie from "lottie-react";
+import sandyAnimation from "../../assets/animations/sandy.json";
 
 import styled, { ThemeProvider } from "styled-components";
 import { Helmet } from "react-helmet";
@@ -44,8 +46,11 @@ const Loader = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: #fff;
+  background: ${({ dark }) => (dark ? "#19191b" : "#fff")} !important;
   z-index: 9999999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 1;
   visibility: visible;
   transition: all 1s ease-out 0.5s;
@@ -69,34 +74,42 @@ const Layout = ({ children, pageContext }) => {
   const gContext = useContext(GlobalContext);
 
   const [visibleLoader, setVisibleLoader] = useState(true);
+  const [mounted, setMounted] = useState(false);
+  const [loaderDark, setLoaderDark] = useState(false);
 
   useLayoutEffect(() => {
     AOS.init();
-    setVisibleLoader(false);
+    setMounted(true);
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        setLoaderDark(!!parsed.bodyDark);
+      }
+    } catch {}
+
+    document.body.style.overflow = "hidden";
+    const t = setTimeout(() => {
+      setVisibleLoader(false);
+    }, 2000);
+    const t2 = setTimeout(() => {
+      document.body.style.overflow = "";
+    }, 3500);
+    return () => { clearTimeout(t); clearTimeout(t2); };
   }, []);
 
   // Navbar style based on scroll
   const eleRef = useRef();
 
   useEffect(() => {
-    window.addEventListener(
-      "popstate",
-      function(event) {
-        // The popstate event is fired each time when the current history entry changes.
-        gContext.closeAbout();
-        gContext.closeContact();
-      },
-      false
-    );
-    window.addEventListener(
-      "pushState",
-      function(event) {
-        // The pushstate event is fired each time when the current history entry changes.
-        gContext.closeAbout();
-        gContext.closeContact();
-      },
-      false
-    );
+    window.addEventListener("popstate", () => {
+      gContext.closeAbout();
+      gContext.closeContact();
+    }, false);
+    window.addEventListener("pushState", () => {
+      gContext.closeAbout();
+      gContext.closeContact();
+    }, false);
 
     return () => {};
   }, [gContext]);
@@ -111,13 +124,15 @@ const Layout = ({ children, pageContext }) => {
         <ThemeSwitch />
         <GlobalStyle />
         <Helmet>
-          <title>Fernanda Cruz · Ingeniera de Software &amp; Líder de Equipo</title>
+          <title>Fernanda Cruz · Frontend Engineer &amp; Engineering Lead</title>
           <link rel="icon" type="image/png" href={imgFavicon} />
         </Helmet>
-        <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
-          <div className="load-circle">
-            <span className="one"></span>
-          </div>
+        <Loader id="loading" dark={loaderDark ? 1 : 0} className={visibleLoader ? "" : "inActive"}>
+          {mounted && (
+            <div style={{ width: 220, height: 220 }}>
+              <Lottie animationData={sandyAnimation} loop={true} />
+            </div>
+          )}
         </Loader>
         <div className="site-wrapper overflow-hidden" ref={eleRef}>
           {children}
@@ -138,8 +153,8 @@ const Layout = ({ children, pageContext }) => {
         <ThemeSwitch />
         <GlobalStyle />
         <Helmet>
-          <title>Fernanda Cruz · Ingeniera de Software &amp; Líder de Equipo</title>
-          <meta name="description" content="Portfolio de Fernanda Cruz — Ingeniera de Software con 9+ años de experiencia. Liderazgo técnico, .NET, React, Google Cloud, Azure e integración de IA." />
+          <title>Fernanda Cruz · Frontend Engineer &amp; Engineering Lead</title>
+          <meta name="description" content="Portfolio of Fernanda Cruz — Frontend Engineer with 9+ years of experience. Engineering leadership, React, React Native, .NET, GCP, Azure, and AI integration." />
           <meta name="author" content="Fernanda Cruz" />
           {/* Open Graph */}
           <meta property="og:type" content="website" />
@@ -161,10 +176,12 @@ const Layout = ({ children, pageContext }) => {
           <link rel="icon" type="image/png" href={imgFavicon} />
           <link rel="canonical" href="https://fernandacruz.com" />
         </Helmet>
-        <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
-          <div className="load-circle">
-            <span className="one"></span>
-          </div>
+        <Loader id="loading" dark={loaderDark ? 1 : 0} className={visibleLoader ? "" : "inActive"}>
+          {mounted && (
+            <div style={{ width: 220, height: 220 }}>
+              <Lottie animationData={sandyAnimation} loop={true} />
+            </div>
+          )}
         </Loader>
         <div className="site-wrapper overflow-hidden" ref={eleRef}>
           <Header isDark={gContext.theme.headerDark} />

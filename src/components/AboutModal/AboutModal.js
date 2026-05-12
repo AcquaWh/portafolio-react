@@ -90,7 +90,7 @@ const AboutModal = (props) => {
       onHide={gContext.toggleAbout}
     >
       <Modal.Body className="position-relative ">
-        <Container fluid className="px-sm-5 py-2">
+        <Container fluid className="px-sm-5 py-2" style={{ position: "sticky", top: 0, zIndex: 10, background: "inherit", backdropFilter: "blur(7px)" }}>
           <div className="d-flex justify-content-between py-3">
             <Logo color="light" />
             <CloseButton onClick={gContext.toggleAbout} />

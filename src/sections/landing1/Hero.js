@@ -6,7 +6,6 @@ import { Link } from "gatsby";
 import GlobalContext from "../../context/GlobalContext";
 import { Title, ButtonIcon, Section, Box } from "../../components/Core";
 import bgHeroPattern from "../../assets/image/webp/hero-pattern.webp";
-import imgL from "../../assets/image/jpg/avatar.jpg";
 
 const SectionStyled = styled(Section)`
   &::before {
@@ -61,18 +60,8 @@ const Hero = () => {
 
   return (
     <>
-      {/* <!-- Hero Area --> */}
       <SectionStyled hero className="position-relative">
         <Container>
-          <Box pb="40px">
-            <img
-              src={imgL}
-              alt=""
-              css={`
-                border-radius: 50rem !important;
-              `}
-            />
-          </Box>
           <Row className="align-items-lg-end">
             <Col lg="8" sm="12" className="mb-5 mb-lg-0">
               <Box>
@@ -80,16 +69,9 @@ const Hero = () => {
                   Fernanda Cruz
                 </Title>
                 <Title variant="card" className="mt-2" color="primary">
-                  Ingeniera de Software &amp; Líder de Equipo
+                  Frontend Engineer &amp; Engineering Lead
                 </Title>
                 <Box mt="1.25rem" className="d-flex align-items-center flex-wrap">
-                  <SocialLink
-                    href="https://www.linkedin.com/in/acquawh/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    LinkedIn
-                  </SocialLink>
                   <SocialLink
                     href="https://github.com/AcquaWh"
                     target="_blank"
@@ -98,7 +80,7 @@ const Hero = () => {
                     GitHub
                   </SocialLink>
                   <CVButton to="/curriculum">
-                    Ver curriculum
+                    View Curriculum
                   </CVButton>
                 </Box>
               </Box>
@@ -111,7 +93,7 @@ const Hero = () => {
                     gContext.toggleAbout();
                   }}
                 >
-                  Hablemos ahora
+                  Let's talk
                 </ButtonIcon>
               </Box>
             </Col>

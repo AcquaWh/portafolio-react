@@ -35,8 +35,7 @@ const WorkSingle = () => {
                     max-width: 750px;
                   `}
                 >
-                  Este diseño se llevó a cabo para hacer una plataforma educativa en donde podrían acceder los empleados de novutek a capacitarse
-                  y dar clases donde podrían recibir varios certificados en línea. Se diseñó primero en Photoshop llevándolo a un prototipo en Adobe XD.
+                  Designed for an internal education platform where Novutek employees could take courses and earn online certificates. The design process started in Photoshop, was prototyped in Adobe XD, and delivered as a production-ready Angular application.
                 </Text>
               </Col>
             </Row>
@@ -46,13 +45,13 @@ const WorkSingle = () => {
           <Container>
             <Row>
               <Col lg="4" className="mb-4 mb-lg-0">
-                <Text variant="tag">Cliente</Text>
+                <Text variant="tag">Client</Text>
                 <Title variant="cardBig" className="mt-3">
                   Novutek
                 </Title>
               </Col>
               <Col lg="4" className="mb-4 mb-lg-0">
-                <Text variant="tag">Tiempo</Text>
+                <Text variant="tag">Date</Text>
                 <Title variant="cardBig" className="mt-3">
                   Mayo 2, 2019
                 </Title>

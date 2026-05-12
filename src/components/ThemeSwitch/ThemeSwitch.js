@@ -96,13 +96,12 @@ const ThemeSwitch = (props) => {
 
   return (
     <>
-      {/* <!-- Footer section --> */}
       <BoxWrapper
         className={`position-fixed ${active ? "opened" : ""}`}
         {...props}
       >
         <Panel bg="primary" className="position-relative">
-          <TextBox>Cambiar Versión</TextBox>
+          <TextBox>Switch Theme</TextBox>
           <ButtonGroup>
             <Button
               className={!gContext.theme.bodyDark ? "active" : ""}
