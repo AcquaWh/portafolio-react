@@ -8,10 +8,10 @@ import imgTrips from "../assets/image/jpg/details/teper-trips.webp";
 import imgRoutes from "../assets/image/jpg/details/teper-routes.webp";
 import imgScanner from "../assets/image/jpg/details/teper-scanner.webp";
 import imgMessages from "../assets/image/jpg/details/teper-messages.webp";
-import imgTrip from "../assets/image/jpg/details/teper-trip.jpg";
-import imgEscaneo from "../assets/image/jpg/details/teper-escaneo.jpg";
-import imgContabilizacion from "../assets/image/jpg/details/teper-contabilizacion.jpg";
-import imgAbordados from "../assets/image/jpg/details/teper-abordados.jpg";
+import imgTrip from "../assets/image/jpg/details/teper-trip.webp";
+import imgEscaneo from "../assets/image/jpg/details/teper-escaneo.webp";
+import imgContabilizacion from "../assets/image/jpg/details/teper-contabilizacion.webp";
+import imgAbordados from "../assets/image/jpg/details/teper-abordados.webp";
 
 const HeroSection = styled(Section)`
   margin-top: 92px;
