@@ -46,6 +46,13 @@ const ModalStyled = styled(Modal)`
   }
 `;
 
+const StickyHeader = styled.div`
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: ${({ theme }) => theme.colors.primary};
+`;
+
 const CloseWrapper = styled.div`
   cursor: pointer;
   height: 1.5rem;
@@ -91,12 +98,14 @@ const AboutModal = (props) => {
       onHide={gContext.toggleAbout}
     >
       <Modal.Body className="position-relative ">
-        <Container fluid className="px-sm-5 py-2" style={{ position: "sticky", top: 0, zIndex: 10, background: "inherit" }}>
-          <div className="d-flex justify-content-between py-3">
-            <Logo color="light" />
-            <CloseButton onClick={gContext.toggleAbout} />
-          </div>
-        </Container>
+        <StickyHeader>
+          <Container fluid className="px-sm-5 py-2">
+            <div className="d-flex justify-content-between py-3">
+              <Logo color="light" />
+              <CloseButton onClick={gContext.toggleAbout} />
+            </div>
+          </Container>
+        </StickyHeader>
         <About hero={false} bg="primary" />
       </Modal.Body>
     </ModalStyled>
