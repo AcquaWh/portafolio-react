@@ -119,10 +119,11 @@ const StoreBtn = styled.a`
 `;
 
 const ResultBox = styled.div`
-  background: ${({ theme }) => theme.colors.light};
+  background: ${({ theme }) => theme.colors.primary}12;
   border-radius: 12px;
   padding: 2rem;
   border-left: 4px solid ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 const screenshots = [
