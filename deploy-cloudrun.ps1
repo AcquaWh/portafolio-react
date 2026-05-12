@@ -1,4 +1,4 @@
-$GCLOUD = "C:\Users\acqua\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin\gcloud.cmd"
+$GCLOUD = "C:\Users\Xochilt_Murrieta\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin\gcloud.cmd"
 $PROJECT_ID = "fernandacruz"
 $REGION = "us-central1"
 $SERVICE = "fernandacruz-portfolio"
