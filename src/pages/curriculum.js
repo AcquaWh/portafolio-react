@@ -292,11 +292,10 @@ const CurriculumPage = () => {
           Frontend Engineer &amp; Engineering Lead
         </Title>
         <Text className="mt-3" css={`max-width: 640px; font-size: 0.9rem; line-height: 1.6;`}>
-          Frontend Engineer with 9+ years of experience building web and mobile applications for clients
-          in the mobility, transportation, and tourism industries. I focus on creating fast, user-centered
-          interfaces and working with serverless and cloud technologies to build scalable applications.
-          I have also led engineering teams and helped improve product stability and delivery quality
-          across multiple projects.
+          Frontend Engineer with 9+ years building consumer-facing web and mobile products at scale.
+          I focus on fast, user-centered interfaces and real-time systems — from React and React Native
+          apps used daily by thousands of users to scalable cloud architectures on GCP and Azure.
+          I lead engineering teams, own architecture decisions, and drive product quality from design to deployment.
         </Text>
         <ContactRow>
           <a

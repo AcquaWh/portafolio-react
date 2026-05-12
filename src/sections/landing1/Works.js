@@ -1,10 +1,43 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Masonry from "react-masonry-component";
+import styled from "styled-components";
 
-import { Section, Box, ListNav } from "../../components/Core";
+import { Section, Box } from "../../components/Core";
 import WorkCard from "../../components/WorkCard";
 import { devWorks1 } from "../../data";
+
+const FilterNav = styled.ul`
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+`;
+
+const FilterBtn = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  padding: 0.5rem 1.1rem;
+  border-radius: 500px;
+  transition: background 0.25s, color 0.25s;
+  color: ${({ active, theme }) => active ? "#fff" : theme.colors.text};
+  background: ${({ active, theme }) => active ? theme.colors.primary : "transparent"};
+  border: 2px solid ${({ active, theme }) => active ? theme.colors.primary : theme.colors.border};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+    border-color: ${({ theme }) => theme.colors.primary};
+    background: transparent;
+  }
+`;
 
 const Works = () => {
   const [items, setItems] = useState([]);
@@ -35,31 +68,12 @@ const Works = () => {
     <>
       <Section className="position-relative">
         <Container>
-          <Box mb="2.5rem" ml="-1.75rem" data-aos="fade-up">
-            <ListNav className="nav">
-              <li className="nav-item">
-                <button
-                  className={`nav-link font-weight-bold text-uppercase ${
-                    activeLink === "web" ? "active" : null
-                  }`}
-                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer", outline: "none" }}
-                  onClick={() => filterBy("web")}
-                >
-                  Web development
-                </button>
-              </li>
-              <li className="nav-item">
-                <button
-                  className={`nav-link font-weight-bold text-uppercase ${
-                    activeLink === "vr" ? "active" : null
-                  }`}
-                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer", outline: "none" }}
-                  onClick={() => filterBy("vr")}
-                >
-                  Virtual Reality
-                </button>
-              </li>
-            </ListNav>
+          <Box mb="2.5rem" data-aos="fade-up">
+            <FilterNav>
+              <li><FilterBtn active={activeLink === "web" ? 1 : 0} onClick={() => filterBy("web")}>Web</FilterBtn></li>
+              <li><FilterBtn active={activeLink === "mobile" ? 1 : 0} onClick={() => filterBy("mobile")}>Mobile</FilterBtn></li>
+              <li><FilterBtn active={activeLink === "vr" ? 1 : 0} onClick={() => filterBy("vr")}>Virtual Reality</FilterBtn></li>
+            </FilterNav>
           </Box>
         </Container>
 

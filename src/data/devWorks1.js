@@ -1,3 +1,4 @@
+import imgTeper from "../assets/image/jpg/details/teper-trips.webp";
 import imgT1 from "../assets/image/jpg/dev/masonry/erus.webp";
 import imgT2 from "../assets/image/jpg/dev/masonry/kite.webp";
 import imgT3 from "../assets/image/jpg/dev/masonry/certificate.webp";
@@ -77,8 +78,16 @@ link : "/nasa-spaceapps"
   brand: `Novutek UI`,
   slug: `novutek-ui`,
   title: `Novutek UI`,
-  categories: [`ui`],
+  categories: [`web`, `ui`],
   thumbnail: imgT9,
-link : "/novutek-ui"
+  link: "/novutek-ui",
+},
+{
+  brand: `TEPER Conductores`,
+  slug: `teper-mobile`,
+  title: `TEPER Conductores`,
+  categories: [`mobile`],
+  thumbnail: imgTeper,
+  link: "/teper",
 },
 ];

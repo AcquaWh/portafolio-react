@@ -71,6 +71,9 @@ const Hero = () => {
                 <Title variant="card" className="mt-2" color="primary">
                   Frontend Engineer &amp; Engineering Lead
                 </Title>
+                <p style={{ marginTop: "0.75rem", fontSize: "0.95rem", lineHeight: 1.7, maxWidth: 520, color: "inherit", opacity: 0.75 }}>
+                  9+ years building consumer-facing products at scale — React, React Native, real-time systems, mobile, cloud.
+                </p>
                 <Box mt="1.25rem" className="d-flex align-items-center flex-wrap">
                   <SocialLink
                     href="https://github.com/AcquaWh"

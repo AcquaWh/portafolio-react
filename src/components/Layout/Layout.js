@@ -128,7 +128,7 @@ const Layout = ({ children, pageContext }) => {
         <GlobalStyle />
         <Helmet>
           <title>Fernanda Cruz · Frontend Engineer &amp; Engineering Lead</title>
-          <meta name="description" content="Portfolio of Fernanda Cruz — Frontend Engineer with 9+ years of experience. Engineering leadership, React, React Native, .NET, GCP, Azure, and AI integration." />
+          <meta name="description" content="Portfolio of Fernanda Cruz — Frontend Engineer with 9+ years building consumer-facing products at scale. React, React Native, real-time systems, mobile, GCP, Azure, AI integration." />
           <meta name="author" content="Fernanda Cruz" />
           {/* Open Graph */}
           <meta property="og:type" content="website" />

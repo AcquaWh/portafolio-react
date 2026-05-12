@@ -30,14 +30,14 @@ const Stats = () => (
         </Col>
         <Col xs="6" lg="3" className="mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
           <Box>
-            <Number>3</Number>
-            <Text variant="tag" className="mt-3">Cloud platforms</Text>
+            <Number>4K+</Number>
+            <Text variant="tag" className="mt-3">Active users in production</Text>
           </Box>
         </Col>
         <Col xs="6" lg="3" data-aos="fade-up" data-aos-delay="400">
           <Box>
-            <Number>8+</Number>
-            <Text variant="tag" className="mt-3">Technologies mastered</Text>
+            <Number>&lt;2h</Number>
+            <Text variant="tag" className="mt-3">Critical incident response</Text>
           </Box>
         </Col>
       </Row>

@@ -145,6 +145,34 @@ const LiveBtn = styled.a`
   &:hover { opacity: 0.85; }
 `;
 
+const ResultBox = styled.div`
+  background: ${({ theme }) => theme.colors.primary}12;
+  border-left: 4px solid ${({ theme }) => theme.colors.primary};
+  border-radius: 0 12px 12px 0;
+  padding: 1.75rem 2rem;
+  margin-bottom: 2rem;
+`;
+
+const ScrollTop = styled.button`
+  background: none;
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  border-radius: 500px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: ${({ theme }) => theme.colors.text};
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  display: block;
+  margin-top: 2rem;
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+    border-color: ${({ theme }) => theme.colors.primary};
+  }
+`;
+
 const PageAnim = styled.div`
   animation: ${fadeUp} 0.5s ease both;
 `;
@@ -211,16 +239,17 @@ const CaseStudyPage = ({ data }) => {
 
                 <Divider />
 
-                <SectionLabel>Result</SectionLabel>
-                <Text variant="p" css={`line-height: 1.75;`}>{result}</Text>
-
-                {liveUrl && (
-                  <div className="mt-4">
-                    <LiveBtn href={liveUrl} target="_blank" rel="noopener noreferrer">
-                      View live site →
-                    </LiveBtn>
-                  </div>
-                )}
+                <ResultBox>
+                  <SectionLabel>Result</SectionLabel>
+                  <Text variant="p" css={`line-height: 1.75; margin: 0;`}>{result}</Text>
+                  {liveUrl && (
+                    <div className="mt-3">
+                      <LiveBtn href={liveUrl} target="_blank" rel="noopener noreferrer">
+                        View live site →
+                      </LiveBtn>
+                    </div>
+                  )}
+                </ResultBox>
 
               </Col>
 
@@ -247,6 +276,9 @@ const CaseStudyPage = ({ data }) => {
                   <Divider />
 
                   <BackLink to="/">← Back to portfolio</BackLink>
+                  <ScrollTop onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                    ↑ Back to top
+                  </ScrollTop>
 
                 </div>
               </Col>

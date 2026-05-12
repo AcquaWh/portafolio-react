@@ -13,15 +13,15 @@ const data = {
   highlights: [
     { title: "Immersive VR experience", desc: "The player is transported to climate-affected scenarios with visualizations based on real NASA data." },
     { title: "Educational game mechanics", desc: "The player's in-game decisions have visible environmental consequences, building cause-and-effect awareness." },
-    { title: "Local winner — Ciudad Obregón 2019", desc: "The project was selected and nominated at the local hackathon venue, competing against teams from across the region." },
+    { title: "Local winner — Ciudad Obregón 2019", desc: "The project won the local NASA SpaceApps Challenge venue in Ciudad Obregón, competing against teams from across the region, and was nominated to the global judging round." },
   ],
   screenshots: [
     { img: imgS1, caption: "VR game scene — climate impact visualization" },
   ],
-  result: "The project was nominated at the NASA SpaceApps Challenge 2019 in Ciudad Obregón. It demonstrated that virtual reality can be a powerful vehicle for science communication and environmental education.",
+  result: "Won the local NASA SpaceApps Challenge 2019 venue in Ciudad Obregón and nominated to the global round. The project demonstrated that virtual reality is a powerful vehicle for science communication — making abstract climate data experiential rather than just informational.",
   techStack: ["Unity", "C#", "VR SDK", "3D Modeling", "NASA Open Data"],
   myRole: "Built the game in Unity with C#, designed game mechanics, integrated the VR environments, and presented the project to the hackathon judges.",
-  bullets: ["Nominated at NASA SpaceApps Challenge 2019", "Full VR experience in Unity + C#", "Real NASA data integrated", "Educational cause-and-effect mechanics"],
+  bullets: ["Local winner — NASA SpaceApps Challenge 2019", "Nominated to global judging round", "Full VR experience in Unity + C#", "Real NASA data integrated", "Educational cause-and-effect mechanics"],
   liveUrl: "https://2019.spaceappschallenge.org/challenges/living-our-world/1up-nasa-earth/teams/the-no-names/project",
 };
 

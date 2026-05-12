@@ -172,18 +172,19 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                   {/* Bio */}
                   <SectionLabel>About me</SectionLabel>
                   <Text color="light" css={`line-height: 1.65; font-size: 0.92rem;`}>
-                    Frontend Engineer with 9+ years delivering production web and mobile apps
-                    at scale. Built and drove adoption of a shared UI component library
-                    (Vue + React Native) across 10+ products — cutting onboarding from
-                    1–2 months to a few days. Fixed a critical React Native bug blocking
-                    100% of passenger boarding within ~3–4 hours; resolved a scaling issue
-                    affecting ~4,000 active users within ~1–2 hours.
+                    Frontend Engineer with 9+ years building consumer-facing products
+                    that people use daily. I own the full stack of a production React Native app
+                    with 4,000+ active users — real-time Firebase sync, live route tracking,
+                    QR scanning, and in-trip messaging. I built and drove adoption of a shared
+                    UI component library (Vue + React Native) across 10+ products, cutting
+                    onboarding from 1–2 months to days.
                   </Text>
                   <Text color="light" className="mt-3" css={`line-height: 1.65; font-size: 0.92rem;`}>
-                    I lead engineering teams, own architecture decisions, run PR reviews and
-                    CI/CD pipelines (GCP, Azure), and bridge product, design, and engineering.
-                    I build with React, React Native, TypeScript, Vue.js, and ship
-                    AI-integrated features using Claude API and Gemini API.
+                    I resolve incidents fast: a critical bug blocking 100% of passenger
+                    boarding fixed in ~3–4 hours; a peak-hour scaling outage affecting
+                    ~4,000 users resolved in &lt;2 hours — zero service interruption after
+                    each fix. I lead teams, own architecture and CI/CD (GCP, Azure), and
+                    ship AI-integrated features with Claude API and Gemini API.
                   </Text>
 
                   {/* Skills */}
