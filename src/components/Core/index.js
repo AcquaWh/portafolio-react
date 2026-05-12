@@ -11,7 +11,6 @@ import Input from "./Input";
 import TextArea from "./TextArea";
 import Checkbox from "./Checkbox";
 import InputGroup from "./InputGroup";
-import Select from "./Select";
 import Switch from "./Switch";
 import Span from "./Span";
 import List from "./List";
@@ -32,7 +31,6 @@ export {
   TextArea,
   Checkbox,
   InputGroup,
-  Select,
   Switch,
   Span,
   List,

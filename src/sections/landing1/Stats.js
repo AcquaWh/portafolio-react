@@ -19,25 +19,25 @@ const Stats = () => (
         <Col xs="6" lg="3" className="mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
           <Box>
             <Number>9+</Number>
-            <Text variant="tag" className="mt-3">Años de experiencia</Text>
+            <Text variant="tag" className="mt-3">Years of experience</Text>
           </Box>
         </Col>
         <Col xs="6" lg="3" className="mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
           <Box>
             <Number>10+</Number>
-            <Text variant="tag" className="mt-3">Proyectos entregados</Text>
+            <Text variant="tag" className="mt-3">Projects delivered</Text>
           </Box>
         </Col>
         <Col xs="6" lg="3" className="mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
           <Box>
-            <Number>3</Number>
-            <Text variant="tag" className="mt-3">Plataformas cloud</Text>
+            <Number>4K+</Number>
+            <Text variant="tag" className="mt-3">Active users in production</Text>
           </Box>
         </Col>
         <Col xs="6" lg="3" data-aos="fade-up" data-aos-delay="400">
           <Box>
-            <Number>8+</Number>
-            <Text variant="tag" className="mt-3">Tecnologías dominadas</Text>
+            <Number>&lt;2h</Number>
+            <Text variant="tag" className="mt-3">Critical incident response</Text>
           </Box>
         </Col>
       </Row>

@@ -168,12 +168,12 @@ const KiteCaseStudy = () => (
 
       {/* Cover */}
       <HeroWrap>
-        <img src={imgCover} alt="Kite — plataforma de arrendamiento" />
+        <img src={imgCover} alt="Kite — rental platform" />
       </HeroWrap>
 
       <Section>
         <Container>
-          <BackLink to="/">← Volver al portfolio</BackLink>
+          <BackLink to="/">← Back to portfolio</BackLink>
 
           <Row>
             {/* ── Main content ── */}
@@ -183,31 +183,31 @@ const KiteCaseStudy = () => (
                 <Tag>Angular</Tag>
                 <Tag>PHP</Tag>
                 <Tag>Openpay</Tag>
-                <Tag>Plataforma web</Tag>
+                <Tag>Web platform</Tag>
               </div>
 
               <Title variant="secSm" className="mb-3">
-                Kite — Plataforma de arrendamiento con pagos en línea
+                Kite — Rental platform with online payments
               </Title>
 
               <Text variant="p" css={`line-height: 1.75; font-size: 0.95rem;`}>
-                Kite es una plataforma web para apartar y rentar departamentos en línea,
-                con un ecosistema completo de roles: inquilinos, propietarios y administradores.
-                El proyecto incluyó diseño de arquitectura, desarrollo full-stack y la
-                integración de un sistema de pagos en producción.
+                Kite is a web platform for booking and renting apartments online,
+                with a complete multi-role ecosystem: tenants, property owners, and administrators.
+                The project included architecture design, full-stack development, and
+                integration of a live payment gateway.
               </Text>
 
               <MetaGrid>
                 <MetaItem>
-                  <p className="label">Cliente</p>
+                  <p className="label">Client</p>
                   <p className="value">ALPAE</p>
                 </MetaItem>
                 <MetaItem>
-                  <p className="label">Año</p>
+                  <p className="label">Year</p>
                   <p className="value">2020</p>
                 </MetaItem>
                 <MetaItem>
-                  <p className="label">Rol</p>
+                  <p className="label">Role</p>
                   <p className="value">Front-End Lead</p>
                 </MetaItem>
                 <MetaItem>
@@ -219,68 +219,68 @@ const KiteCaseStudy = () => (
               <Divider />
 
               {/* Challenge */}
-              <SectionLabel>El problema</SectionLabel>
+              <SectionLabel>The problem</SectionLabel>
               <Text variant="p" css={`line-height: 1.75;`}>
-                ALPAE administraba sus propiedades en arrendamiento de forma completamente manual:
-                los interesados llamaban por teléfono, los pagos se hacían en efectivo o transferencia,
-                y no existía visibilidad del estado de cada departamento en tiempo real.
-                El proceso era lento, propenso a errores y no escalable.
+                ALPAE managed their rental properties entirely manually: interested tenants
+                called by phone, payments were made in cash or wire transfer,
+                and there was no real-time visibility into each apartment's availability.
+                The process was slow, error-prone, and not scalable.
               </Text>
 
               <Divider />
 
               {/* Solution */}
-              <SectionLabel>La solución</SectionLabel>
+              <SectionLabel>The solution</SectionLabel>
               <Text variant="p" css={`line-height: 1.75; margin-bottom: 1.5rem;`}>
-                Diseñamos y desarrollamos una plataforma web con tres portales diferenciados
-                según el rol del usuario, integrando pagos en línea con Openpay para eliminar
-                la fricción del proceso de apartar un departamento.
+                We designed and built a web platform with three role-specific portals,
+                integrating online payments via Openpay to eliminate friction from
+                the apartment booking process.
               </Text>
 
               <HighlightBox>
-                <h6>Portal del inquilino</h6>
-                <p>Búsqueda de departamentos disponibles, reserva en línea y pago seguro con tarjeta mediante Openpay. Historial de pagos y estado del contrato en tiempo real.</p>
+                <h6>Tenant portal</h6>
+                <p>Search available apartments, book online, and pay securely by card via Openpay. Payment history and contract status in real time.</p>
               </HighlightBox>
 
               <HighlightBox>
-                <h6>Portal del propietario</h6>
-                <p>Dashboard con ocupación de unidades, ingresos del mes, estatus de pagos pendientes y herramientas para gestionar sus propiedades sin intermediarios.</p>
+                <h6>Owner portal</h6>
+                <p>Dashboard with unit occupancy, monthly income, pending payment status, and tools to manage properties without intermediaries.</p>
               </HighlightBox>
 
               <HighlightBox>
-                <h6>Panel de administración</h6>
-                <p>Vista global de toda la operación: usuarios, propiedades, transacciones y soporte. Control total del ciclo de vida del arrendamiento.</p>
+                <h6>Admin panel</h6>
+                <p>Global view of the entire operation: users, properties, transactions, and support. Full control of the rental lifecycle.</p>
               </HighlightBox>
 
               <Divider />
 
               {/* Screenshots */}
-              <SectionLabel>Vistas del sistema</SectionLabel>
+              <SectionLabel>Screenshots</SectionLabel>
 
               <div className="mb-4">
-                <ScreenImg src={imgS1} alt="Vista de inicio — búsqueda de departamentos" />
-                <ScreenCaption>Pantalla de inicio — búsqueda y disponibilidad de departamentos</ScreenCaption>
+                <ScreenImg src={imgS1} alt="Home view — apartment search" />
+                <ScreenCaption>Home screen — apartment search and availability</ScreenCaption>
               </div>
 
               <div className="mb-4">
-                <ScreenImg src={imgS2} alt="Portal del propietario" />
-                <ScreenCaption>Portal del propietario — dashboard de ocupación e ingresos</ScreenCaption>
+                <ScreenImg src={imgS2} alt="Owner portal" />
+                <ScreenCaption>Owner portal — occupancy and income dashboard</ScreenCaption>
               </div>
 
               <div className="mb-4">
-                <ScreenImg src={imgS3} alt="Panel de administración" />
-                <ScreenCaption>Panel de administración — gestión global de la plataforma</ScreenCaption>
+                <ScreenImg src={imgS3} alt="Admin panel" />
+                <ScreenCaption>Admin panel — global platform management</ScreenCaption>
               </div>
 
               <Divider />
 
               {/* Result */}
-              <SectionLabel>Resultado</SectionLabel>
+              <SectionLabel>Result</SectionLabel>
               <Text variant="p" css={`line-height: 1.75;`}>
-                La plataforma eliminó el 100% del proceso manual de apartar departamentos.
-                Los inquilinos pueden completar una reserva y pago en menos de 5 minutos,
-                y los propietarios tienen visibilidad completa de su cartera sin depender
-                del equipo de administración para consultar el estatus de sus unidades.
+                The platform eliminated 100% of the manual apartment booking process.
+                Tenants can complete a booking and payment in under 5 minutes,
+                and owners have full visibility into their portfolio without depending
+                on the admin team to check unit status.
               </Text>
 
               <div className="mt-4">
@@ -289,7 +289,7 @@ const KiteCaseStudy = () => (
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Ver sitio en vivo →
+                  View live site →
                 </LiveBtn>
               </div>
 
@@ -299,7 +299,7 @@ const KiteCaseStudy = () => (
             <Col lg="4" className="mt-5 mt-lg-0">
               <div style={{ position: "sticky", top: "120px" }}>
 
-                <SectionLabel>Tecnologías</SectionLabel>
+                <SectionLabel>Technologies</SectionLabel>
                 <div className="mb-4">
                   {["AngularJS", "PHP", "Openpay", "MySQL", "Bootstrap", "npm"].map(t => (
                     <Tag key={t}>{t}</Tag>
@@ -308,26 +308,26 @@ const KiteCaseStudy = () => (
 
                 <Divider />
 
-                <SectionLabel>Mi rol</SectionLabel>
+                <SectionLabel>My role</SectionLabel>
                 <Text css={`font-size: 0.85rem; line-height: 1.7;`}>
-                  Lideré el desarrollo front-end con AngularJS, diseñé la arquitectura
-                  de los tres portales y coordiné la integración con el backend PHP y
-                  la pasarela de pagos Openpay.
+                  Led front-end development with AngularJS, designed the architecture
+                  for all three portals, and coordinated integration with the PHP backend
+                  and the Openpay payment gateway.
                 </Text>
 
                 <Divider />
 
                 <SectionLabel>Highlights</SectionLabel>
                 <Text css={`font-size: 0.82rem; line-height: 1.7;`}>
-                  ✓ Integración de pagos en producción con Openpay<br />
-                  ✓ 3 roles de usuario con accesos y vistas diferenciadas<br />
-                  ✓ Proceso de reserva completamente digitalizado<br />
-                  ✓ Dashboard en tiempo real para propietarios
+                  ✓ Live payment integration with Openpay<br />
+                  ✓ 3 user roles with separate views and access<br />
+                  ✓ Fully digitized booking process<br />
+                  ✓ Real-time dashboard for property owners
                 </Text>
 
                 <Divider />
 
-                <BackLink to="/">← Volver al portfolio</BackLink>
+                <BackLink to="/">← Back to portfolio</BackLink>
 
               </div>
             </Col>

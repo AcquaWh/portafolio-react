@@ -3,23 +3,23 @@ import CaseStudyPage from "../components/CaseStudy";
 import imgCover from "../assets/image/jpg/details/alumni.webp";
 
 const data = {
-  title: "Alumni ULSA — Bolsa de trabajo universitaria",
-  tags: ["Laravel", "PHP", "Plataforma web", "Educación"],
+  title: "Alumni ULSA — University job board",
+  tags: ["Laravel", "PHP", "Web platform", "Education"],
   cover: imgCover,
   meta: { client: "ULSA Noroeste", year: "2020", role: "Full-Stack Developer", stack: "Laravel · PHP · MySQL" },
-  problem: "La Universidad La Salle Noroeste no tenía una plataforma digital para conectar a sus egresados con empleadores. El proceso de búsqueda de empleo era manual, sin visibilidad para las empresas ni trazabilidad para la universidad sobre la inserción laboral de sus alumni.",
-  solution: "Desarrollamos una plataforma de bolsa de trabajo universitaria con cuatro roles diferenciados: alumni, empresas, universidades y administradores. Las universidades pueden importar su base de egresados mediante CSV y las empresas publican vacantes directamente.",
+  problem: "Universidad La Salle Noroeste had no digital platform to connect alumni with employers. The job search process was manual, with no visibility for companies and no traceability for the university on graduate employment outcomes.",
+  solution: "We built a university job board platform with four distinct roles: alumni, companies, universities, and administrators. Universities can bulk-import their graduate database via CSV, and companies publish job listings directly.",
   highlights: [
-    { title: "Portal de Alumni", desc: "Registro de perfil profesional, búsqueda de vacantes por área y postulación en línea. Acceso a historial de aplicaciones." },
-    { title: "Portal de Empresas", desc: "Publicación de ofertas de trabajo, revisión de candidatos egresados ULSA y contacto directo con postulantes." },
-    { title: "Portal de Universidades", desc: "Importación masiva de alumnos graduados mediante CSV, seguimiento de inserción laboral y reportes de colocación." },
-    { title: "Panel de Administración", desc: "Gestión centralizada de usuarios, validación de empresas y moderación de contenido de la plataforma." },
+    { title: "Alumni portal", desc: "Professional profile setup, job search by field, and online application. Access to application history." },
+    { title: "Company portal", desc: "Post job openings, review ULSA graduate candidates, and contact applicants directly." },
+    { title: "University portal", desc: "Bulk import of graduated students via CSV, employment tracking, and placement reports." },
+    { title: "Admin panel", desc: "Centralized user management, company validation, and content moderation." },
   ],
   screenshots: [],
-  result: "La plataforma centralizó el proceso de vinculación laboral de ULSA Noroeste, eliminando la gestión manual de CVs y permitiendo a la universidad tener por primera vez métricas de inserción laboral de sus egresados.",
+  result: "The platform centralized ULSA Noroeste's employment pipeline, eliminating manual CV management and giving the university its first-ever graduate employment metrics.",
   techStack: ["Laravel", "PHP", "MySQL", "Bootstrap", "CSV Import", "Blade"],
-  myRole: "Desarrollo full-stack en Laravel: diseño de base de datos, módulos de importación CSV, sistema de roles y permisos, y todas las vistas de la plataforma.",
-  bullets: ["4 roles de usuario con accesos diferenciados", "Importación masiva de egresados por CSV", "Vinculación directa alumni-empresa", "Reportes de inserción laboral"],
+  myRole: "Full-stack development in Laravel: database design, CSV import modules, role and permission system, and all platform views.",
+  bullets: ["4 user roles with separate access", "Bulk graduate import via CSV", "Direct alumni-company matching", "Graduate employment reports"],
   liveUrl: null,
 };
 

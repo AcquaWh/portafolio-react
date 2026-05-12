@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Section, Box, LinkContact } from "../../components/Core";
-import bgFooter from "../../assets/image/png/subscribe-pattern.png";
+import bgFooter from "../../assets/image/png/subscribe-pattern.webp";
 
 const SectionStyled = styled(Section)`
   &.pattern::before {
@@ -21,7 +21,6 @@ const SectionStyled = styled(Section)`
 const Contact = ({ pattern = true }) => {
   return (
     <>
-      {/* <!-- Hero Area --> */}
       <SectionStyled
         className={`position-relative ${pattern ? "pattern" : ""}`}
       >
@@ -30,8 +29,7 @@ const Contact = ({ pattern = true }) => {
             <Col lg="11" xl="10" className="text-center">
               <Box>
                 <Title variant="secSm">
-                  Estoy tomando nuevos proyectos. Esperando noticias nuevas
-                  proyectos, así que si quieres chatear, ponte en contacto.
+                  Open to new projects and opportunities — reach out anytime.
                 </Title>
 
                 <Box
@@ -44,16 +42,6 @@ const Contact = ({ pattern = true }) => {
                       className="mb-2 mb-lg-0"
                     >
                       info@fernandacruz.com
-                    </LinkContact>
-                    <span className="divider mx-2 mx-lg-4 d-none d-lg-block">
-                      |
-                    </span>
-                    <LinkContact
-                      href="https://www.linkedin.com/in/acquawh/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      linkedin.com/in/acquawh/
                     </LinkContact>
                   </div>
                 </Box>

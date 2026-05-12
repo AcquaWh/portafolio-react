@@ -26,7 +26,7 @@ const skills = [
     tags: ["React", "Vue.js", "Angular", "Blazor", "Razor", "TypeScript"],
   },
   {
-    category: "Móvil",
+    category: "Mobile",
     tags: ["React Native", ".NET MAUI", "MAUI Blazor", "iOS", "Android"],
   },
   {
@@ -34,15 +34,15 @@ const skills = [
     tags: ["Azure DevOps", "Pipelines CI/CD", "Docker", "Kubernetes", "Cloud Run", "Cloud Tasks", "VM", "Google Cloud"],
   },
   {
-    category: "Inteligencia Artificial",
-    tags: ["Claude API", "Gemini API", "Integración de IA"],
+    category: "Artificial Intelligence",
+    tags: ["Claude API", "Gemini API", "AI Integration"],
   },
   {
-    category: "Datos & Reportes",
+    category: "Data & Reporting",
     tags: ["BigQuery", "Power BI", "Looker Studio"],
   },
   {
-    category: "Gestión & Colaboración",
+    category: "Engineering & Collaboration",
     tags: ["Jira", "Kanban", "Scrum", "Code Review", "Pull Requests", "Git"],
   },
 ];
@@ -51,7 +51,7 @@ const Skills = () => (
   <Section>
     <Container>
       <Title variant="secSm" className="mb-5" data-aos="fade-up">
-        Stack tecnológico
+        Tech stack
       </Title>
       <Row>
         {skills.map(({ category, tags }, index) => (

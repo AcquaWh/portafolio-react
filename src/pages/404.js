@@ -106,15 +106,15 @@ export default function NotFound() {
         <Container>
           <Wrap>
             <BigNumber>404</BigNumber>
-            <Subtitle>Página no encontrada</Subtitle>
+            <Subtitle>Page not found</Subtitle>
             <Description>
-              La página que buscas no existe o fue movida.
-              No te preocupes, todo lo demás sigue en su lugar.
+              The page you're looking for doesn't exist or has been moved.
+              Don't worry, everything else is right where you left it.
             </Description>
             <div className="d-flex align-items-center flex-wrap justify-content-center" style={{ gap: "12px" }}>
-              <HomeBtn to="/">← Volver al inicio</HomeBtn>
+              <HomeBtn to="/">← Back to home</HomeBtn>
               <Dot />
-              <SecondaryBtn to="/curriculum">Ver curriculum</SecondaryBtn>
+              <SecondaryBtn to="/curriculum">View CV</SecondaryBtn>
             </div>
           </Wrap>
         </Container>

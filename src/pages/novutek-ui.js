@@ -1,84 +1,38 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-
-import { Section, Title, Text, Box } from "../components/Core";
-import PageWrapper from "../components/PageWrapper";
-import Contact from "../sections/common/Contact";
-import imgWorkCover from "../assets/image/jpg/details/novutek.webp";
+import CaseStudyPage from "../components/CaseStudy";
+import imgCover from "../assets/image/jpg/details/novutek.webp";
 import imgS1 from "../assets/image/jpg/details/novutek-details.webp";
 import imgS2 from "../assets/image/jpg/details/novutek-details2.webp";
 
-const WorkSingle = () => {
-  return (
-    <>
-      <PageWrapper>
-        <Container
-          fluid
-          className="px-sm-5"
-          css={`
-            margin-top: 92px;
-          `}
-        >
-          <img src={imgWorkCover} alt="" className="img-fluid w-100" />
-        </Container>
-        <Section className="mt-lg-5">
-          <Container>
-            <Row>
-              <Col lg="8">
-                <Text variant="tag">UI</Text>
-                <Title variant="secSm" className="my-4">
-                  Novutek UI
-                </Title>
-                <Text
-                  variant="p"
-                  css={`
-                    max-width: 750px;
-                  `}
-                >
-                  Este diseño se llevó a cabo para hacer una plataforma educativa en donde podrían acceder los empleados de novutek a capacitarse
-                  y dar clases donde podrían recibir varios certificados en línea. Se diseñó primero en Photoshop llevándolo a un prototipo en Adobe XD.
-                </Text>
-              </Col>
-            </Row>
-          </Container>
-        </Section>
-        <div className="mt-lg-3">
-          <Container>
-            <Row>
-              <Col lg="4" className="mb-4 mb-lg-0">
-                <Text variant="tag">Cliente</Text>
-                <Title variant="cardBig" className="mt-3">
-                  Novutek
-                </Title>
-              </Col>
-              <Col lg="4" className="mb-4 mb-lg-0">
-                <Text variant="tag">Tiempo</Text>
-                <Title variant="cardBig" className="mt-3">
-                  Mayo 2, 2019
-                </Title>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-        <Section className="mt-lg-5">
-          <Container>
-            <Row>
-              <Col xs="12" className="mb-5">
-                <img src={imgS1} alt="" className="img-fluid w-100" />
-              </Col>
-              <Col xs="12" className="mb-5">
-                <img src={imgS2} alt="" className="img-fluid w-100" />
-              </Col>
-            </Row>
-          </Container>
-        </Section>
-        
-        
-        <Box py={4}>
-          <Contact />
-        </Box>
-      </PageWrapper>
-    </>
-  );
+const data = {
+  title: "Novutek UI — Design to code for an internal e-learning platform",
+  tags: ["UI Design", "Angular", "Adobe XD", "Photoshop", "Design System"],
+  cover: imgCover,
+  meta: { client: "Novutek", year: "2019", role: "UI Designer & Frontend Developer", stack: "Photoshop · Adobe XD · Angular" },
+  problem: "Novutek had no internal platform for employee training or certification. Learning was unstructured, with no way to track progress, validate completed courses, or issue certifications — making it impossible to verify which employees had the required skills.",
+  solution: "I owned the full design-to-code pipeline: defined the visual system in Photoshop, validated the interaction flow with an Adobe XD prototype, and delivered the final UI as a production-ready Angular application — ensuring pixel-perfect fidelity between the design and the live product.",
+  highlights: [
+    { title: "Visual system in Photoshop", desc: "Defined the full UI kit: typography, color palette, component states, and layout grid before writing any code." },
+    { title: "Interactive prototype in Adobe XD", desc: "Built a clickable prototype covering the full user journey — course browsing, video playback, exam flow, and badge award — validated with stakeholders before development." },
+    { title: "Design-to-code in Angular", desc: "Translated every design spec into production Angular components, maintaining visual fidelity across all screen sizes and interaction states." },
+    { title: "Badge & certification UI", desc: "Designed and implemented the gamification layer: earned badges visible on each employee's profile, encouraging course completion." },
+  ],
+  screenshots: [
+    { img: imgS1, caption: "Course dashboard — design translated to Angular components" },
+    { img: imgS2, caption: "Badge system UI — from XD prototype to production" },
+  ],
+  result: "Delivered a fully designed and implemented e-learning platform — from blank canvas to production code — as a solo designer-developer. The project demonstrated end-to-end ownership of the UI: visual design, interaction prototype, and final implementation with no handoff gaps.",
+  techStack: ["Photoshop", "Adobe XD", "Angular", "TypeScript", "CSS3", "Bootstrap"],
+  myRole: "Sole UI designer and front-end developer. Owned every stage: visual design in Photoshop, interactive prototype in Adobe XD, and production implementation in Angular — with direct stakeholder reviews at each phase.",
+  bullets: [
+    "Full design-to-code ownership — no handoff",
+    "Interactive XD prototype validated before development",
+    "Pixel-perfect Angular implementation",
+    "Reusable component system from Photoshop kit",
+    "Badge & certification gamification UI",
+  ],
+  liveUrl: null,
 };
-export default WorkSingle;
+
+const NovutekUIPage = () => <CaseStudyPage data={data} />;
+export default NovutekUIPage;

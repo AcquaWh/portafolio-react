@@ -15,7 +15,7 @@ const Hero = () => {
           <Row className="text-center justify-content-center">
             <Col lg="10" xl="7">
               <div className="text-center mb-5">
-                <Title variant="hero">¿Estás listo para hablar?</Title>
+                <Title variant="hero">Ready to connect?</Title>
               </div>
               <div className="text-center">
                 <ButtonIcon
@@ -24,7 +24,7 @@ const Hero = () => {
                     gContext.toggleAbout();
                   }}
                 >
-                  Hablemos ahora
+                  Let's talk
                 </ButtonIcon>
               </div>
             </Col>

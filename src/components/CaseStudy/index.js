@@ -142,7 +142,36 @@ const LiveBtn = styled.a`
   letter-spacing: 0.8px;
   text-decoration: none !important;
   transition: opacity 0.25s;
+  &:visited, &:hover, &:active, &:focus { color: #fff !important; }
   &:hover { opacity: 0.85; }
+`;
+
+const ResultBox = styled.div`
+  background: ${({ theme }) => theme.colors.primary}12;
+  border-left: 4px solid ${({ theme }) => theme.colors.primary};
+  border-radius: 0 12px 12px 0;
+  padding: 1.75rem 2rem;
+  margin-bottom: 2rem;
+`;
+
+const ScrollTop = styled.button`
+  background: none;
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  border-radius: 500px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: ${({ theme }) => theme.colors.text};
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  display: block;
+  margin-top: 2rem;
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+    border-color: ${({ theme }) => theme.colors.primary};
+  }
 `;
 
 const PageAnim = styled.div`
@@ -161,7 +190,7 @@ const CaseStudyPage = ({ data }) => {
 
         <Section>
           <Container>
-            <BackLink to="/">← Volver al portfolio</BackLink>
+            <BackLink to="/">← Back to portfolio</BackLink>
 
             <Row>
               <Col lg="8" className="pr-lg-5">
@@ -173,20 +202,20 @@ const CaseStudyPage = ({ data }) => {
                 <Title variant="secSm" className="mb-3">{title}</Title>
 
                 <MetaGrid>
-                  {meta.client && <MetaItem><p className="label">Cliente</p><p className="value">{meta.client}</p></MetaItem>}
-                  {meta.year   && <MetaItem><p className="label">Año</p><p className="value">{meta.year}</p></MetaItem>}
-                  {meta.role   && <MetaItem><p className="label">Rol</p><p className="value">{meta.role}</p></MetaItem>}
+                  {meta.client && <MetaItem><p className="label">Client</p><p className="value">{meta.client}</p></MetaItem>}
+                  {meta.year   && <MetaItem><p className="label">Year</p><p className="value">{meta.year}</p></MetaItem>}
+                  {meta.role   && <MetaItem><p className="label">Role</p><p className="value">{meta.role}</p></MetaItem>}
                   {meta.stack  && <MetaItem><p className="label">Stack</p><p className="value">{meta.stack}</p></MetaItem>}
                 </MetaGrid>
 
                 <Divider />
 
-                <SectionLabel>El problema</SectionLabel>
+                <SectionLabel>The problem</SectionLabel>
                 <Text variant="p" css={`line-height: 1.75;`}>{problem}</Text>
 
                 <Divider />
 
-                <SectionLabel>La solución</SectionLabel>
+                <SectionLabel>The solution</SectionLabel>
                 <Text variant="p" css={`line-height: 1.75; margin-bottom: 1.5rem;`}>{solution}</Text>
 
                 {highlights.map((h, i) => (
@@ -199,7 +228,7 @@ const CaseStudyPage = ({ data }) => {
                 {screenshots.length > 0 && (
                   <>
                     <Divider />
-                    <SectionLabel>Vistas del sistema</SectionLabel>
+                    <SectionLabel>Screenshots</SectionLabel>
                     {screenshots.map((s, i) => (
                       <div key={i} className="mb-4">
                         <ScreenImg src={s.img} alt={s.caption} />
@@ -211,30 +240,31 @@ const CaseStudyPage = ({ data }) => {
 
                 <Divider />
 
-                <SectionLabel>Resultado</SectionLabel>
-                <Text variant="p" css={`line-height: 1.75;`}>{result}</Text>
-
-                {liveUrl && (
-                  <div className="mt-4">
-                    <LiveBtn href={liveUrl} target="_blank" rel="noopener noreferrer">
-                      Ver sitio en vivo →
-                    </LiveBtn>
-                  </div>
-                )}
+                <ResultBox>
+                  <SectionLabel>Result</SectionLabel>
+                  <Text variant="p" css={`line-height: 1.75; margin: 0;`}>{result}</Text>
+                  {liveUrl && (
+                    <div className="mt-3">
+                      <LiveBtn href={liveUrl} target="_blank" rel="noopener noreferrer">
+                        View live site →
+                      </LiveBtn>
+                    </div>
+                  )}
+                </ResultBox>
 
               </Col>
 
               <Col lg="4" className="mt-5 mt-lg-0">
                 <div style={{ position: "sticky", top: "120px" }}>
 
-                  <SectionLabel>Tecnologías</SectionLabel>
+                  <SectionLabel>Technologies</SectionLabel>
                   <div className="mb-4">
                     {techStack.map(t => <Tag key={t}>{t}</Tag>)}
                   </div>
 
                   <Divider />
 
-                  <SectionLabel>Mi rol</SectionLabel>
+                  <SectionLabel>My role</SectionLabel>
                   <Text css={`font-size: 0.85rem; line-height: 1.7;`}>{myRole}</Text>
 
                   <Divider />
@@ -246,7 +276,10 @@ const CaseStudyPage = ({ data }) => {
 
                   <Divider />
 
-                  <BackLink to="/">← Volver al portfolio</BackLink>
+                  <BackLink to="/">← Back to portfolio</BackLink>
+                  <ScrollTop onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                    ↑ Back to top
+                  </ScrollTop>
 
                 </div>
               </Col>
