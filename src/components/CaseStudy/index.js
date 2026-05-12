@@ -142,6 +142,7 @@ const LiveBtn = styled.a`
   letter-spacing: 0.8px;
   text-decoration: none !important;
   transition: opacity 0.25s;
+  &:visited, &:hover, &:active, &:focus { color: #fff !important; }
   &:hover { opacity: 0.85; }
 `;
 

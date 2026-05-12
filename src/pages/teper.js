@@ -115,6 +115,7 @@ const StoreBtn = styled.a`
   font-weight: 600;
   text-decoration: none !important;
   transition: opacity 0.25s;
+  &:visited, &:hover, &:active, &:focus { color: #fff !important; }
   &:hover { opacity: 0.75; }
 `;
 
