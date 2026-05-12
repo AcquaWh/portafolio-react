@@ -60,6 +60,7 @@ const MenuItem = ({
   isExternal = false,
   name,
   items,
+  isMega,
   depthStep = 20,
   depth = 0,
   ...rest

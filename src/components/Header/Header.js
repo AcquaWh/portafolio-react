@@ -299,7 +299,7 @@ const Header = ({ isDark }) => {
                 >
                   {menuItems.map(
                     (
-                      { label, isExternal = false, name, items, ...rest },
+                      { label, isExternal = false, name, items, isMega, ...rest },
                       index
                     ) => {
                       const hasSubItems = Array.isArray(items);
@@ -316,7 +316,7 @@ const Header = ({ isDark }) => {
                               >
                                 {label}
                               </a>
-                              {rest.isMega ? (
+                              {isMega ? (
                                 <MegaMenu className="mega-menu">
                                   {items.map((group) => (
                                     <div className="mega-col" key={group.name}>
